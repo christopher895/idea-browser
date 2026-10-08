@@ -24,9 +24,11 @@ Keep evidence strength separate from founder fit. An AI score is not a probabili
 
 ## Current status
 
-This repository contains a static browsing prototype and a documented research method. It does **not** yet include an automated demand-research engine or a continuously refreshed feed.
+This repository contains a static browsing app, a documented research method, and a personal email digest implementation. It does **not** yet include an automated demand-research engine or a continuously refreshed feed. Email delivery remains disabled until its sender, recipient, published app URL, and cadence are configured and tested.
 
 The prototype includes search, industry and business-model filters, full idea briefs, a saved shortlist, local notes, and JSON export. Its ten starter briefs are primarily unvalidated concepts. Sentrik includes competitor sources, which establish existing capabilities rather than demand for the proposed business.
+
+The **Email digest** page previews qualifying reports. A GitHub Actions workflow can send fresh reviewed reports through authenticated SMTP. It uses a committed delivery ledger to avoid automatically resending already delivered or uncertain batches. See [email setup](docs/EMAIL_SETUP.md).
 
 Bookmarks and notes are stored in the browser on the current origin. They do not sync across devices. JSON export provides a backup; import is not implemented.
 
@@ -39,6 +41,15 @@ python3 -m http.server 8000 --directory dist
 ```
 
 Open <http://localhost:8000>. The interface uses Google Fonts when available and falls back to local fonts.
+
+To edit the collection, update `dist/ideas.json`, then run `node scripts/build-data.mjs`. This generates `dist/data.js` for the browser. The email sender reads the same canonical JSON collection.
+
+Preview an email without sending and run delivery checks:
+
+```sh
+python3 scripts/digest.py
+python3 -m unittest discover -s tests -v
+```
 
 Optional JavaScript syntax checks, with Node.js installed:
 
@@ -53,6 +64,9 @@ node --check dist/data.js
 | --- | --- |
 | `docs/RESEARCH_METHOD.md` | Discovery sources, evidence standards, evaluation, and validation |
 | `docs/ROADMAP.md` | Research-first implementation sequence |
+| `docs/EMAIL_SETUP.md` | Sender setup, scheduling, and delivery recovery |
+| `scripts/digest.py` | Personal email preview, eligibility, reservation, and SMTP delivery |
+| `.github/workflows/digest.yml` | Disabled-by-default scheduled email workflow |
 | `research/IDEA_TEMPLATE.md` | Template for a source-backed opportunity report |
 | `dist/` | Early browser prototype and starter content |
 | `PRODUCT.md` | Product intent and constraints |

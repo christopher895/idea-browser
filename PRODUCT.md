@@ -8,6 +8,8 @@ The user wants a free personal alternative to IdeaBrowser focused on useful idea
 Discover and evaluate businesses worth testing. Include software or AI businesses a solo builder could create, other businesses with strong demand evidence, and opportunities matched to the builder's skills and interests. The researched collection is the main product; the interface is secondary.
 ## Capabilities and Constraints
 Original idea content; no copied paid reports. Preserve sources, dates, counterevidence, and uncertainty. Separate demand evidence from founder fit. Browser-local bookmarks and notes exist in the prototype. No paid API dependency in the current implementation. An automated research and refresh pipeline is planned but not implemented.
+
+The user wants a web app they can browse and emails about new ideas. The app now has a digest preview and a sender workflow. Recipient, cadence, and sender setup remain open; delivery must remain disabled until configured and verified. Only explicitly reviewed, sourced reports qualify for email. No newly generated demand claims are implied by the digest.
 ## Evidence on Hand
 User supplied Sentrik concept and assistant assessment with sources. Other starter ideas are explicitly marked unvalidated hypotheses.
 ## Stack

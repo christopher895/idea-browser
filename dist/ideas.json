@@ -1,5 +1,4 @@
-// Generated from ideas.json by scripts/build-data.mjs.
-window.IDEAS = [
+[
   {
     "id": "sentrik",
     "name": "Sentrik",
@@ -293,4 +292,4 @@ window.IDEAS = [
     "evidence": "Concept brief",
     "status": "Unvalidated hypothesis"
   }
-];
+]
