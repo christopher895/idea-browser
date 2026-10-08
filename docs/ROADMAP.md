@@ -1,6 +1,6 @@
 # Research-first roadmap
 
-Status (2026-10-08): steps 1, 2, and 4 have a working first version; steps 3 and 5 are not started.
+Status (2026-10-08): steps 1, 2, and 4 have a working first version. Step 3 runs as a weekly research agent that opens a reviewable pull request; it has no source adapters or caching yet. Step 5 is not started.
 
 ## 1. Produce a small useful collection
 
