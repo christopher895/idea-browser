@@ -24,13 +24,13 @@ Keep evidence strength separate from founder fit. An AI score is not a probabili
 
 ## Current status
 
-This repository contains a static browsing app, a documented research method, and a personal email digest implementation. It does **not** yet include an automated demand-research engine or a continuously refreshed feed. Email delivery remains disabled until its sender, recipient, published app URL, and cadence are configured and tested.
+This repository contains a static browsing app, a documented research method, a structured evidence store, and a personal email digest. It does **not** include an automated demand-research engine or a continuously refreshed feed; reports are researched and reviewed by hand. Email delivery remains disabled until its sender, recipient, published app URL, and cadence are configured and tested.
 
-The prototype includes search, industry and business-model filters, full idea briefs, a saved shortlist, local notes, and JSON export. Its ten starter briefs are primarily unvalidated concepts. Sentrik includes competitor sources, which establish existing capabilities rather than demand for the proposed business.
+The app includes search; industry, business-model, evidence-level, and verdict filters; full reports with an evidence log, verdict, and next step; a saved shortlist; local notes; and JSON export and import. Researched reports carry an `evidenceLog` in which every entry has a source URL, source type, dates, the claim it supports, and its limitations. Remaining concept briefs are labeled as unvalidated hypotheses.
 
 The **Email digest** page previews qualifying reports. A GitHub Actions workflow can send fresh reviewed reports through authenticated SMTP. It uses a committed delivery ledger to avoid automatically resending already delivered or uncertain batches. See [email setup](docs/EMAIL_SETUP.md).
 
-Bookmarks and notes are stored in the browser on the current origin. They do not sync across devices. JSON export provides a backup; import is not implemented.
+Bookmarks and notes are stored in the browser on the current origin. They do not sync across devices. Export a JSON backup and import it on another browser; import merges the shortlist and appends differing notes rather than overwriting them.
 
 ## Run locally
 
@@ -42,13 +42,14 @@ python3 -m http.server 8000 --directory dist
 
 Open <http://localhost:8000>. The interface uses Google Fonts when available and falls back to local fonts.
 
-To edit the collection, update `dist/ideas.json`, then run `node scripts/build-data.mjs`. This generates `dist/data.js` for the browser. The email sender reads the same canonical JSON collection.
+To edit the collection, update `dist/ideas.json`, then run `node scripts/build-data.mjs`. This validates the collection and generates `dist/data.js` for the browser. The build fails if an evidence entry lacks a listed https source, a past `observedAt` date, a source type, or stated limitations; if a report claims a stronger evidence level than its log supports; or if a digest-ready report lacks a verdict, rationale, or next step. The email sender reads the same canonical JSON collection.
 
 Preview an email without sending and run delivery checks:
 
 ```sh
 python3 scripts/digest.py
 python3 -m unittest discover -s tests -v
+node --test tests/build-data.test.mjs
 ```
 
 Optional JavaScript syntax checks, with Node.js installed:
@@ -67,6 +68,7 @@ node --check dist/data.js
 | `docs/EMAIL_SETUP.md` | Sender setup, scheduling, and delivery recovery |
 | `scripts/digest.py` | Personal email preview, eligibility, reservation, and SMTP delivery |
 | `.github/workflows/digest.yml` | Disabled-by-default scheduled email workflow |
+| `.github/workflows/pages.yml` | Validates the collection and publishes `dist/` to GitHub Pages |
 | `research/IDEA_TEMPLATE.md` | Template for a source-backed opportunity report |
 | `dist/` | Early browser prototype and starter content |
 | `PRODUCT.md` | Product intent and constraints |

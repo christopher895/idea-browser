@@ -46,9 +46,11 @@ No paid email API is required by this code. Sender-provider limits and GitHub Ac
 
 ## Add reviewed ideas
 
-Edit `dist/ideas.json`, the canonical collection, and run `node scripts/build-data.mjs` to regenerate the browser data. A report must include source links, a review date (`reviewedAt`, ISO date), and explicit editorial approval (`digestReady: true`) to qualify. The sender skips future-dated or more than 30-day-old reviews and sends at most five ideas per run.
+Edit `dist/ideas.json`, the canonical collection, and run `node scripts/build-data.mjs` to regenerate the browser data. A report must include source links, an evidence log, a review date (`reviewedAt`, ISO date), and explicit editorial approval (`digestReady: true`) to qualify. The sender skips future-dated or more than 30-day-old reviews and sends at most five ideas per run.
 
-The existing Sentrik assessment is eligible as a reviewed brief. Its demand remains unvalidated and is described that way in the email. The other initial concepts are excluded until researched. Approval is not a claim of proven demand.
+The build (`node scripts/build-data.mjs`) also requires every digest-ready report to have an evidence log, a verdict with its rationale, and a next step. The email shows the verdict and uses the next step as the first test.
+
+As of 2026-10-08, Sentrik plus four researched reports (permit tracking, change orders, maintenance evidence, post-award grant reporting) are digest-ready. Reports with a Pass verdict stay in the browser but are not emailed. Approval is not a claim of proven demand.
 
 Adding a report does not automatically deploy the static app. Publish the matching collection before sending a digest linking to it.
 

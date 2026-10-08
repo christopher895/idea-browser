@@ -1,5 +1,7 @@
 # Research-first roadmap
 
+Status (2026-10-08): steps 1, 2, and 4 have a working first version; steps 3 and 5 are not started.
+
 ## 1. Produce a small useful collection
 
 - Research a mix of solo-buildable software/AI ideas, businesses with existing spending, and opportunities aligned with the builder's experience.

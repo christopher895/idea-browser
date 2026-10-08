@@ -32,6 +32,16 @@ class DigestTests(unittest.TestCase):
         self.assertIn('&lt;script&gt;', body)
         self.assertIn('Demand unvalidated', text)
         self.assertIn('https://example.org/#one', text)
+        self.assertIn('Verdict: Not yet assessed', text)
+
+    def test_email_prefers_verdict_and_next_step(self):
+        idea = self.idea(title='T', summary='S', evidence='Researched report', status='Untested', buyer='B',
+                         pilot=['Generic pilot'], risks=['R'], verdict='Interview', verdictRationale='Pain is repeated',
+                         nextStep='Call three contractors')
+        text, body = digest.render([idea], 'https://example.org')
+        self.assertIn('Verdict: Interview — Pain is repeated', text)
+        self.assertIn('First test: Call three contractors', text)
+        self.assertIn('Call three contractors', body)
 
 
 if __name__ == '__main__':

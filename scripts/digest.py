@@ -39,8 +39,10 @@ def render(ideas, site_url):
     sections = []
     for idea in ideas:
         link = f"{site_url.rstrip('/')}/#{idea['id']}"
+        verdict = f"{idea['verdict']} — {idea['verdictRationale']}" if idea.get('verdict') else 'Not yet assessed'
+        first_test = idea.get('nextStep') or idea['pilot'][0]
         text.extend([idea['title'], idea['summary'], f"Evidence: {idea['evidence']} — {idea['status']}",
-                     f"Buyer: {idea['buyer']}", f"First test: {idea['pilot'][0]}",
+                     f"Verdict: {verdict}", f"Buyer: {idea['buyer']}", f"First test: {first_test}",
                      f"Main risk: {idea['risks'][0]}", f'Read the report: {link}'])
         text.extend(f'{label}: {url}' for label, url in idea['sources'])
         text.append('')
@@ -48,7 +50,8 @@ def render(ideas, site_url):
         sources = ''.join(f'<li><a href="{e(url, quote=True)}">{e(label)}</a></li>' for label, url in idea['sources'])
         sections.append(f'<section style="border-top:1px solid #d9dcd1;padding:24px 0"><h2>{e(idea["title"])}</h2>'
                         f'<p>{e(idea["summary"])}</p><p><strong>Evidence:</strong> {e(idea["evidence"])} — {e(idea["status"])}</p>'
-                        f'<p><strong>Buyer:</strong> {e(idea["buyer"])}</p><p><strong>First test:</strong> {e(idea["pilot"][0])}</p>'
+                        f'<p><strong>Verdict:</strong> {e(verdict)}</p>'
+                        f'<p><strong>Buyer:</strong> {e(idea["buyer"])}</p><p><strong>First test:</strong> {e(first_test)}</p>'
                         f'<p><strong>Main risk:</strong> {e(idea["risks"][0])}</p>'
                         f'<p><a href="{e(link, quote=True)}">Read the full report</a></p><ul>{sources}</ul></section>')
     footer = 'You requested this personal digest. Pause it by setting DIGEST_ENABLED to false in your repository Actions variables.'
