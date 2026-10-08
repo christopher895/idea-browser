@@ -40,10 +40,10 @@ export function validate(ideas, today = new Date().toISOString().slice(0, 10)) {
       strongest = Math.max(strongest, LEVELS.indexOf(e.level));
     }
     if (LEVELS.indexOf(idea.level ?? 'concept') > strongest) fail(`level ${idea.level} exceeds its strongest evidence`);
-    if (idea.digestReady === true) {
-      if (!isDate(idea.reviewedAt) || idea.reviewedAt > today) fail('digestReady needs a past reviewedAt date');
-      if (!idea.sources?.length || !idea.evidenceLog?.length) fail('digestReady needs sources and an evidenceLog');
-      for (const key of ['verdict', 'verdictRationale', 'nextStep', 'sourceNote']) if (!text(idea[key])) fail(`digestReady needs ${key}`);
+    // A report with an evidence log is a researched report and must say what the evidence means.
+    if (idea.evidenceLog?.length) {
+      if (!isDate(idea.reviewedAt) || idea.reviewedAt > today) fail('researched report needs a past reviewedAt date');
+      for (const key of ['verdict', 'verdictRationale', 'nextStep', 'sourceNote']) if (!text(idea[key])) fail(`researched report needs ${key}`);
     }
   }
   return ideas;

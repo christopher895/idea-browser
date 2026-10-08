@@ -48,7 +48,6 @@ window.IDEAS = [
     ],
     "sourceNote": "These sources establish existing support and control capabilities. They do not establish Sentrik’s demand, recovery rate, or unit economics.",
     "reviewedAt": "2026-10-07",
-    "digestReady": true,
     "evidenceLog": [
       {
         "observation": "OBI markets staffed remote monitoring and teleoperation for robot fleets.",
@@ -287,8 +286,7 @@ window.IDEAS = [
         "https://permitplace.com/permit-expediter-cost-guide/"
       ]
     ],
-    "reviewedAt": "2026-10-08",
-    "digestReady": true
+    "reviewedAt": "2026-10-08"
   },
   {
     "id": "renewal-radar",
@@ -485,8 +483,7 @@ window.IDEAS = [
         "https://stitchflow.com/tools/renewal-tracker"
       ]
     ],
-    "reviewedAt": "2026-10-08",
-    "digestReady": false
+    "reviewedAt": "2026-10-08"
   },
   {
     "id": "change-order",
@@ -683,8 +680,7 @@ window.IDEAS = [
         "https://sourceforge.net/software/construction-change-order/for-startup/"
       ]
     ],
-    "reviewedAt": "2026-10-08",
-    "digestReady": true
+    "reviewedAt": "2026-10-08"
   },
   {
     "id": "clinic-waitlist",
@@ -880,8 +876,7 @@ window.IDEAS = [
         "https://alternativeto.net/software/patient-waitlist-management/about"
       ]
     ],
-    "reviewedAt": "2026-10-08",
-    "digestReady": false
+    "reviewedAt": "2026-10-08"
   },
   {
     "id": "field-proof",
@@ -1048,8 +1043,7 @@ window.IDEAS = [
         "https://companycam.com/pricing"
       ]
     ],
-    "reviewedAt": "2026-10-08",
-    "digestReady": true
+    "reviewedAt": "2026-10-08"
   },
   {
     "id": "returns-intake",
@@ -1273,8 +1267,7 @@ window.IDEAS = [
         "https://cep.org/blog/why-do-we-bother-the-tragedy-of-foundation-reporting-requirements/"
       ]
     ],
-    "reviewedAt": "2026-10-08",
-    "digestReady": true
+    "reviewedAt": "2026-10-08"
   },
   {
     "id": "lesson-loop",
