@@ -1,4 +1,4 @@
-# Fieldnotes — Evidence-backed business ideas
+# Startup Ideas — Evidence-backed business ideas
 A personal, subscription-free idea discovery project inspired by the useful part of IdeaBrowser: finding problems worth solving and understanding the demand behind them.
 The main product is a stream of useful, researched ideas. The website is a way to browse that research.
 ## Who it is for
