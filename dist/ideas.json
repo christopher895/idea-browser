@@ -1321,5 +1321,596 @@
     "timing": "Recruit around a clear coordination transition, such as a new caregiver joining the family routine.",
     "evidence": "Concept brief",
     "status": "Unvalidated hypothesis"
+  },
+  {
+    "id": "distributor-deduction-disputes",
+    "name": "Chargeback Check",
+    "title": "Distributor deduction reconciliation for emerging food brands",
+    "category": "Food and beverage",
+    "model": "B2B",
+    "type": "Workflow software",
+    "summary": "A tool that matches UNFI and KeHE deductions to orders and flags disputable ones before dispute windows close. The pain is real and costly for small natural food brands, but funded software and done-for-you recovery services already target it, and every source in this report was seen only as a search summary.",
+    "buyer": "Founders, operations leads or part-time bookkeepers at emerging natural and specialty food and beverage brands selling through UNFI and KeHE, roughly at the stage before they have a finance team. The founder usually approves spend; a bookkeeper or contractor does the work.",
+    "problem": "Distributors net deductions (chargebacks, promotional billbacks, spoilage, shortages, fees) against invoices, often leaving small brands paid far less than they invoiced. Founders and advisors describe (per search summaries, unverified) payouts of $21,000 on $32,000 invoiced and $13,345 on $68,267 invoiced, although much of those gaps were agreed fees or legitimate returns. One brand posted a part-time contract role to validate each charge against POs, invoices and EDI data because its deductions were unclear, unreconciled and sometimes overstated. Two suppliers have sued UNFI over deductions. Disputes need documentation and are time-limited, so unreviewed invalid deductions are lost.",
+    "solution": "If pursued at all: a low-cost, self-serve reconciliation tool for brands under roughly $1-2M in distributor sales. It would import distributor deduction exports and EDI/PO data, auto-match each deduction to an order and promotion, flag likely-invalid items such as duplicates and shortages, track dispute deadlines, and assemble the backup document packet. The brand files the dispute itself. No commission on recoveries.",
+    "revenue": "Hypothesis (unvalidated): $49-149 per month flat for brands too small to want a commission-based service. No price for comparable deduction software was verified. Glimpse charges a monthly fee plus an unpublished commission; Promomash and Vividly price by volume or quote. The True Sea Moss contract role (about 15-20 hours per week) suggests the manual alternative costs more than this band, but its pay was not seen.",
+    "gap": "Alternatives: done-for-you services and software (Glimpse, Promomash CPGenius Deductions, Margin Wizard, Floret, Vividly, SPS Commerce/SupplyPike revenue recovery, ValenceIntel), deductions consultants (one ex-UNFI founder runs Natural Food Ally), part-time contractors, spreadsheets, free guides from SPS/SupplyPike and Foodbevy, and accepting the losses. KeHE's reported small-supplier administrative allowance program may also bundle some launch fees. The only possible gap seen is the smallest brands, whose invalid-deduction dollars may be too small for commission-based services to pursue. That gap was not confirmed with customers, and Floret's free pilot and Glimpse's discounts suggest vendors already court small brands.",
+    "timing": "Mixed. Lawsuits against UNFI and a reported $10M round for Glimpse in 2025 (search summary, unverified) show the problem is getting attention. The same attention has drawn several funded entrants and an EDI incumbent, so the window for a new solo product looks to be closing rather than opening.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer. Natural-foods industry experience, access to brand founders, familiarity with KeHE Connect and UNFI supplier portals and EDI data, and capital are all unconfirmed. Whether distributor portals offer clean data exports is unverified, so the product may depend on manual uploads.",
+    "risks": [
+      "Crowded, funded competition: Glimpse ($10M Series A and 125+ brands claimed, per search summaries, unverified), Promomash, Vividly, Margin Wizard, Floret, and SPS Commerce/SupplyPike already address distributor deductions.",
+      "Buyers may prefer done-for-you recovery: a commission-only or low-fee service that files disputes for them beats a tool that still requires their time.",
+      "Recoverable value may be small: much of the reported payout gap is agreed fees, allowances, spoilage and retailer returns, not invalid deductions, so the dollars a tool could recover for a small brand may not justify a subscription.",
+      "Data access: deduction data lives in distributor portals with changing formats and unverified export options; integration upkeep could be heavy for one developer.",
+      "Evidence quality: every source in this report was seen only through search summaries because page fetching failed, so quotes and figures are unverified.",
+      "No independent customer complaints about existing deduction tools were found."
+    ],
+    "pilot": [
+      "Before building, verify the sources by reading the pages directly, then interview 6 founders or bookkeepers of brands with under $2M in UNFI/KeHE sales. Ask about the last payout they reconciled, hours spent, dollars disputed and recovered, and whether they have tried Glimpse, Floret or Promomash. Stop if 4 of 6 already use a service or report under $500 per month of invalid deductions.",
+      "If a segment survives, run a 4-week concierge test: reconcile 2-3 brands' last 90 days of deductions by hand from their exports and produce a dispute packet. Success means at least $1,000 in disputable deductions identified per brand and 2 brands agreeing in writing to pay at least $79 per month. Stop if fewer than 2 brands find disputable items worth more than the fee."
+    ],
+    "assumptions": [
+      "The $49-149 per month price is a hypothesis, not observed willingness to pay.",
+      "That the smallest brands are underserved by commission-based services is inferred, not confirmed.",
+      "The 2-3% (and 3% of turnover) invalid-deduction figures come from vendors and one employer and are unverified.",
+      "It is assumed brands can export deduction and order data in a usable form without portal scraping.",
+      "All quoted figures were seen in search summaries only and must be re-verified against the original pages."
+    ],
+    "level": "costly-workaround",
+    "verdict": "Pass",
+    "verdictRationale": "The problem is real and costly. A brand is paying for a part-time contractor to validate and dispute UNFI and KeHE deductions, founders describe large invoice-to-payout gaps, and two suppliers have sued UNFI. But the workflow is already the target of a venture-funded specialist (Glimpse), several trade-spend platforms (Promomash, Vividly, Margin Wizard, Floret) and an EDI incumbent (SPS Commerce/SupplyPike), several of which offer free pilots, discounts or commission pricing that suits small brands. A solo developer without industry access would be entering late with a self-serve tool that still asks founders for time, and no customer evidence showed that existing options fail. Confidence is limited because every source was seen only via search summaries. This would move to Watch or Interview with verified evidence that sub-$1M brands are turned away by or dissatisfied with current services, plus direct access to a founder community.",
+    "nextStep": "Shelve. If revisiting, first re-fetch the job post, both Grocery Dive articles and the Foodbevy podcast to verify the figures, then look for founder complaints about Glimpse or Promomash pricing or minimums in natural-foods founder communities.",
+    "evidence": "Researched report",
+    "status": "Costly pain confirmed by a job post and lawsuits; crowded with funded vendors; sources unverified",
+    "sourceNote": "Page fetching failed for every site during this run (DNS errors from the fetch tool and proxy refusals for direct requests), so all ten entries rely on search-result summaries and are labeled unverified. They show that distributor deductions cost small food brands real money and staff time, and that multiple funded vendors and services already sell reconciliation and recovery. No independent source showed unmet demand for a new self-serve tool.",
+    "reviewedAt": "2026-10-09",
+    "sources": [
+      [
+        "Djinni job post: Distributor Deductions and Chargeback Specialist (UNFI / KeHE)",
+        "https://djinni.co/jobs/831947-distributor-deductions-and-chargeback-special/"
+      ],
+      [
+        "Foodbevy Startup To Scale podcast, ep. 98: distributor deductions and chargebacks",
+        "https://podcast.foodbevy.com/1832151/episodes/12408975-98-breaking-down-distributor-deductions-and-chargebacks"
+      ],
+      [
+        "The Good Food CFO: KeHE Uncovered case study",
+        "https://thegoodfoodcfo.substack.com/p/kehe-uncovered-real-case-study-of-3a6"
+      ],
+      [
+        "Grocery Dive: class action over UNFI supplier deductions",
+        "https://www.grocerydive.com/news/unfi-class-action-lawsuit-payment-discounts-grocery-natural-foods/732132/"
+      ],
+      [
+        "Grocery Dive: Omaha Industries sues UNFI over chargebacks",
+        "https://www.grocerydive.com/news/omaha-sues-grocery-distributor-unfi-chargebacks-giant-food/705044/"
+      ],
+      [
+        "Food Industry Executive: Glimpse raises $10M for CPG deduction management",
+        "https://foodindustryexecutive.com/2025/04/glimpse-secures-10m-to-automate-deduction-management-for-cpg-brands/"
+      ],
+      [
+        "Foodbevy: Top 5 Deduction Management Platforms for CPG Brands",
+        "https://www.foodbevy.com/?p=38999"
+      ],
+      [
+        "Promomash: plans",
+        "https://www.promomash.com/plans"
+      ],
+      [
+        "G2: Vividly product page",
+        "https://www.g2.com/products/vividly"
+      ],
+      [
+        "SPS Commerce: Revenue Recovery for KeHE",
+        "https://www.spscommerce.com/?p=779142"
+      ]
+    ],
+    "evidenceLog": [
+      {
+        "observation": "A contract job post for a 'Distributor Deductions and Chargeback Specialist (UNFI / KeHE)' at True Sea Moss offers a part-time (about 15-20 hours per week), remote 1099 role. It says the brand's distributor deductions are frequently unclear, unreconciled to actual orders, and sometimes overstated. Duties include monitoring distributor portals, validating each charge against purchase orders, invoices and EDI/SPS Commerce data, filing disputes, and giving Finance a reconciled weekly picture. The search summary also said the post estimates uncontested UNFI and KeHE deductions at about 3% of turnover.",
+        "label": "Djinni job post: Distributor Deductions and Chargeback Specialist (UNFI / KeHE)",
+        "url": "https://djinni.co/jobs/831947-distributor-deductions-and-chargeback-special/",
+        "sourceType": "job",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "A small food/beverage brand is willing to pay for recurring manual deduction reconciliation and dispute work.",
+        "level": "costly-workaround",
+        "limitations": "WebFetch failed (DNS lookup error) and direct HTTPS was refused by the egress proxy, so the page itself was not read. Based only on the search-result summary seen on 2026-10-09; details unverified. One employer; the 3% figure is the employer's estimate. A job post shows intent to spend, not a hire. Posting date unknown."
+      },
+      {
+        "observation": "Foodbevy's Startup To Scale episode 98 tells the story of TeaSquares, which invoiced KeHE about $32,000 at wholesale and was paid roughly $21,000 after chargebacks, fees and returned product, after a Jewel-Osco launch lost its buyer contact. The episode says distributor chargebacks cost brands millions of dollars a year and that many are charged in error, leaving brands to contest them.",
+        "label": "Foodbevy Startup To Scale podcast, ep. 98: distributor deductions and chargebacks",
+        "url": "https://podcast.foodbevy.com/1832151/episodes/12408975-98-breaking-down-distributor-deductions-and-chargebacks",
+        "sourceType": "customer",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "A founder reports a large share of distributor revenue lost to deductions.",
+        "level": "costly-workaround",
+        "limitations": "WebFetch failed (DNS lookup error) and direct HTTPS was refused by the egress proxy, so the page itself was not read. Based only on the search-result summary seen on 2026-10-09; details unverified. Much of this loss came from legitimate retailer returns of unsold product, which software would not recover. The search summaries gave slightly different accounts of the year and breakdown. Single brand."
+      },
+      {
+        "observation": "The Good Food CFO episode 'KeHE Uncovered: Real Case Study of a Food Brand's First Payout' describes a brand that invoiced KeHE $68,267 and received $13,345 on its first payout.",
+        "label": "The Good Food CFO: KeHE Uncovered case study",
+        "url": "https://thegoodfoodcfo.substack.com/p/kehe-uncovered-real-case-study-of-3a6",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Emerging brands face large, confusing gaps between invoiced and paid amounts at distributors.",
+        "level": "repeated-pain",
+        "limitations": "WebFetch failed (DNS lookup error) and direct HTTPS was refused by the egress proxy, so the page itself was not read. Based only on the search-result summary seen on 2026-10-09; details unverified. Another search summary attributed the gap partly to intro allowances, free fills, spoilage allowances, promotional fees and an initial-PO payment hold, most of which are agreed terms rather than invalid deductions. The breakdown was not visible. Written by a finance advisor to food brands, who may sell related services."
+      },
+      {
+        "observation": "Grocery Dive reported a proposed class action filed in Rhode Island state court by NYSM Organics, a small chocolate and plant-based cheese maker, alleging UNFI squeezes suppliers with 'opaque and constant deductions' that can leave suppliers owing UNFI money and that are 'often crippling for new and smaller natural food brands'. UNFI said it values supplier relationships and was reviewing the complaint.",
+        "label": "Grocery Dive: class action over UNFI supplier deductions",
+        "url": "https://www.grocerydive.com/news/unfi-class-action-lawsuit-payment-discounts-grocery-natural-foods/732132/",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Small natural-food suppliers see distributor deductions as opaque and financially serious enough to litigate.",
+        "level": "repeated-pain",
+        "limitations": "WebFetch failed (DNS lookup error) and direct HTTPS was refused by the egress proxy, so the page itself was not read. Based only on the search-result summary seen on 2026-10-09; details unverified. The quoted phrases come from the search summary of the article, not a page read directly. Allegations only; case status not checked. Publication year not visible in the snippet."
+      },
+      {
+        "observation": "Grocery Dive reported that pet food supplier Omaha Industries sued UNFI over chargebacks that began in October 2022 and reached $268,816.94 on more than $326,780 of product sold to UNFI. The contract allowed deductions for product deemed unacceptable, so the dispute is over their validity.",
+        "label": "Grocery Dive: Omaha Industries sues UNFI over chargebacks",
+        "url": "https://www.grocerydive.com/news/omaha-sues-grocery-distributor-unfi-chargebacks-giant-food/705044/",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "A second, independent supplier reports chargebacks large enough to dispute in court.",
+        "level": "repeated-pain",
+        "limitations": "WebFetch failed (DNS lookup error) and direct HTTPS was refused by the egress proxy, so the page itself was not read. Based only on the search-result summary seen on 2026-10-09; details unverified. Pet food, not human food. Allegations only. The dispute turns on contract terms and product quality, which a tracking tool would not settle."
+      },
+      {
+        "observation": "Food Industry Executive reported that Glimpse raised $10M to automate deduction management for CPG brands. Search summaries say Glimpse imports, categorizes and disputes deductions, especially from KeHE and UNFI, charges a low monthly fee plus a commission on recovered funds, claims a 4-5x average ROI, and reported more than 125 brands in April 2025.",
+        "label": "Food Industry Executive: Glimpse raises $10M for CPG deduction management",
+        "url": "https://foodindustryexecutive.com/2025/04/glimpse-secures-10m-to-automate-deduction-management-for-cpg-brands/",
+        "sourceType": "news",
+        "publishedAt": "2025-04",
+        "observedAt": "2026-10-09",
+        "supports": "A venture-funded competitor already targets exactly this workflow for small natural brands (counterevidence).",
+        "level": "context",
+        "limitations": "WebFetch failed (DNS lookup error) and direct HTTPS was refused by the egress proxy, so the page itself was not read. Based only on the search-result summary seen on 2026-10-09; details unverified. ROI and brand counts are company claims. Commission rate is unpublished."
+      },
+      {
+        "observation": "Foodbevy's roundup of deduction management platforms for CPG brands lists Glimpse, Promomash, Margin Wizard, Floret and Vividly. It says Floret offers a free pilot and Glimpse offers Foodbevy readers 25% off the first year.",
+        "label": "Foodbevy: Top 5 Deduction Management Platforms for CPG Brands",
+        "url": "https://www.foodbevy.com/?p=38999",
+        "sourceType": "review",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "At least five products compete for emerging food brands' deduction work, with free pilots and discounts (counterevidence).",
+        "level": "context",
+        "limitations": "WebFetch failed (DNS lookup error) and direct HTTPS was refused by the egress proxy, so the page itself was not read. Based only on the search-result summary seen on 2026-10-09; details unverified. Foodbevy has affiliate or partner discounts with listed vendors, so it is not neutral. Descriptions are partial."
+      },
+      {
+        "observation": "Promomash's plans page says deduction pricing is based on monthly deduction invoice volume, and its CPGenius Deductions service covers capture, AI-assisted coding, validation, dispute and recovery with human-in-the-loop work. No dollar figures for deductions were visible in the summary.",
+        "label": "Promomash: plans",
+        "url": "https://www.promomash.com/plans",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "An emerging-brand trade-spend vendor already sells managed deduction recovery (counterevidence).",
+        "level": "context",
+        "limitations": "WebFetch failed (DNS lookup error) and direct HTTPS was refused by the egress proxy, so the page itself was not read. Based only on the search-result summary seen on 2026-10-09; details unverified. Vendor page; price not published. A third-party listing showing $349-$1,250 per month appears to refer to Promomash's demo/event product, not deductions."
+      },
+      {
+        "observation": "G2's listing describes Vividly (formerly Cresicor) as a trade promotion and deduction management platform for CPG and states its automated deduction management cuts deduction labor by up to 90%. Separate search summaries said Vividly has no published price and tiers pricing by functionality and integrations.",
+        "label": "G2: Vividly product page",
+        "url": "https://www.g2.com/products/vividly",
+        "sourceType": "review",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Established software already covers deduction validation and dispute for small and mid CPG brands (counterevidence).",
+        "level": "context",
+        "limitations": "WebFetch failed (DNS lookup error) and direct HTTPS was refused by the egress proxy, so the page itself was not read. Based only on the search-result summary seen on 2026-10-09; details unverified. The 90% figure is a vendor claim repeated on G2. Individual reviews were not read."
+      },
+      {
+        "observation": "SPS Commerce (which owns SupplyPike) publishes a page titled 'Revenue Recovery for KeHE' and community articles on KeHE deduction types and disputing distributor deductions. Search summaries said KeHE disputes can be filed through K-Solve in KeHE Connect up to 180 days after a deduction is taken.",
+        "label": "SPS Commerce: Revenue Recovery for KeHE",
+        "url": "https://www.spscommerce.com/?p=779142",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "A large EDI vendor that many small brands already pay for markets deduction recovery for KeHE (counterevidence), and free dispute guidance is widely available.",
+        "level": "context",
+        "limitations": "WebFetch failed (DNS lookup error) and direct HTTPS was refused by the egress proxy, so the page itself was not read. Based only on the search-result summary seen on 2026-10-09; details unverified. Only the page title was seen for this URL; the 180-day window came from a summary across several KeHE-related results and was not tied to this page."
+      }
+    ]
+  },
+  {
+    "id": "agency-coi-desk",
+    "name": "Cert Desk",
+    "title": "Certificate-of-insurance issuance for small insurance agencies",
+    "category": "Insurance",
+    "model": "B2B",
+    "type": "Workflow software",
+    "summary": "A tool to cut the unpaid, error-prone work of issuing certificates of insurance (COIs) at small independent P&C agencies. The pain and staff spend are real, but self-service certificates are already built into the main agency management systems, and specialist vendors cover contract review.",
+    "buyer": "Owners or operations managers at small independent property-and-casualty agencies (roughly 3-25 staff) with commercial or contractor-heavy books. The owner approves spend; commercial-lines CSRs or certificate processors do the work.",
+    "problem": "Commercial clients, especially contractors, need certificates for every job, lender, and vendor, often with additional insured, waiver of subrogation, or primary and non-contributory wording that must match endorsements on the policy. Practitioners and the IIABA describe this as a high-volume, mostly uncompensated task that carries E&O risk, and agents on a forum report heavy-certificate accounts costing more than their commission, some requests taking up to an hour, and accounts dropped because of it. Agencies hire dedicated certificate processors or CSRs whose job centers on issuing COIs. All of these sources were seen only as search-result summaries.",
+    "solution": "If pursued at all: a narrow assistant that reads a holder's contract insurance requirements, checks them against the policy and endorsements on file, flags mismatches before a certificate is issued, and drafts the certificate in the agency's existing AMS. Plain certificate generation and self-service portals should not be built, because HawkSoft, EZLynx, Applied CSR24 and Vertafore already offer them.",
+    "revenue": "Hypothesis (unvalidated): $49-199 per agency per month for a contract-requirement checker. The only visible anchor is HawkSoft's self-service certificate add-on, reported in a search snippet (unverified) at a flat $49 per agency per month. Certificate Hero and Vertafore do not publish prices. Per-certificate cost claims ($7-18 from a consultant, >$20 from Certificate Hero) are unverified and partly vendor marketing.",
+    "gap": "Alternatives: native self-service certificates in agency management systems (HawkSoft add-on, EZLynx Client Center, Applied CSR24 with Epic, Vertafore AgencyOne certificates launched April 2026), standalone COI vendors (Certificate Hero with AI contract parsing and AMS connectivity, Certificial), in-house CSRs and certificate processors, offshore and Upwork virtual assistants, templates/masters, and dropping certificate-heavy accounts. The only plausible gap is contract-requirement checking for small agencies whose AMS lacks it, and Certificate Hero already markets that. No source showed small agencies asking for a new tool or complaining that their AMS certificate features fail.",
+    "timing": "Timing is unfavorable for a new entrant. Vertafore shipped integrated self-service certificates in April 2026, and AI contract parsing is already sold by specialists. Incumbents are closing the gap, not opening one.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed insurance-agency domain knowledge, licensing, or access to agency owners, and limited capital. Reliable work requires read (ideally write) integration with closed agency management systems (Applied, Vertafore, HawkSoft, EZLynx), partner-program access, and comfort with E&O liability for wording errors, none of which is confirmed.",
+    "risks": [
+      "Incumbent coverage: every major small-agency AMS already offers or sells self-service certificates, some for about $49/month (unverified).",
+      "Integration lock-in: certificate data lives in closed AMS platforms; without partner APIs the product becomes copy-paste re-entry.",
+      "E&O liability: a wrong additional insured or waiver statement is a known source of agency E&O claims, and a tool that suggests wording shares that risk.",
+      "Specialist competition: Certificate Hero and Certificial already target contract parsing and holder-side tracking.",
+      "Low-cost labor alternative: offshore VAs and Upwork freelancers already handle COI work in the same AMS tools.",
+      "Evidence quality: every source was seen only as a search summary because page fetching was blocked; customer voices are old forum posts."
+    ],
+    "pilot": [
+      "Before any build, interview 6 small commercial-lines agency owners or CSRs. Ask about last week's certificate volume, the last certificate that needed an endorsement check, time spent, and whether they use their AMS self-service feature. Stop if 4 of 6 say their AMS feature or current staff handle it adequately, or if fewer than 3 report at least 10 endorsement-dependent certificates per week.",
+      "If a segment emerges, run a 2-week concierge test with 2 agencies: they send contract insurance clauses and the builder returns a requirement-versus-policy checklist within 4 business hours. Success: at least 15 checklists used and a written commitment to pay at least $99/month. Stop if fewer than 5 are used or no agency will pay."
+    ],
+    "assumptions": [
+      "The $49-199/month price band is a hypothesis, not observed willingness to pay.",
+      "That some small agencies lack adequate certificate tooling in their AMS is inferred, not confirmed with customers.",
+      "Forum anecdotes about cost and dropped accounts generalize to current small agencies; they are several years old.",
+      "Per-certificate cost estimates ($7-18, >$20) are unverified and partly vendor marketing.",
+      "Job posts reflect agency spend on certificate labor, but agency size and pay were not visible."
+    ],
+    "level": "existing-spend",
+    "verdict": "Pass",
+    "verdictRationale": "The problem is well documented: certificate work is high-volume, mostly unpaid, E&O-exposed, and agencies pay staff or freelancers to do it. But the obvious software answer is already sold inside the systems agencies run on (HawkSoft, EZLynx, Applied CSR24, and Vertafore's 2026 launch), and the harder contract-checking niche already has a specialist (Certificate Hero). A solo developer without AMS integrations or agency access would be entering a maturing feature category with real liability. Confidence is limited because every source was seen only through search summaries. This would move to Interview if recent independent agency voices said their AMS certificate features do not handle endorsement-dependent requests and they would pay a separate vendor, and if a partner API path to at least one small-agency AMS were confirmed.",
+    "nextStep": "Shelve the idea. If revisiting, re-fetch the cited pages when page access works and spend one hour searching HawkSoft and EZLynx user communities for complaints about certificate features; drop it if none appear.",
+    "evidence": "Researched report",
+    "status": "Real, staffed pain; solved inside incumbent agency systems",
+    "sourceNote": "All ten sources were seen only through web-search result summaries because page fetching and direct HTTPS were blocked during this run. They establish that COI issuance is a costly, mostly unpaid agency task with paid labor behind it, and that self-service certificates and contract parsing are already offered by incumbents. No source showed unmet demand for a new standalone tool.",
+    "reviewedAt": "2026-10-09",
+    "sources": [
+      [
+        "Insurance-Forums: Do You Charge for COI's? thread",
+        "https://www.insurance-forums.com/community/threads/do-you-charge-for-cois.87585/"
+      ],
+      [
+        "IIABA Virtual University: Certificates of insurance resources",
+        "https://independentagent.com/vu/Pages/featured-resources/certificates-public/certificates-insurance.aspx"
+      ],
+      [
+        "HireHive job: P&C insurance Certificate Processor (Glendora, CA)",
+        "https://the-misch-group0.hirehive.com/pc-insurance-certificate-processor-glendora-54QnsO"
+      ],
+      [
+        "Greenhouse job: Archer Risk Services commercial lines CSR",
+        "https://job-boards.greenhouse.io/archerriskservices/jobs/5022063007"
+      ],
+      [
+        "Upwork service: part-time insurance virtual assistant",
+        "https://www.upwork.com/services/product/admin-customer-support-a-part-time-insurance-virtual-assistant-personal-commercial-line-2013924390407398950"
+      ],
+      [
+        "HawkSoft: Self-Service Certificates",
+        "https://www.hawksoft.com/self-service-certificates/"
+      ],
+      [
+        "Vertafore press release: integrated certificates solution (2026)",
+        "https://www.vertafore.com/resources/press-releases/vertafore-unveils-integrated-certificates-solution-remove-service"
+      ],
+      [
+        "Applied Systems: Applied CSR24 certificates of insurance demo",
+        "https://prod.appliedsystems.com/en-us/resources/demos/applied-csr24-certificates-of-insurance/"
+      ],
+      [
+        "EZLynx: Client Center self-service portal",
+        "https://www.ezlynx.com/client-center.html"
+      ],
+      [
+        "Certificate Hero: The true cost of issuing certificates of insurance",
+        "https://info.certificatehero.com/true-cost-coi"
+      ]
+    ],
+    "evidenceLog": [
+      {
+        "observation": "A small-agency forum thread titled \"Do You Charge for COI's?\" (roughly 2016-2017 by the search tool's age estimate) includes agents describing certificate requests that can take up to an hour when endorsements and wording are involved, an agency that charged $25 for a basic certificate and $100 for ones that took reps hours, agents letting good-sized accounts go because of certificate-management expense, and one contractor account whose certificate cost was said to be triple its commission. Others warned that per-certificate fees can draw state insurance department scrutiny.",
+        "label": "Insurance-Forums: Do You Charge for COI's? thread",
+        "url": "https://www.insurance-forums.com/community/threads/do-you-charge-for-cois.87585/",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Practitioners repeatedly describe certificate work as a costly, mostly uncompensated burden that can make accounts unprofitable.",
+        "level": "costly-workaround",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. The search summary combined snippets from this thread's pages and a related \"Charging for Cert's\" thread, so which post made each claim is unverified. The thread is several years old and anecdotal."
+      },
+      {
+        "observation": "An Independent Insurance Agents & Brokers of America (IIABA) Virtual University resource on certificates of insurance, as summarized in search results, calls COI processing arguably the most troublesome task performed by insurance agencies and says most agencies, even those issuing thousands of certificates a year, do it without additional compensation. The same IIABA material says CSRs are most often responsible for certificate-related E&O claims and cites a $180,000 settlement after an agent failed to request a contractually required additional-insured endorsement.",
+        "label": "IIABA Virtual University: Certificates of insurance resources",
+        "url": "https://independentagent.com/vu/Pages/featured-resources/certificates-public/certificates-insurance.aspx",
+        "sourceType": "research",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "The national independent-agent trade body treats certificates as a widespread, unpaid, E&O-exposed workload.",
+        "level": "repeated-pain",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. The search summary may have drawn some of these points from a linked 2009 CPCU eJournal PDF on na.iiaba.net rather than this page. Trade commentary, not a measured survey."
+      },
+      {
+        "observation": "A job listing on HireHive says a thriving insurance agency in Glendora, CA is seeking a Certificate Processor whose main duty is issuing certificates of insurance, mainly for general business and construction/contractor clients, and which requires contract review and interpreting policy language.",
+        "label": "HireHive job: P&C insurance Certificate Processor (Glendora, CA)",
+        "url": "https://the-misch-group0.hirehive.com/pc-insurance-certificate-processor-glendora-54QnsO",
+        "sourceType": "job",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Agencies with contractor-heavy books budget a dedicated paid role for certificate issuance.",
+        "level": "existing-spend",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Agency size, salary and posting date are unknown. A posting shows intent to hire, not a hire."
+      },
+      {
+        "observation": "A commercial lines CSR posting on Greenhouse (Archer Risk Services) centers on processing and issuing a high volume of certificates of insurance, including lender, vendor and contractual requests, and checking additional insured, waiver of subrogation and primary and non-contributory wording against the policy.",
+        "label": "Greenhouse job: Archer Risk Services commercial lines CSR",
+        "url": "https://job-boards.greenhouse.io/archerriskservices/jobs/5022063007",
+        "sourceType": "job",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Certificate volume and endorsement checking are significant enough to define a service role.",
+        "level": "existing-spend",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Firm size is unknown and may be larger than the small-agency target. Posting date unknown."
+      },
+      {
+        "observation": "An Upwork service listing offers a part-time insurance virtual assistant for personal and commercial lines whose services include certificates of insurance, renewals, endorsements and ACORD form preparation in Applied Epic, AMS360 and EZLynx.",
+        "label": "Upwork service: part-time insurance virtual assistant",
+        "url": "https://www.upwork.com/services/product/admin-customer-support-a-part-time-insurance-virtual-assistant-personal-commercial-line-2013924390407398950",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "A freelance supply market exists for outsourced COI work, which is an existing low-cost alternative to software.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. This is a seller's offer, not a buyer's job post; price and number of buyers were not visible."
+      },
+      {
+        "observation": "HawkSoft sells Self-Service Certificates as an add-on bought through its Marketplace, letting insureds sign in with email and a verification code to generate their own certificates, with agent notification and revocation. Search results report a flat $49 monthly fee per agency with no per-certificate fees.",
+        "label": "HawkSoft: Self-Service Certificates",
+        "url": "https://www.hawksoft.com/self-service-certificates/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "A small-agency management system already sells the obvious solution cheaply (counterevidence and price anchor).",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. The $49/month figure is from the search summary and unverified. A list price is an offer, not proof of adoption."
+      },
+      {
+        "observation": "Vertafore's press release (dated April 16, 2026 per search results) announces an integrated certificates of insurance tool in AgencyOne that turns certificate requests into a real-time, self-service experience for clients, pulls live data from the agency management system, and lets agencies distribute hundreds of certificates in seconds.",
+        "label": "Vertafore press release: integrated certificates solution (2026)",
+        "url": "https://www.vertafore.com/resources/press-releases/vertafore-unveils-integrated-certificates-solution-remove-service",
+        "sourceType": "vendor",
+        "publishedAt": "2026-04-16",
+        "observedAt": "2026-10-09",
+        "supports": "A dominant AMS vendor shipped native self-service certificates in 2026, closing much of the gap for its users.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Availability by product (AMS360, Sagitta) came from a third-party aggregator and is unverified. Vendor marketing."
+      },
+      {
+        "observation": "Applied Systems markets certificates of insurance as a core self-service feature of Applied CSR24, which connects to Applied Epic and lets clients access and manage their certificates. Search summaries of reviews were mixed, with one reviewer saying certificates are easier than in Epic and another calling setup too many steps.",
+        "label": "Applied Systems: Applied CSR24 certificates of insurance demo",
+        "url": "https://prod.appliedsystems.com/en-us/resources/demos/applied-csr24-certificates-of-insurance/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "The other major AMS vendor already offers client self-service certificates.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Review comments came from Capterra/GetApp listings seen only in the same search summary and are not individually cited. Price not published."
+      },
+      {
+        "observation": "EZLynx Client Center, a portal used by many small personal-lines agencies, lets clients request new certificates that immediately create a task in EZLynx, and lets advanced clients add holders to a shared certificate master themselves.",
+        "label": "EZLynx: Client Center self-service portal",
+        "url": "https://www.ezlynx.com/client-center.html",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Small-agency AMS vendors already cover request intake and self-service holder management.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Pricing is not public. Vendor marketing."
+      },
+      {
+        "observation": "Certificate Hero, a standalone COI vendor, publishes a page arguing agents underestimate the cost of issuing certificates and that it exceeds $20 per transaction. A company directory describes its services as automated certificate issuance, AI-driven contract parsing for compliance, and real-time AMS connectivity.",
+        "label": "Certificate Hero: The true cost of issuing certificates of insurance",
+        "url": "https://info.certificatehero.com/true-cost-coi",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "A funded specialist already targets the harder contract-review part of the workflow, the most plausible niche left for a new entrant.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. The >$20 cost figure is vendor marketing and unverified. Certificate Hero pricing was not found. The contract-parsing description came from a third-party directory (bitscale.ai) with placeholder metrics."
+      }
+    ]
+  },
+  {
+    "id": "subsidy-reconcile",
+    "name": "Voucher Ledger",
+    "title": "Subsidy payment reconciliation for small child care providers",
+    "category": "Childcare",
+    "model": "B2B",
+    "type": "Workflow software",
+    "summary": "A per-child ledger that matches state subsidy authorizations, attendance, agency payments and family co-pays for home daycares and small centers. The reconciliation pain is real and paid for, but established child care platforms already sell this workflow and states give providers free attendance systems.",
+    "buyer": "Owners of licensed family child care homes and small independent centers that accept state child care subsidy (CCDF-funded vouchers). In a home daycare the owner does the work and approves payment. In multi-site operators a billing specialist does the work and a director or finance lead approves.",
+    "problem": "Providers that accept subsidy are paid by a state agency on rules tied to authorizations and, in many states, attendance, while families pay a separate co-pay. Records end up spread across sign-in sheets, state attendance portals, billing tools and spreadsheets. Missing or late attendance records delay payment, and state system changes have produced payment backlogs (Missouri 2024-2025, per news coverage seen in search results). Larger operators hire billing specialists to submit attendance to agencies, track authorizations and reconcile agency payments, which shows the work is costly when done by hand.",
+    "solution": "If pursued at all: a lightweight, state-specific ledger for home providers who do not want a full child care management platform. It would import or record authorizations (hours, rate, dates), pull attendance from the state portal export or a sign-in log, compute expected subsidy and co-pay per child, match agency remittances, and flag short-pays and expiring authorizations. Evidence suggests this would duplicate features in Procare, Playground, Brightwheel and MyKidReports.",
+    "revenue": "Hypothesis (unvalidated): $15-40 per month per home provider, or $50-150 per month per small center. No direct price anchor was verified: Brightwheel, Playground and Procare published no prices in the results seen. A billing specialist job at a franchise chain lists $60,000-65,000 a year (search snippet only, unverified), which shows what large operators spend on this labor, not what a home provider would pay.",
+    "gap": "Alternatives: free state attendance systems (KinderConnect, KinderSign and similar, with free tablets in Texas and Virginia for some providers), full child care platforms with subsidy modules (Procare Subsidy Accounting, Playground subsidy matching, Brightwheel billing reports, MyKidReports multi-agency billing), spreadsheets, and paper. The only possible gap seen is home providers who use the free state portal for attendance and nothing for reconciliation, and who find a full platform too heavy or expensive. No customer source was found that confirms such providers want or would pay for a separate reconciliation tool.",
+    "timing": "Mixed. Federal policy is shifting: a 2024 federal rule required enrollment-based, prospective payment, but a January 2026 proposed rule would rescind that requirement and let states choose again. States changing payment methods and attendance systems (Missouri, Virginia's Child Care PASS launch in December 2025) create short-term confusion for providers. The same churn makes state-specific software expensive to keep current, and incumbents are already marketing subsidy features to in-home providers.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed access to child care providers, no confirmed knowledge of any state's subsidy rules, and limited capital. Each state runs its own subsidy program, attendance system and payment rules, so support would likely be state by state.",
+    "risks": [
+      "Incumbent coverage: Procare, Playground, Brightwheel and MyKidReports already market subsidy invoicing, per-child ledgers and payment matching, and Brightwheel publishes content aimed specifically at in-home providers with this problem.",
+      "Free state tools: several states give subsidy providers free attendance software and tablets, which reduces the perceived need for paid tools at the attendance step.",
+      "State fragmentation: authorization formats, billing rules, payment files and portals differ by state and change often (attendance vs enrollment payment), raising build and support costs.",
+      "Root cause is upstream: much of the pain in news coverage is state payment backlogs and system failures, which provider-side software cannot fix.",
+      "Low willingness to pay: home providers run on thin margins and many already use free tiers or paper; no evidence was found that they pay for standalone reconciliation.",
+      "Weak direct customer voice: all evidence came from search snippets because page fetches failed in this run, and no provider forum threads were found."
+    ],
+    "pilot": [
+      "Before any build, pick one state and interview 6 family child care providers who accept subsidy and use only the state portal plus paper or spreadsheets. Ask about the last short-paid or late subsidy payment, how they found it, how long it took to resolve, and what they pay for software today. Stop if fewer than 3 of 6 report a reconciliation problem in the last 3 months or if 4 or more already use a platform with subsidy billing.",
+      "If interviews pass, run a 4-week concierge test: reconcile one month of authorizations, attendance and remittances for 3 providers using a spreadsheet you maintain. Success means at least 2 providers find a discrepancy worth more than $100 or say it saved them 2+ hours, and at least 2 agree in writing to pay $20 or more per month. Stop if no provider commits to pay."
+    ],
+    "assumptions": [
+      "That a meaningful number of subsidy-accepting home providers use no billing platform is assumed, not observed.",
+      "The $15-40 per month price band is a hypothesis, not observed willingness to pay.",
+      "That reconciliation errors (short-pays, expired authorizations) cost providers material money is inferred from job duties and vendor content, not measured.",
+      "That attendance exports from state portals are accessible enough to automate is unverified and likely varies by state.",
+      "Vendor claims about time saved by subsidy modules are unverified marketing."
+    ],
+    "level": "costly-workaround",
+    "verdict": "Pass",
+    "verdictRationale": "The problem is real: subsidy billing involves authorizations, attendance rules, split payers and slow agencies, and multi-site operators pay staff to reconcile it. But the workflow is already a standard module in established child care platforms that explicitly target small and in-home providers, and several states give providers free attendance systems. Much of the visible pain comes from state payment backlogs that software cannot fix, and each state's rules would have to be supported separately. Confidence is limited: every source in this run was seen only as a search snippet because page fetches failed, and no first-hand provider forum posts were found. This would move to Interview if direct provider conversations or forum threads in one state showed home providers who use the free state portal, have recurring short-pays they cannot trace, and say they would pay for a light tool rather than a full platform.",
+    "nextStep": "Shelve the idea. If revisiting, re-fetch the cited pages to confirm the snippet content, then spend two hours looking for family child care provider groups in one large subsidy state (for example Texas or Virginia) discussing reconciliation, and drop the idea if no unprompted complaints appear.",
+    "evidence": "Researched report",
+    "status": "Real pain; served by incumbents and free state tools",
+    "evidenceLog": [
+      {
+        "observation": "KCUR coverage of Missouri's child care subsidy payment backlog (January 2025), as summarized in search results: providers reported missed subsidy payments that forced some centers to close and others to turn families away, part of the backlog reached back about a year, and state officials said paying on attendance was not working.",
+        "label": "KCUR: Missouri child care subsidy payment backlog",
+        "url": "https://www.kcur.org/education/2025-01-30/missouri-child-care-subsidy-payment-backlog-cleared",
+        "sourceType": "news",
+        "publishedAt": "2025-01-30",
+        "observedAt": "2026-10-09",
+        "supports": "Subsidy payment problems cause real financial harm to providers.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS/proxy error), so figures and wording are unverified. The cause was a state system and budget problem, which provider-side software cannot fix. Duplicate coverage by Missouri Independent, St. Louis Public Radio and News Tribune is counted as one signal."
+      },
+      {
+        "observation": "Fox29 report on Philadelphia daycare providers in a financial bind from a backup in monthly state subsidy payments. The search summary says one provider used a submission confirmation to dispute a claim that her invoices arrived late.",
+        "label": "Fox29: Philly daycare providers and subsidy backup",
+        "url": "https://fox29.com/news/philly-daycare-providers-financial-bind-due-backup-monthly-state-subsidies",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Providers in a second state report subsidy payment delays and need records to dispute them.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch failed. Publication date unknown and may be several years old. Provider details are unverified."
+      },
+      {
+        "observation": "The Learning Experience posted a full-time onsite Billing Specialist role in Deerfield Beach, FL at $60,000-65,000 a year covering private pay and subsidy billing for corporate childcare centers, including reviewing attendance records, sending attendance reports and invoices to agencies, and handling subsidy authorizations. One version seeks medical billing or insurance claims experience.",
+        "label": "CareerPlug job: The Learning Experience Billing Specialist",
+        "url": "https://the-learning-experience-hq-1.careerplug.com/jobs/3348872",
+        "sourceType": "job",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Operators pay salaried staff to do subsidy billing and authorization tracking by hand.",
+        "level": "existing-spend",
+        "limitations": "Seen only in a search-result summary; the page fetch failed, so pay, date and duties are unverified. A job post shows intent to spend, not a hire. The employer is a large franchise chain, not a small operator."
+      },
+      {
+        "observation": "Child Development Schools (Columbus, GA) posted a Billing Support Coordinator role to audit and reconcile private payments and state subsidy programs, requiring knowledge of subsidy regulations and advanced Excel skills.",
+        "label": "iCIMS job: Child Development Schools Billing Support Coordinator",
+        "url": "https://careers-childcarenetwork.icims.com/jobs/38678/billing-support-coordinator/job",
+        "sourceType": "job",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Subsidy reconciliation is spreadsheet-heavy work assigned to dedicated staff.",
+        "level": "costly-workaround",
+        "limitations": "Seen only in a search-result summary; the page fetch failed. Pay and date unknown. Multi-site operator, not a home provider."
+      },
+      {
+        "observation": "A Family Access Administrator childcare role in Framingham, MA determines subsidy eligibility under Massachusetts EEC rules, enters children's attendance into the state's system every week, and tracks voucher end dates to complete reauthorizations before they expire.",
+        "label": "Recorder jobs: Family Access Administrator (childcare)",
+        "url": "https://jobs.recorder.com/job/c6a69b8e-7ed8-47ff-a05b-9d92bf1a345b/family-access-administrator-childcare",
+        "sourceType": "job",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Weekly attendance entry and authorization-expiry tracking are recurring paid tasks.",
+        "level": "costly-workaround",
+        "limitations": "Seen only in a search-result summary; the page fetch failed. Employer size, pay and date unknown."
+      },
+      {
+        "observation": "Brightwheel publishes a guide aimed at in-home child care providers about manually reconciling subsidy and vouchers across systems. Per the search summary, it describes providers juggling a sign-in sheet, family texts, a billing tool and a spreadsheet, authorizations that change mid-cycle, split co-pay and subsidy payers, and missing documents delaying payment, and it pitches Brightwheel's billing reports for reconciliation.",
+        "label": "Brightwheel: manually reconciling subsidy and vouchers (in-home)",
+        "url": "https://mybrightwheel.com/in-home-child-care/manually-reconciling-subsidy-and-vouchers-across-systems/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "Describes the workflow pain, and shows a well-funded incumbent already targets in-home providers with this exact problem (counterevidence).",
+        "level": "context",
+        "limitations": "Vendor marketing seen only as a search summary; the page fetch failed. Not a customer voice."
+      },
+      {
+        "observation": "Procare's help center describes Subsidy Accounting in Procare Online: recurring or one-time agency invoices, subsidy amounts by child or line item, separate plans for parent co-pay and subsidy, and a Subsidy Account screen showing amounts invoiced, received and owed per subsidy.",
+        "label": "Procare help: Subsidy Accounting overview",
+        "url": "https://help.procareconnect.com/en/articles/5025280-subsidy-accounting-overview",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "The core reconciliation workflow is a shipped feature in a major child care platform.",
+        "level": "context",
+        "limitations": "Vendor documentation seen only as a search summary; the page fetch failed. Pricing not shown."
+      },
+      {
+        "observation": "Playground's subsidy page claims it calculates expected payments by child and agency, matches uploaded deposits to children, flags under- or overpayments, and supports waiving, deferring or charging families for differences. Directory listings seen in search say pricing is on request.",
+        "label": "Playground: child care subsidy tracking",
+        "url": "https://www.tryplayground.com/subsidies",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "A newer competitor already sells automated subsidy matching and short-pay flagging, the main proposed feature.",
+        "level": "context",
+        "limitations": "Vendor marketing seen only as a search summary; the page fetch failed. Price and customer count unknown."
+      },
+      {
+        "observation": "Workforce Solutions (Texas) says providers accepting Child Care Services subsidies must take attendance through KinderConnect, KinderSmart or KinderSign, and the state provides a free tablet with attendance software to facilities without a child care management system, subject to an eligibility survey.",
+        "label": "Workforce Solutions (Texas): common provider concerns",
+        "url": "https://wrksolutions.com/for-individuals/financial-aid/early-childcare-expansion/director/new-to-childcare/home-based-business-things-to-do-later/common-provider-concerns",
+        "sourceType": "government",
+        "publishedAt": null,
+        "observedAt": "2026-10-09",
+        "supports": "States supply free attendance tools to subsidy providers, which reduces the need for paid software (counterevidence). Search results showed similar free offerings in Virginia and Washington.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch failed. Free tools cover attendance submission, not necessarily payment reconciliation."
+      },
+      {
+        "observation": "Child Care Aware's summary of the January 2026 CCDF proposed rule says HHS proposes to rescind the 2024 requirements to pay providers based on enrollment and prospectively, leaving states free to choose; the rule was published January 5, 2026 with comments due February 4, 2026.",
+        "label": "Child Care Aware: CCDF NPRM 2026 summary",
+        "url": "https://info.childcareaware.org/blog/ccdf-nprm-2026",
+        "sourceType": "research",
+        "publishedAt": "2026-01",
+        "observedAt": "2026-10-09",
+        "supports": "Payment rules are in flux, so attendance-based billing and its reconciliation burden may persist in many states, while also raising maintenance cost for state-specific software.",
+        "level": "context",
+        "limitations": "Advocacy-organization summary seen only in search results; the page fetch failed. Whether a final rule has been issued was not checked."
+      }
+    ],
+    "sourceNote": "All page fetches failed in this run (DNS/proxy errors), so every entry relies on search-result summaries and is unverified until re-fetched. The sources show that subsidy payment delays and reconciliation work are real and that larger operators pay staff for them. They also show that established platforms already sell subsidy reconciliation, including to in-home providers, and that states offer free attendance tools. No first-hand provider forum posts were found.",
+    "reviewedAt": "2026-10-09",
+    "sources": [
+      [
+        "KCUR: Missouri child care subsidy payment backlog",
+        "https://www.kcur.org/education/2025-01-30/missouri-child-care-subsidy-payment-backlog-cleared"
+      ],
+      [
+        "Fox29: Philly daycare providers and subsidy backup",
+        "https://fox29.com/news/philly-daycare-providers-financial-bind-due-backup-monthly-state-subsidies"
+      ],
+      [
+        "CareerPlug job: The Learning Experience Billing Specialist",
+        "https://the-learning-experience-hq-1.careerplug.com/jobs/3348872"
+      ],
+      [
+        "iCIMS job: Child Development Schools Billing Support Coordinator",
+        "https://careers-childcarenetwork.icims.com/jobs/38678/billing-support-coordinator/job"
+      ],
+      [
+        "Recorder jobs: Family Access Administrator (childcare)",
+        "https://jobs.recorder.com/job/c6a69b8e-7ed8-47ff-a05b-9d92bf1a345b/family-access-administrator-childcare"
+      ],
+      [
+        "Brightwheel: manually reconciling subsidy and vouchers (in-home)",
+        "https://mybrightwheel.com/in-home-child-care/manually-reconciling-subsidy-and-vouchers-across-systems/"
+      ],
+      [
+        "Procare help: Subsidy Accounting overview",
+        "https://help.procareconnect.com/en/articles/5025280-subsidy-accounting-overview"
+      ],
+      [
+        "Playground: child care subsidy tracking",
+        "https://www.tryplayground.com/subsidies"
+      ],
+      [
+        "Workforce Solutions (Texas): common provider concerns",
+        "https://wrksolutions.com/for-individuals/financial-aid/early-childcare-expansion/director/new-to-childcare/home-based-business-things-to-do-later/common-provider-concerns"
+      ],
+      [
+        "Child Care Aware: CCDF NPRM 2026 summary",
+        "https://info.childcareaware.org/blog/ccdf-nprm-2026"
+      ]
+    ]
   }
 ]
