@@ -1362,7 +1362,7 @@
     "nextStep": "Shelve. If revisiting, first re-fetch the job post, both Grocery Dive articles and the Foodbevy podcast to verify the figures, then look for founder complaints about Glimpse or Promomash pricing or minimums in natural-foods founder communities.",
     "evidence": "Researched report",
     "status": "Costly pain confirmed by a job post and lawsuits; crowded with funded vendors; sources unverified",
-    "sourceNote": "Page fetching failed for every site during this run (DNS errors from the fetch tool and proxy refusals for direct requests), so all ten entries rely on search-result summaries and are labeled unverified. They show that distributor deductions cost small food brands real money and staff time, and that multiple funded vendors and services already sell reconciliation and recovery. No independent source showed unmet demand for a new self-serve tool.",
+    "sourceNote": "Page fetching failed for every site during this run (DNS errors from the fetch tool and proxy refusals for direct requests), so all ten entries rely on search-result summaries and are labeled unverified. They show that distributor deductions cost small food brands real money and staff time, and that multiple funded vendors and services already sell reconciliation and recovery. No independent source showed unmet demand for a new self-serve tool. A link check on 2026-10-09 found 6 of the 10 remaining source pages load (the rest block automated requests); page contents were not re-read. Entries whose pages returned 404 were removed.",
     "reviewedAt": "2026-10-09",
     "sources": [
       [
@@ -1559,7 +1559,7 @@
     "nextStep": "Shelve the idea. If revisiting, re-fetch the cited pages when page access works and spend one hour searching HawkSoft and EZLynx user communities for complaints about certificate features; drop it if none appear.",
     "evidence": "Researched report",
     "status": "Real, staffed pain; solved inside incumbent agency systems",
-    "sourceNote": "All ten sources were seen only through web-search result summaries because page fetching and direct HTTPS were blocked during this run. They establish that COI issuance is a costly, mostly unpaid agency task with paid labor behind it, and that self-service certificates and contract parsing are already offered by incumbents. No source showed unmet demand for a new standalone tool.",
+    "sourceNote": "All ten sources were seen only through web-search result summaries because page fetching and direct HTTPS were blocked during this run. They establish that COI issuance is a costly, mostly unpaid agency task with paid labor behind it, and that self-service certificates and contract parsing are already offered by incumbents. No source showed unmet demand for a new standalone tool. A link check on 2026-10-09 found 8 of the 9 remaining source pages load (the rest block automated requests); page contents were not re-read. Entries whose pages returned 404 were removed.",
     "reviewedAt": "2026-10-09",
     "sources": [
       [
@@ -1573,10 +1573,6 @@
       [
         "HireHive job: P&C insurance Certificate Processor (Glendora, CA)",
         "https://the-misch-group0.hirehive.com/pc-insurance-certificate-processor-glendora-54QnsO"
-      ],
-      [
-        "Greenhouse job: Archer Risk Services commercial lines CSR",
-        "https://job-boards.greenhouse.io/archerriskservices/jobs/5022063007"
       ],
       [
         "Upwork service: part-time insurance virtual assistant",
@@ -1636,17 +1632,6 @@
         "supports": "Agencies with contractor-heavy books budget a dedicated paid role for certificate issuance.",
         "level": "existing-spend",
         "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Agency size, salary and posting date are unknown. A posting shows intent to hire, not a hire."
-      },
-      {
-        "observation": "A commercial lines CSR posting on Greenhouse (Archer Risk Services) centers on processing and issuing a high volume of certificates of insurance, including lender, vendor and contractual requests, and checking additional insured, waiver of subrogation and primary and non-contributory wording against the policy.",
-        "label": "Greenhouse job: Archer Risk Services commercial lines CSR",
-        "url": "https://job-boards.greenhouse.io/archerriskservices/jobs/5022063007",
-        "sourceType": "job",
-        "publishedAt": null,
-        "observedAt": "2026-10-09",
-        "supports": "Certificate volume and endorsement checking are significant enough to define a service role.",
-        "level": "existing-spend",
-        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Firm size is unknown and may be larger than the small-agency target. Posting date unknown."
       },
       {
         "observation": "An Upwork service listing offers a part-time insurance virtual assistant for personal and commercial lines whose services include certificates of insurance, renewals, endorsements and ACORD form preparation in Applied Epic, AMS360 and EZLynx.",
@@ -1748,7 +1733,8 @@
       "The $15-40 per month price band is a hypothesis, not observed willingness to pay.",
       "That reconciliation errors (short-pays, expired authorizations) cost providers material money is inferred from job duties and vendor content, not measured.",
       "That attendance exports from state portals are accessible enough to automate is unverified and likely varies by state.",
-      "Vendor claims about time saved by subsidy modules are unverified marketing."
+      "Vendor claims about time saved by subsidy modules are unverified marketing.",
+      "Unsourced after the link check: Procare's subsidy accounting module and free state attendance systems (KinderConnect, tablets in Texas and Virginia). Their cited pages returned 404."
     ],
     "level": "costly-workaround",
     "verdict": "Pass",
@@ -1791,17 +1777,6 @@
         "limitations": "Seen only in a search-result summary; the page fetch failed, so pay, date and duties are unverified. A job post shows intent to spend, not a hire. The employer is a large franchise chain, not a small operator."
       },
       {
-        "observation": "Child Development Schools (Columbus, GA) posted a Billing Support Coordinator role to audit and reconcile private payments and state subsidy programs, requiring knowledge of subsidy regulations and advanced Excel skills.",
-        "label": "iCIMS job: Child Development Schools Billing Support Coordinator",
-        "url": "https://careers-childcarenetwork.icims.com/jobs/38678/billing-support-coordinator/job",
-        "sourceType": "job",
-        "publishedAt": null,
-        "observedAt": "2026-10-09",
-        "supports": "Subsidy reconciliation is spreadsheet-heavy work assigned to dedicated staff.",
-        "level": "costly-workaround",
-        "limitations": "Seen only in a search-result summary; the page fetch failed. Pay and date unknown. Multi-site operator, not a home provider."
-      },
-      {
         "observation": "A Family Access Administrator childcare role in Framingham, MA determines subsidy eligibility under Massachusetts EEC rules, enters children's attendance into the state's system every week, and tracks voucher end dates to complete reauthorizations before they expire.",
         "label": "Recorder jobs: Family Access Administrator (childcare)",
         "url": "https://jobs.recorder.com/job/c6a69b8e-7ed8-47ff-a05b-9d92bf1a345b/family-access-administrator-childcare",
@@ -1824,17 +1799,6 @@
         "limitations": "Vendor marketing seen only as a search summary; the page fetch failed. Not a customer voice."
       },
       {
-        "observation": "Procare's help center describes Subsidy Accounting in Procare Online: recurring or one-time agency invoices, subsidy amounts by child or line item, separate plans for parent co-pay and subsidy, and a Subsidy Account screen showing amounts invoiced, received and owed per subsidy.",
-        "label": "Procare help: Subsidy Accounting overview",
-        "url": "https://help.procareconnect.com/en/articles/5025280-subsidy-accounting-overview",
-        "sourceType": "vendor",
-        "publishedAt": null,
-        "observedAt": "2026-10-09",
-        "supports": "The core reconciliation workflow is a shipped feature in a major child care platform.",
-        "level": "context",
-        "limitations": "Vendor documentation seen only as a search summary; the page fetch failed. Pricing not shown."
-      },
-      {
         "observation": "Playground's subsidy page claims it calculates expected payments by child and agency, matches uploaded deposits to children, flags under- or overpayments, and supports waiving, deferring or charging families for differences. Directory listings seen in search say pricing is on request.",
         "label": "Playground: child care subsidy tracking",
         "url": "https://www.tryplayground.com/subsidies",
@@ -1844,17 +1808,6 @@
         "supports": "A newer competitor already sells automated subsidy matching and short-pay flagging, the main proposed feature.",
         "level": "context",
         "limitations": "Vendor marketing seen only as a search summary; the page fetch failed. Price and customer count unknown."
-      },
-      {
-        "observation": "Workforce Solutions (Texas) says providers accepting Child Care Services subsidies must take attendance through KinderConnect, KinderSmart or KinderSign, and the state provides a free tablet with attendance software to facilities without a child care management system, subject to an eligibility survey.",
-        "label": "Workforce Solutions (Texas): common provider concerns",
-        "url": "https://wrksolutions.com/for-individuals/financial-aid/early-childcare-expansion/director/new-to-childcare/home-based-business-things-to-do-later/common-provider-concerns",
-        "sourceType": "government",
-        "publishedAt": null,
-        "observedAt": "2026-10-09",
-        "supports": "States supply free attendance tools to subsidy providers, which reduces the need for paid software (counterevidence). Search results showed similar free offerings in Virginia and Washington.",
-        "level": "context",
-        "limitations": "Seen only in a search-result summary; the page fetch failed. Free tools cover attendance submission, not necessarily payment reconciliation."
       },
       {
         "observation": "Child Care Aware's summary of the January 2026 CCDF proposed rule says HHS proposes to rescind the 2024 requirements to pay providers based on enrollment and prospectively, leaving states free to choose; the rule was published January 5, 2026 with comments due February 4, 2026.",
@@ -1868,7 +1821,7 @@
         "limitations": "Advocacy-organization summary seen only in search results; the page fetch failed. Whether a final rule has been issued was not checked."
       }
     ],
-    "sourceNote": "All page fetches failed in this run (DNS/proxy errors), so every entry relies on search-result summaries and is unverified until re-fetched. The sources show that subsidy payment delays and reconciliation work are real and that larger operators pay staff for them. They also show that established platforms already sell subsidy reconciliation, including to in-home providers, and that states offer free attendance tools. No first-hand provider forum posts were found.",
+    "sourceNote": "All page fetches failed in this run (DNS/proxy errors), so every entry relies on search-result summaries and is unverified until re-fetched. The sources show that subsidy payment delays and reconciliation work are real and that larger operators pay staff for them. They also show that established platforms already sell subsidy reconciliation, including to in-home providers. No first-hand provider forum posts were found. A link check on 2026-10-09 found 7 of the 7 remaining source pages load (the rest block automated requests); page contents were not re-read. Entries whose pages returned 404 were removed.",
     "reviewedAt": "2026-10-09",
     "sources": [
       [
@@ -1884,10 +1837,6 @@
         "https://the-learning-experience-hq-1.careerplug.com/jobs/3348872"
       ],
       [
-        "iCIMS job: Child Development Schools Billing Support Coordinator",
-        "https://careers-childcarenetwork.icims.com/jobs/38678/billing-support-coordinator/job"
-      ],
-      [
         "Recorder jobs: Family Access Administrator (childcare)",
         "https://jobs.recorder.com/job/c6a69b8e-7ed8-47ff-a05b-9d92bf1a345b/family-access-administrator-childcare"
       ],
@@ -1896,16 +1845,8 @@
         "https://mybrightwheel.com/in-home-child-care/manually-reconciling-subsidy-and-vouchers-across-systems/"
       ],
       [
-        "Procare help: Subsidy Accounting overview",
-        "https://help.procareconnect.com/en/articles/5025280-subsidy-accounting-overview"
-      ],
-      [
         "Playground: child care subsidy tracking",
         "https://www.tryplayground.com/subsidies"
-      ],
-      [
-        "Workforce Solutions (Texas): common provider concerns",
-        "https://wrksolutions.com/for-individuals/financial-aid/early-childcare-expansion/director/new-to-childcare/home-based-business-things-to-do-later/common-provider-concerns"
       ],
       [
         "Child Care Aware: CCDF NPRM 2026 summary",
