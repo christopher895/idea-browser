@@ -1853,5 +1853,597 @@
         "https://info.childcareaware.org/blog/ccdf-nprm-2026"
       ]
     ]
+  },
+  {
+    "id": "signing-agent-receivables",
+    "name": "Signing Ledger",
+    "title": "Receivables tracking and payment follow-up for notary loan signing agents",
+    "category": "Real estate services",
+    "model": "B2B",
+    "type": "Workflow software",
+    "summary": "A tool that logs each loan signing, its payer and expected pay date, sends overdue reminders and flags slow payers. Signing agents clearly complain about late and missing pay, but low-cost notary tools (NotaryGadget, NotaryAssist, NotaryNext) already track paid status and overdue invoices, and payer reputation data is free on NotaryRotary and Notary Cafe.",
+    "buyer": "Independent notary signing agents (sole proprietors) who take per-signing assignments from signing services and title or escrow companies. The agent does the work and approves the purchase. Most are price-sensitive, and many work part time.",
+    "problem": "Signing agents are paid per signing, often by signing services that sit between title companies and the agent. Forum threads describe pay that arrives months late or never (one report of over 6 months, write-offs as bad debt, a $240 signing unpaid from late 2025), and agents chase payment with emails, calls, demand letters and escalation to the title company. All of these figures come from search snippets and are unverified. Agents also check company reputations before accepting orders.",
+    "solution": "If pursued: a receivables ledger for signing agents. It would log each signing with payer, fee and the payer's typical pay time, send scheduled reminders at day 30, 45 and 60 using NNA-style letter templates, show aging, and flag payers whose pay times are getting longer, possibly using pooled data from users. Evidence suggests most of this already exists in NotaryGadget, NotaryAssist and NotaryNext, and the pooled-reputation idea overlaps with free NotaryRotary ratings and Notary Cafe threads.",
+    "revenue": "Hypothesis (unvalidated): $5-15 per month per agent. Anchors seen only in search snippets (unverified): NotaryGadget about $11.95 per month or about $119.95 per year, and NotaryNext Starter $15 per month with overdue escalation included. A receivables-only tool would likely have to be priced at or below these all-in-one tools, which caps revenue per user at very small amounts.",
+    "gap": "Alternatives: NotaryGadget (invoices, paid tracking, A/R reports), NotaryAssist (unpaid invoice tracking), NotaryNext (automated overdue reminders and escalation), QuickBooks or Wave for invoicing, Excel, NotaryRotary company ratings, Notary Cafe's searchable warning threads, and NNA sample collection letters. One forum comment says a day-30 follow-up gets almost everyone paid. No evidence was found of a missing capability. The only possible gap is structured, shared payer pay-time data (median days-to-pay by company), as opposed to star ratings and threads, and nothing showed agents asking for that.",
+    "timing": "Weak. The 2023-2025 mortgage slowdown reduced refinance signings (forum anecdotes; no direct signing-volume figure was found), and loan officer headcount at independent mortgage banks fell in 2025 (HousingWire, snippet only). Fewer signings per agent means fewer receivables to track. A rate-driven refinance rebound would raise volume and could also raise slow-pay incidents, but incumbents would benefit equally.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed access to notary communities, no confirmed experience as a signing agent, and limited capital. Distribution would depend on Notary Cafe, NotaryRotary, Facebook groups and NNA-adjacent channels, where incumbents are already well known.",
+    "risks": [
+      "Incumbent coverage: NotaryGadget, NotaryAssist and NotaryNext already track paid status, unpaid invoices and (NotaryNext) automated overdue reminders, at about $9-15 per month (unverified snippet prices).",
+      "Free reputation data: NotaryRotary ratings and Notary Cafe threads already serve the 'flag bad payers' need at no cost and are the community's habit.",
+      "Simple workaround works: one forum member reports a day-30 follow-up resolves nearly all delays, so automation saves little time.",
+      "Root cause is counterparty behavior: software cannot collect from companies that go out of business or refuse to pay. The remedies are title-company escalation, small claims or bond claims.",
+      "Low and cyclical volume: the mortgage slowdown cut signings, and many agents are part time with few receivables to track.",
+      "Defamation and moderation risk if pooled payer reputation data names companies as non-payers.",
+      "Weak verification: every source in this run was seen only as a search snippet because all page fetches were blocked."
+    ],
+    "pilot": [
+      "Before building, interview 8 active signing agents (5+ signings a month) from Notary Cafe or Facebook groups. Ask about the last late or unpaid signing, how they found it, what they did and what it cost, and what software they pay for. Stop if fewer than 4 report an unpaid balance over 60 days in the last 6 months, or if 6 or more already track A/R in NotaryGadget, NotaryAssist or NotaryNext and are satisfied.",
+      "If interviews pass, run a 6-week concierge test with 5 agents: you maintain a shared spreadsheet of their open signings, send day-30, 45 and 60 reminders on their behalf, and log days-to-pay by company. Success means at least 3 agents recover or speed up at least one payment and at least 3 prepay $10 or more per month to continue. Stop if fewer than 2 commit to pay."
+    ],
+    "assumptions": [
+      "That a meaningful share of signing agents have recurring receivables older than 60 days is assumed from self-selected forum threads, not measured.",
+      "The $5-15 per month price band is a hypothesis; competitor prices are snippet-only and unverified.",
+      "That incumbents lack payer days-to-pay analytics is unverified; their feature pages could not be read.",
+      "That agents would contribute payment data to a shared database, and that publishing it is legally manageable, is untested.",
+      "Mortgage-slowdown effects on signing volume are inferred from forum anecdotes and loan officer data, not signing counts."
+    ],
+    "level": "existing-spend",
+    "verdict": "Pass",
+    "verdictRationale": "The pain is real and recurring: signing agents describe months-late and unpaid signings across many company-specific warning threads. But the proposed product duplicates cheap, established notary tools that already track paid status, accounts receivable and (NotaryNext) overdue reminders. The 'shared payer reputation' angle already exists for free on NotaryRotary and Notary Cafe. Forum comments suggest a manual day-30 follow-up fixes most delays, and the rest are counterparty failures software cannot solve. The market is price-sensitive and shrank with the mortgage slowdown. Existing spend is shown only for incumbent all-in-one tools, not for a standalone receivables product. Confidence is limited: every page fetch was blocked in this run, so all entries rely on search snippets, and no Reddit or Facebook group content could be reached. This would move to Interview if agents showed they want structured days-to-pay data by company (not star ratings), and incumbents turned out to lack it.",
+    "nextStep": "Shelve the idea. If revisiting, re-fetch NotaryGadget, NotaryAssist and NotaryNext feature pages to confirm reminder and aging features, then check whether NotaryRotary shows pay-time data. Drop the idea for good if it does.",
+    "evidence": "Researched report",
+    "status": "Real pain; served by cheap incumbents and free reputation sites",
+    "sourceNote": "All page fetches in this run were blocked (WebFetch DNS errors; curl got proxy CONNECT 403), and Reddit was not available to search. Every entry relies on search-result summaries and is unverified until re-fetched. Community sources are Notary Cafe threads and one Trustpilot review. No Facebook group or r/notary content was seen. Duplicate company-specific non-payment threads are counted as one signal.",
+    "reviewedAt": "2026-10-12",
+    "evidenceLog": [
+      {
+        "observation": "A Notary Cafe thread titled 'Too Many Signing Companies Not Paying' reports, per the search summary, an uptick in slow or non-payment by signing companies. One member describes a $240 signing from late 2025 that was still unpaid. Another member says that when they follow up at day 30, payment arrives the same or next day '99% of time'.",
+        "label": "Notary Cafe: Too Many Signing Companies Not Paying",
+        "url": "https://forum.notarycafe.com/t/too-many-signing-companies-not-paying/41792",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Signing agents report recurring slow and non-payment. The day-30 follow-up comment is also counterevidence: a simple manual reminder often fixes the delay.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. The summary combined several results, so tying each comment to this exact thread is likely but not certain. Thread date unknown. Self-selected forum posters; no count of how common the problem is."
+      },
+      {
+        "observation": "A Notary Cafe thread headed 'OUT OF BUSINESS: SIGNING TRAC, another bad payer' is summarized in search results as one notary saying it took over 6 months to get paid and another writing the company off as a bad debt.",
+        "label": "Notary Cafe: Signing Trac, another bad payer",
+        "url": "https://forum.notarycafe.com/t/out-of-business-signing-trac-another-bad-payer/8124",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Some signing companies pay very late or never, and agents absorb the loss.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. Probably several years old. Search results also showed many similar company-specific warning threads on the same forum (for example 'Non-payment from Prestige Horizons LLC', 'Docs2Go - Scam no payment'); these are counted together as one repeated-pain signal and were not read."
+      },
+      {
+        "observation": "Search summaries of Notary Cafe threads, including 'Why Companies Pay Some Notaries but Not Others?', describe free reputation resources agents already use before accepting work: NotaryRotary's company ratings with notary comments (its 'Signing Central' section, where agents post about pay problems) and the Notary Cafe forum search, which one user called a 'GOLDMINE'. A long-time notary's rule of thumb was that 4 and 5 star companies are fine, while a 3 star company trending down should be paid in advance.",
+        "label": "Notary Cafe: Why Companies Pay Some Notaries but Not Others?",
+        "url": "https://forum.notarycafe.com/t/why-companies-pay-some-notaries-but-not-others/1907",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Counterevidence: shared payer reputation data, the proposed differentiator, already exists for free on NotaryRotary and Notary Cafe.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. The summary drew on several threads, so the exact quotes may come from other threads in the same results. NotaryRotary itself (notaryrotary.com) was also blocked and its ratings pages were not seen directly. Search summaries noted these are self-reported and unverified."
+      },
+      {
+        "observation": "Notary Cafe threads comparing NotaryGadget and QuickBooks ('NotaryGadget or Quick Books') are summarized in search results as follows: NotaryGadget is the most recommended. One member says it 'does everything' they need at about $119.95 a year, and another uses it for scheduling, mileage, and income and accounts receivable reports. QuickBooks covers invoicing but not appointment tracking, entering signings in both was called frustrating, and some notaries use Excel or Quicken.",
+        "label": "Notary Cafe: NotaryGadget or Quick Books",
+        "url": "https://forum.notarycafe.com/t/notarygadget-or-quick-books/55197",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Agents already pay for notary-specific tools that include accounts receivable tracking. That shows a budget, but it is already spent on incumbents (counterevidence on the gap).",
+        "level": "existing-spend",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. The search summary noted the quoted price is probably years old. Statements may come from the related 'Quickbooks VS Notary Gadget' thread in the same results."
+      },
+      {
+        "observation": "NotaryGadget's home page (per search result text) says it automatically generates invoices, calculates mileage and notarial tax deductions, and tracks whether you have been paid. A third-party review in the same summary says the free trial covers the first 15 signings and the monthly plan is $11.95, with a lower annual rate.",
+        "label": "NotaryGadget home page",
+        "url": "https://www.notarygadget.com/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Counterevidence: an established, low-priced signing-agent tool already logs signings, invoices and paid status.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. The $11.95 figure came from an unnamed third-party review in the summary, not the vendor's pricing page, and is unverified. Not checked: whether it has overdue reminders or aging reports. Vendor marketing, not a customer voice."
+      },
+      {
+        "observation": "NotaryAssist's site, as summarized in search results, says its expense module can track unpaid invoices and lists tracking invoices and non-payments as part of a signing agent's job. Its iPhone app listing showed a 4.9 rating from 172 ratings. The summary found no explicit overdue-reminder feature.",
+        "label": "NotaryAssist software",
+        "url": "https://notaryassist.com/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Counterevidence: a second long-running signing-agent tool already covers unpaid-invoice tracking.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. Price not verified: a figure seen in the summary ($8.99) came from a Capterra India listing that was not fetched. The rating count came from an App Store listing seen only in the summary. Vendor marketing."
+      },
+      {
+        "observation": "Capterra's NotaryNext listing, per search summaries, describes automatic invoice generation and delivery to title companies after a signing, overdue payment reminders that send follow-ups on a schedule once an invoice is past due, and a Starter plan at $15 per month that includes overdue invoice escalation. The listing showed 0 user reviews.",
+        "label": "Capterra: NotaryNext",
+        "url": "https://www.capterra.com/p/10050796/NotaryNext/",
+        "sourceType": "vendor",
+        "publishedAt": "2026",
+        "observedAt": "2026-10-12",
+        "supports": "Counterevidence: the automated overdue-reminder feature is already sold to notaries at $15 per month.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. Listing data comes from the vendor. Zero reviews means no evidence of customers. Reminder intervals and settings unknown."
+      },
+      {
+        "observation": "An NNA Notary Bulletin article on getting overdue notary invoices paid, per the search summary, cites the Freelancers Union figure that 71% of independent contractors have had trouble getting paid, owed on average more than $6,000. NNA also publishes non-payment resources with sample collection letters and 'Nine tips to ensure you get paid and on time'.",
+        "label": "NNA: Overdue notary invoices: getting paid",
+        "url": "https://www.nationalnotary.org/notary-bulletin/blog/2016/09/overdue-notary-invoices-getting-paid",
+        "sourceType": "news",
+        "publishedAt": "2016-09",
+        "observedAt": "2026-10-12",
+        "supports": "The main trade association treats late payment as a standing problem for signing agents and gives free collection templates (both a sign of pain and a free alternative).",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. The 71% figure covers freelancers in general, not signing agents, and is from 2016 or earlier. Association content, not a customer voice."
+      },
+      {
+        "observation": "A 2026 Trustpilot review of Mobile Notary Zone, per the search summary, says the reviewer had not been paid for a February 2026 trust signing and the company stopped responding. It also says typical turnaround for some third-party notary companies is about 30 days.",
+        "label": "Trustpilot: Mobile Notary Zone reviews",
+        "url": "https://www.trustpilot.com/review/mobilenotaryzone.com",
+        "sourceType": "review",
+        "publishedAt": "2026",
+        "observedAt": "2026-10-12",
+        "supports": "Recent (2026) first-hand report of non-payment by a signing intermediary, outside the Notary Cafe forum.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. A single review of one company, and the claims are not verified. Reviewer details are omitted on purpose."
+      },
+      {
+        "observation": "HousingWire's 2025 review of MBA data, per the search summary, says loan officer headcount at independent mortgage banks and other lenders fell 11.7% to 74,969, while banks and credit unions grew and MBA expected originations to rise through 2027. A separate search found no 2025 figure for notary signing volume. Forum anecdotes describe refinance volume as 'NOT there anymore' and a shift toward HELOC signings.",
+        "label": "HousingWire: loan officer growth 2025",
+        "url": "https://www.housingwire.com/articles/loan-officer-growth-2025/",
+        "sourceType": "news",
+        "publishedAt": "2025",
+        "observedAt": "2026-10-12",
+        "supports": "Timing context: lower mortgage activity means fewer signings per agent, which lowers the value of receivables software. A recovery would help.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. Loan officer headcount is only an indirect proxy for signing volume. Forum anecdotes about the refinance slowdown came from other threads and are not cited separately."
+      }
+    ],
+    "sources": [
+      [
+        "Notary Cafe: Too Many Signing Companies Not Paying",
+        "https://forum.notarycafe.com/t/too-many-signing-companies-not-paying/41792"
+      ],
+      [
+        "Notary Cafe: Signing Trac, another bad payer",
+        "https://forum.notarycafe.com/t/out-of-business-signing-trac-another-bad-payer/8124"
+      ],
+      [
+        "Notary Cafe: Why Companies Pay Some Notaries but Not Others?",
+        "https://forum.notarycafe.com/t/why-companies-pay-some-notaries-but-not-others/1907"
+      ],
+      [
+        "Notary Cafe: NotaryGadget or Quick Books",
+        "https://forum.notarycafe.com/t/notarygadget-or-quick-books/55197"
+      ],
+      [
+        "NotaryGadget home page",
+        "https://www.notarygadget.com/"
+      ],
+      [
+        "NotaryAssist software",
+        "https://notaryassist.com/"
+      ],
+      [
+        "Capterra: NotaryNext",
+        "https://www.capterra.com/p/10050796/NotaryNext/"
+      ],
+      [
+        "NNA: Overdue notary invoices: getting paid",
+        "https://www.nationalnotary.org/notary-bulletin/blog/2016/09/overdue-notary-invoices-getting-paid"
+      ],
+      [
+        "Trustpilot: Mobile Notary Zone reviews",
+        "https://www.trustpilot.com/review/mobilenotaryzone.com"
+      ],
+      [
+        "HousingWire: loan officer growth 2025",
+        "https://www.housingwire.com/articles/loan-officer-growth-2025/"
+      ]
+    ]
+  },
+  {
+    "id": "detention-claims",
+    "name": "Detention Ledger",
+    "title": "Detention-pay claim documentation for owner-operators and small carriers",
+    "category": "Trucking",
+    "model": "B2B",
+    "type": "Mobile workflow app",
+    "summary": "An app that captures arrival and departure times, builds a broker-ready detention invoice packet and tracks unpaid claims for 1-10 truck carriers. Unpaid detention is a large, well-documented loss, but several apps (WaitClaim, Detention Source, bubba.ai, DMRG) already do this, some free, and drivers say the main obstacle is brokers ignoring claims, not missing proof.",
+    "buyer": "Owner-operators with their own authority and small carriers (1-10 trucks) hauling brokered spot freight. The owner, or a part-time dispatcher, does the billing and approves any spend. Leased-on owner-operators bill through their carrier and are not buyers.",
+    "problem": "Drivers are detained at a large share of stops (39.3% in ATRI's 2023 data, per search summaries) and fleets report fewer than half of detention invoices get paid. Owner-operators must negotiate detention terms on the rate confirmation, record times in and out (BOL signatures, photos, ELD data), notify the broker when free time ends, and file within short windows, often 24-48 hours. Forum posts describe brokers ignoring requests or rejecting claims even with timestamps, and roughly half of OOIDA survey respondents do not request detention at all.",
+    "solution": "If pursued: a phone app that auto-starts a detention clock on geofence entry at the facility (or from ELD data), sends a free-time-expiring notice to the broker, assembles a packet (rate con terms, timestamps, map, BOL photo, notice email) into an invoice, and tracks each claim to paid, with reminders and a broker payment-history list. This duplicates the core of WaitClaim, Detention Source and bubba.ai; the only untested angle is the unpaid-claim tracker plus broker reputation data.",
+    "revenue": "Hypothesis (unvalidated): $10-20 per truck per month, or a 10-15% fee on detention actually recovered. No competitor price was verified: WaitClaim lists a free trial only, Detention Source's listing says free, bubba.ai had no visible price. Forum-reported detention of about $40-75 per hour after 2 free hours (single anecdotes) means one recovered claim per month could exceed the subscription, but only if brokers pay.",
+    "gap": "Alternatives: free broker tracking apps (Trucker Tools, MacroPoint, Uber Freight's in-app detention request) that already timestamp loads; ELD geofence data; free or trial-priced detention apps (Detention Source, DMRG, WaitClaim); ELD-based vendors (bubba.ai, FleetOptos on Geotab); factoring companies that bill accessorials; signed BOLs and phone photos; and doing nothing. No clear underserved segment was found. A possible narrow gap is cross-broker tracking of unpaid claims and broker payment reputation, but no customer source asked for it.",
+    "timing": "Neutral. Detention is a long-running issue (FMCSA study and regulatory comments, ATRI 2024 research) with no federal mandate that brokers pay, and broker trade groups oppose one. A wave of 2025-2026 forum threads asking how detention claims are denied, and multiple new apps, suggest many builders are already chasing this.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed trucking experience or access to owner-operator communities, no known relationships with brokers or factoring companies, and limited capital. Geofence and ELD integrations and mobile background location are feasible but carry ongoing support cost.",
+    "risks": [
+      "Crowded and cheap: at least four apps target the same workflow, some free, plus broker apps and ELDs that already record timestamps.",
+      "Root cause is leverage, not proof: the largest poll answer was brokers ignoring requests, and a 2026 thread describes a denial despite timestamps and video; better documentation may not raise collection.",
+      "Low willingness to pay: about half of owner-operators surveyed do not request detention at all, and carriers reportedly prefer avoiding delay over billing it.",
+      "Payment depends on contract terms set at booking; if detention is not on the rate confirmation, no packet helps.",
+      "Factoring companies may hold or pass through detention, putting another party between the carrier and the money.",
+      "Weak verification: every source in this run was seen only in search summaries because page fetches failed."
+    ],
+    "pilot": [
+      "Before any build, interview 8 owner-operators with their own authority who haul brokered spot freight (via trucking Facebook groups or forums). Ask about the last detention event, whether they filed, what proof they sent, the outcome, and what they pay for apps today. Stop if fewer than 4 of 8 had a claim denied or unpaid in the last 60 days for reasons proof could fix, or if 4 or more already use a broker app or ELD whose timestamps they rely on.",
+      "If interviews pass, run a 4-week concierge test with 5 carriers: they text arrival/departure photos and rate cons, you assemble and send detention packets and chase payment. Success: at least $500 recovered across the group that the carriers say they would not have collected, and at least 3 agree to pay 10% of recovered detention or $15 per truck per month. Stop if fewer than 2 claims are paid or no carrier commits to pay."
+    ],
+    "assumptions": [
+      "That documentation gaps, rather than broker refusal, explain a meaningful share of unpaid detention is assumed and partly contradicted by the forum poll.",
+      "The $10-20 per truck price and 10-15% recovery fee are hypotheses, not observed willingness to pay.",
+      "That owner-operators would add another app despite broker-required tracking apps is unverified.",
+      "Competitor capabilities (WaitClaim, Detention Source, bubba.ai) come from their own listings and were not tested.",
+      "That brokers apply 24-48 hour filing windows comes from vendor and forum summaries, not broker contracts."
+    ],
+    "level": "costly-workaround",
+    "verdict": "Pass",
+    "verdictRationale": "Unpaid detention is real and costly: ATRI and OOIDA data show frequent detention and low collection, and owner-operators complain repeatedly in forums and regulatory comments. But the proposed product, timestamp capture plus an invoice packet, is already offered by WaitClaim, Detention Source, DMRG and bubba.ai, some free, and broker tracking apps and ELDs already record the same times. Driver evidence points to broker non-response and weak contract leverage as the main barrier, which documentation software does not fix. No evidence of carriers paying for a detention tool was found. Confidence is limited: no page could be fetched in this run, so all entries rest on search summaries, and the forum poll is small. This would move to Interview if owner-operator interviews showed claims routinely lost for lack of proof or missed filing windows, and if a recovery-fee model got paid commitments in a concierge test.",
+    "nextStep": "Shelve the idea. If revisiting, re-fetch the cited pages to confirm their content, check WaitClaim's and bubba.ai's current pricing and traction, and read the full Truckers Report poll thread for vote counts before running the interview step.",
+    "evidence": "Researched report",
+    "status": "Real, costly pain; crowded with free and cheap apps; leverage, not proof, is the barrier",
+    "evidenceLog": [
+      {
+        "observation": "Truckers Report forum thread (started 2018) where a driver asks how to get layover and detention paid. Per the search summary, a veteran member says you need an agreement with the broker on free time and hourly rate before booking, ideally written on the rate confirmation and initialed, and reports typical terms of roughly $40-50 per hour after 2 hours, often capped around $250. Other replies say drivers must request detention themselves and should record arrival, dock and departure times.",
+        "label": "Truckers Report: Layover and Detention Request thread",
+        "url": "https://www.thetruckersreport.com/truckingindustryforum/threads/layover-and-detention-request-how-do-you-go-about-getting-it.1291097",
+        "sourceType": "community",
+        "publishedAt": "2018",
+        "observedAt": "2026-10-12",
+        "supports": "Drivers must request and document detention themselves; payment hinges on rate-confirmation terms.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error / proxy denied CONNECT in this run), so wording and figures are unverified. Start year comes from the search summary. Rate figures are one member's experience, not a standard. Advice centers on negotiating terms up front, which software does not do."
+      },
+      {
+        "observation": "Truckers Report poll thread started August 12, 2025, 'What's the #1 reason your detention claims get denied?'. Per the search summary, about 53.8% chose 'they just ignore my request / it's too much hassle to fight', about 38.5% chose 'I don't have this problem / I usually get paid', 7.7% chose missing rate-confirmation terms, and options for disputed log times and non-firm appointments got no votes.",
+        "label": "Truckers Report: Why detention claims get denied (poll)",
+        "url": "https://www.thetruckersreport.com/truckingindustryforum/threads/whats-the-1-reason-your-detention-claims-get-denied-poll.2529156/page-3",
+        "sourceType": "community",
+        "publishedAt": "2025-08-12",
+        "observedAt": "2026-10-12",
+        "supports": "Denial is real for many respondents, but disputed timestamps were not the reported cause (counterevidence: the bottleneck is broker non-response and leverage, not documentation).",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error / proxy denied CONNECT in this run), so wording and figures are unverified. Total vote count not visible; sample is probably small and self-selected. The poll may have been posted by someone researching a product rather than a driver."
+      },
+      {
+        "observation": "Truckers Report thread 'What does your carrier contract say about detention pay disputes?' (summarized as February 2026): a driver preparing to fight a denied detention claim says they had timestamps and camera footage but the broker still rejected the claim, and the carrier contract contains arbitration and dispute-resolution language. Replies mostly advise reading your own contract.",
+        "label": "Truckers Report: Carrier contract and detention disputes",
+        "url": "https://www.thetruckersreport.com/truckingindustryforum/threads/what-does-your-carrier-contract-say-about-detention-pay-disputes.2537804/",
+        "sourceType": "community",
+        "publishedAt": "2026-02",
+        "observedAt": "2026-10-12",
+        "supports": "Unpaid detention persists in 2026; and having timestamp proof did not get it paid (counterevidence to a documentation-only product).",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error / proxy denied CONNECT in this run), so wording and figures are unverified. Single anecdote. Month comes from the search summary."
+      },
+      {
+        "observation": "ATRI research released September 2024 on 2023 data: drivers were detained at 39.3% of stops; lost time exceeded 135 million hours for for-hire trucking; 94.5% of fleets charge detention fees but fewer than 50% of those invoices are paid; ATRI estimates $3.6 billion in direct expenses and $11.5 billion in lost productivity.",
+        "label": "ATRI: Financial and safety impacts of driver detention (2024)",
+        "url": "https://truckingresearch.org/2024/09/new-research-documents-substantial-financial-and-safety-impacts-from-truck-driver-detention/",
+        "sourceType": "research",
+        "publishedAt": "2024-09",
+        "observedAt": "2026-10-12",
+        "supports": "Detention is frequent and most billed detention goes uncollected, a measurable missed-revenue cost.",
+        "level": "costly-workaround",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error / proxy denied CONNECT in this run), so wording and figures are unverified. Figures come from search summaries of ATRI's press release and trade coverage, not the full report. Fleet-level survey data, not specific to owner-operators; does not say documentation is why invoices go unpaid."
+      },
+      {
+        "observation": "Land Line report (February 2024) on OOIDA Foundation detention survey results: respondents (mostly owner-operators) averaged 14.3 hours of detention per week (7.2 loading, 7.1 unloading), and around half said they request compensation for detention time.",
+        "label": "Land Line: OOIDA Foundation detention survey results",
+        "url": "https://landline.media/ooida-foundation-releases-freight-rate-detention-time-survey-results/",
+        "sourceType": "news",
+        "publishedAt": "2024-02",
+        "observedAt": "2026-10-12",
+        "supports": "Owner-operators specifically lose many hours to detention, and about half do not even request pay.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error / proxy denied CONNECT in this run), so wording and figures are unverified. A secondary vendor page claims claimants received pay on about 25% of detained loads; that figure was not found in OOIDA or Land Line text and is excluded. Members of an advocacy group, self-selected respondents."
+      },
+      {
+        "observation": "FreightWaves article 'Truckers push FMCSA to make brokers pay for detention time': owner-operators and small carriers commenting on an FMCSA detention study asked that brokers be required to pay for waiting time, several proposing two free hours then $100 per hour; the Transportation Intermediaries Association argued FMCSA should not regulate detention and that better tracking data alone does not ensure fair pay.",
+        "label": "FreightWaves: Truckers push FMCSA to make brokers pay for detention",
+        "url": "https://freightwaves.com/news/truckers-push-fmcsa-to-make-brokers-pay-for-detention-time",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Many small carriers publicly complain about unpaid detention; brokers' trade group itself says tracking data does not secure payment.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error / proxy denied CONNECT in this run), so wording and figures are unverified. Publication date not shown in results (likely several years old). Regulatory comments, not buying behavior."
+      },
+      {
+        "observation": "SaaSHub listing for WaitClaim describes GPS-verified arrival and departure times turned into broker-ready documentation for owner-operators and small fleets, no app install, works on any phone, 14-day free trial without a credit card. Part of the listing describes an unrelated restaurant/clinic queue service.",
+        "label": "SaaSHub: WaitClaim listing",
+        "url": "https://www.saashub.com/waitclaim",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "A direct competitor already sells this exact offer (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error / proxy denied CONNECT in this run), so wording and figures are unverified. No price, reviews, app store listing or user count found; listing content is partly inconsistent. An offer is not proof of customers."
+      },
+      {
+        "observation": "Apple App Store listing for Detention Source describes a free app that uses geofences at shipper and receiver to detect arrival and departure times, sends detention requests for customer approval against their policy, and produces a voucher the carrier uses when invoicing. A separate free-to-find iPhone app, 'Detention Pay - DMRG', was also seen in results tracking detention by geolocation with BOL uploads.",
+        "label": "App Store: Detention Source",
+        "url": "https://apps.apple.com/ca/app/detention-source/id6444958697",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Free geofence detention capture and invoicing apps already exist (counterevidence on price and gap).",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error / proxy denied CONNECT in this run), so wording and figures are unverified. Ratings, download counts and update dates not seen. DMRG app details seen only as a search title/summary."
+      },
+      {
+        "observation": "bubba.ai markets an ELD-based detention product: the dwell clock starts on the ELD geofence crossing, claims include ELD timestamps and terms captured at booking. It states that most unpaid detention is unclaimed rather than refused and that some brokers apply filing windows.",
+        "label": "bubba.ai: Detention never gets paid",
+        "url": "https://bubba.ai/problems/broker-wont-pay-detention",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Another vendor targets owner-operators with automated detention claims (counterevidence); also argues missed filing is a real cause, which partly supports the idea.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error / proxy denied CONNECT in this run), so wording and figures are unverified. Vendor marketing; no pricing or customer reviews found. Its 'unclaimed not refused' claim conflicts with the forum poll."
+      },
+      {
+        "observation": "Trucker Tools, a broker-side load tracking app used by carriers, publishes detention guidance for owner-operators and small carriers saying to negotiate the detention rate with the freight rate and that app-based GPS/geofence detention tracking can help settle disputes. A 2019 Overdrive panel article cites Trucker Tools data on near four-hour average facility dwell and its surveys finding most carriers rank minimizing delays above getting paid for them.",
+        "label": "Trucker Tools: Detention strategies for owner-operators",
+        "url": "https://www.truckertools.com/detention-strategies-for-owner-operators-and-small-carriers/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Brokers' own tracking apps already timestamp facility arrival and departure for many loads (counterevidence); carriers may value avoiding delays over billing them.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error / proxy denied CONNECT in this run), so wording and figures are unverified. Vendor content; Overdrive details come from a 2019 article seen only in summary. Whether brokers share these timestamps with carriers on request was not verified."
+      }
+    ],
+    "sourceNote": "All page fetches failed in this run (DNS errors and proxy-denied connections), so every entry relies on search-result summaries and is unverified until re-fetched. Community sources are three Truckers Report threads (2018, 2025, 2026); no job posts paying for detention billing were found. Research and news sources (ATRI, OOIDA via Land Line, FreightWaves) quantify the loss. Vendor sources show several existing detention apps; they are offers, not proof of customers.",
+    "reviewedAt": "2026-10-12",
+    "sources": [
+      [
+        "Truckers Report: Layover and Detention Request thread",
+        "https://www.thetruckersreport.com/truckingindustryforum/threads/layover-and-detention-request-how-do-you-go-about-getting-it.1291097"
+      ],
+      [
+        "Truckers Report: Why detention claims get denied (poll)",
+        "https://www.thetruckersreport.com/truckingindustryforum/threads/whats-the-1-reason-your-detention-claims-get-denied-poll.2529156/page-3"
+      ],
+      [
+        "Truckers Report: Carrier contract and detention disputes",
+        "https://www.thetruckersreport.com/truckingindustryforum/threads/what-does-your-carrier-contract-say-about-detention-pay-disputes.2537804/"
+      ],
+      [
+        "ATRI: Financial and safety impacts of driver detention (2024)",
+        "https://truckingresearch.org/2024/09/new-research-documents-substantial-financial-and-safety-impacts-from-truck-driver-detention/"
+      ],
+      [
+        "Land Line: OOIDA Foundation detention survey results",
+        "https://landline.media/ooida-foundation-releases-freight-rate-detention-time-survey-results/"
+      ],
+      [
+        "FreightWaves: Truckers push FMCSA to make brokers pay for detention",
+        "https://freightwaves.com/news/truckers-push-fmcsa-to-make-brokers-pay-for-detention-time"
+      ],
+      [
+        "SaaSHub: WaitClaim listing",
+        "https://www.saashub.com/waitclaim"
+      ],
+      [
+        "App Store: Detention Source",
+        "https://apps.apple.com/ca/app/detention-source/id6444958697"
+      ],
+      [
+        "bubba.ai: Detention never gets paid",
+        "https://bubba.ai/problems/broker-wont-pay-detention"
+      ],
+      [
+        "Trucker Tools: Detention strategies for owner-operators",
+        "https://www.truckertools.com/detention-strategies-for-owner-operators-and-small-carriers/"
+      ]
+    ]
+  },
+  {
+    "id": "snow-service-proof",
+    "name": "Storm File",
+    "title": "Slip-and-fall defense records for small commercial snow contractors",
+    "category": "Field services",
+    "model": "B2B",
+    "type": "Workflow software",
+    "summary": "Per-site, per-storm evidence files (timestamps, salt, weather, photos, GPS) that a 1-15 truck snow contractor can pull years later when a slip-and-fall claim arrives. The pain is real and well documented, but GPS-verified, timestamped proof of service is already a headline feature of many snow apps, including at least one listed at about $10 a month.",
+    "buyer": "Owners of small commercial snow and ice removal companies (1-15 trucks) serving parking lots and walkways for property managers, retail and multi-family sites. The owner usually feels the claim risk, approves software spend, and deals with the insurer; drivers and subcontractors do the logging.",
+    "problem": "Snow contracts often push slip-and-fall liability onto the contractor, and claims can arrive years after the storm. Trade press and an attorney quoted in Lawn & Landscape advise keeping arrival and departure times, crew, weather, and salt amounts for at least five years, because contractors may not hear of a suit for two to three years. Contractors on PlowSite describe claims dropped because they had a log and before-and-after photos. Those without records lose leverage, and even a defended claim can raise premiums. A Massachusetts contractor said his insurer settled a claim for $365,000 two years after the fall and then dropped his business (per search summaries; unverified).",
+    "solution": "If pursued at all: a mobile check-in app that drivers and subcontractors use per site visit (geofenced arrival and departure, salt or deicer quantity, timestamped photos), automatically attached weather data, and a durable archive that exports a sealed per-site, per-storm evidence packet (PDF plus raw data and hashes) for the insurer or defense counsel. The search results suggest this would mostly duplicate Yeti, Plow360, SnowPilot Pro, Aspire and other snow tools that already advertise GPS-verified, timestamped proof of service.",
+    "revenue": "Hypothesis (unvalidated): $20-60 per month per company, or a per-site seasonal fee. Price anchors seen only in search results: SnowPilot Pro advertises about $10 per month flat (Product Hunt listing), and a third-party roundup lists Yeti Snow from about $50 per month. Both are offers, not proof of buyers, and suggest little room for a premium standalone price.",
+    "gap": "Alternatives: snow-specific apps that advertise GPS-verified logs and timestamped photos (Yeti for Snow, Plow360, SNOWiQ Driver, SnowPilot Pro, IndusTrack, Aspire, Routeware for municipal work), general field-service tools plus photo apps (Jobber plus CompanyCam), hardware GPS trackers, paper logs and handwritten diaries, and contract clauses that shift liability back to the owner. The only possible gap seen is the retrieval end: a claim-ready per-storm packet with long retention independent of whether the contractor still pays for the operations app years later. No contractor post was found asking for that specifically, and incumbents' export and retention capabilities were not verified because their pages could not be fetched.",
+    "timing": "Neutral to weak. Liability and insurance pressure is ongoing (2025 Massachusetts coverage of contractors losing coverage and a stalled contract-reform bill; Insurance Business coverage of slip-and-fall exposure; Ontario's 60-day notice rule for slip-and-fall claims). But smartphone GPS and photo proof of service is already mainstream in snow software, so there is no new technical or regulatory opening that incumbents lack.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed access to snow contractors, no confirmed knowledge of snow contracts, insurance or premises-liability evidence rules, and limited capital. The business is seasonal and regional (US snow belt and Canada), which concentrates sales and support into a few months.",
+    "risks": [
+      "Crowded feature: Yeti, Plow360, SNOWiQ, SnowPilot Pro, IndusTrack and Aspire all advertise GPS-verified, timestamped service records and photos as liability protection.",
+      "Low price ceiling: at least one snow app lists about $10 per month, and broader field-service tools bundle photos and GPS.",
+      "Adoption depends on drivers and subcontractors logging every visit in bad weather and poor signal; vendor content itself warns that drivers revert to paper when apps add friction.",
+      "Records do not settle every case: court decisions turn on contract scope, whether the contractor created the hazard, and state law, so the value of better records is real but hard to quantify for a buyer.",
+      "Much of the cost is upstream (contract indemnity clauses, insurer exits, premium increases) and is not fixed by software.",
+      "Evidence quality: every page fetch failed in this run, so all entries rely on search-result summaries; no Reddit threads were found and PlowSite threads are about ten years old."
+    ],
+    "pilot": [
+      "Before building, interview 8 owners of 1-15 truck commercial snow companies (via a state landscape association or SIMA chapter). Ask about the last slip-and-fall claim or records request, how long after the storm it came, what records they produced, how long retrieval took, and what software they use today. Stop if fewer than 3 of 8 had a claim or records request in the last 3 years, or if 5 or more already use an app with GPS and photo proof of service and are satisfied with its exports.",
+      "If interviews pass, run a one-season concierge test with 3 contractors who still use paper or a generic tool: give drivers a simple check-in form, attach weather data, and produce a per-storm packet within 24 hours of any request. Success means at least 2 contractors keep logging through 5 or more storms and at least 2 agree in writing to pay $30 or more per month next season. Stop if drivers stop logging after 2 storms or no one commits to pay."
+    ],
+    "assumptions": [
+      "That a meaningful share of 1-15 truck contractors still rely on paper logs is assumed, not observed.",
+      "That incumbents' archives are hard to search or export years later is unverified; their product pages could not be fetched.",
+      "The $20-60 per month price band is a hypothesis; observed anchors (about $10 and about $50 per month) are snippet-only and unverified.",
+      "That better records measurably reduce claim payouts or premiums rests on trade press, attorney advice and anecdote, not data.",
+      "That timestamped app records and photos are admissible and persuasive varies by jurisdiction and was not checked with counsel."
+    ],
+    "level": "repeated-pain",
+    "verdict": "Pass",
+    "verdictRationale": "The pain is real and repeated: trade press, insurers, attorneys and contractors agree that slip-and-fall claims are the main liability for snow contractors, that claims can arrive years later, and that contemporaneous records often decide them. But the proposed solution is exactly what existing snow apps already sell: GPS-verified logs, timestamped photos and weather data pitched as slip-and-fall protection, with at least one app listed at about $10 per month. No customer source asked for a separate evidence tool or complained that current apps fail at retrieval years later. Confidence is limited because every page fetch failed (DNS and proxy errors) and all entries come from search-result summaries. This would move to Interview if contractors reported that records from their current app were missing, unexportable, or lost after cancelling when a claim arrived, and said they would pay for an independent long-term archive.",
+    "nextStep": "Shelve the idea. If revisiting, re-fetch the cited pages, then check Yeti's, Plow360's and Aspire's documentation for multi-year retention and per-site export, and ask 3-5 contractors who changed or cancelled snow software whether they could still produce old storm records.",
+    "evidence": "Researched report",
+    "status": "Real pain; proof-of-service already a standard snow-app feature",
+    "evidenceLog": [
+      {
+        "observation": "Landscape Ontario's September 2019 article argues that the side with better records usually wins a slip-and-fall lawsuit. Per the search summaries, the related content recommends snow plow logs with time of removal, equipment, precise location and weather, salt logs, GPS records and handwritten diaries for each site visit, and mentions a Newfoundland case where a contractor's daily salting log showed a vigilant effort to control freeze-thaw conditions.",
+        "label": "Landscape Ontario: Battle of Evidence",
+        "url": "https://landscapeontario.com/battle-of-evidence-the-side-with-the-best-records-often-wins-a-slip-and-fall-lawsuit",
+        "sourceType": "news",
+        "publishedAt": "2019-09",
+        "observedAt": "2026-10-12",
+        "supports": "Records are the main defense in snow slip-and-fall claims, and the record types match the proposed evidence file.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error), so wording is unverified. Trade association content, not a customer voice. Article is from 2019 and Ontario law has since changed (60-day notice rule)."
+      },
+      {
+        "observation": "Lawn & Landscape's 'Providing proof' quotes attorney Baakman: the statute of limitations on a slip-and-fall claim is two years, but snow contractors should keep documents for at least five years, and a contractor may not learn of a suit for two to three years. She recommends cloud storage and keeping both paper and transcribed versions of reports.",
+        "label": "Lawn & Landscape: Providing proof",
+        "url": "https://www.lawnandlandscape.com/article/providing-proof",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Claims arrive years later, so long-term retention and retrieval of per-site records matters.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error). Publication date unknown. The retention advice is one attorney's view and limitation periods vary by state."
+      },
+      {
+        "observation": "Lawn & Landscape's 'Clean sheet' treats documentation as the main defense, listing arrival and departure times, worker names, weather conditions and the amount of salt or deicer used, and reports contractors advising that paperwork be kept for years because some claims are not reported until years after the incident.",
+        "label": "Lawn & Landscape: Clean sheet",
+        "url": "https://www.lawnandlandscape.com/news/clean-sheet",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Contractors already know what to record; the workflow is established practice.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error) and the proxy denied a direct request. Publication date unknown (a related URL suggests 2018 but this is unverified)."
+      },
+      {
+        "observation": "Insurance Business reports SWG Specialty's Brian Mahoney calling slip-and-fall third-party injury claims the biggest exposure for snow removal contractors, noting a contractor can be drawn into a claim even after clearing a site because no lot is fully free of snow or ice, and that some contractual performance guarantees fall outside standard CGL coverage.",
+        "label": "Insurance Business: snow contractors' slip-and-fall exposure",
+        "url": "https://www.insurancebusinessmag.com/ca/news/commercial-liability/snow-removal-contractors-face-relentless-slipandfall-exposure-expert-warns-566589.aspx",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Slip-and-fall claims are the dominant liability for snow contractors per an insurance specialist.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error). Publication date unknown. Canadian focus; an insurance broker's view, not a contractor's."
+      },
+      {
+        "observation": "State House News Service coverage (May 2025, reprinted by Banker & Tradesman) quotes Massachusetts contractor Doug McDuff saying his company's slip-and-fall claim was settled by his insurer two years later for $365,000 and the insurer then dropped his business; contractors say liability is raising rates and reducing insurers' willingness to cover them, and back a contract-reform bill that stalled in Senate Ways and Means.",
+        "label": "Banker & Tradesman: Liability woes leave snow contractors on slippery ground",
+        "url": "https://bankerandtradesman.com/liability-woes-leave-snow-contractors-on-slippery-ground",
+        "sourceType": "news",
+        "publishedAt": "2025-05",
+        "observedAt": "2026-10-12",
+        "supports": "Named contractors report costly claims, late settlements and loss of coverage.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; the related WWLP page fetch failed (DNS error) and this page was not fetched. The $365,000 figure is unverified. The article does not say better records would have changed the outcome; the main complaint is contract terms and insurance."
+      },
+      {
+        "observation": "PlowSite forum threads on being sued for slip and falls, as summarized in search results: contractors say detailed records are the only protection; one says a suit was dropped before trial because of before-and-after pictures and a permanent log of visit times; another keeps records five years; another says a claim he was not liable for still sat on his insurance record as pending and raised his premium by almost $10,000; one says a contract clause shifting slip-and-fall responsibility to the client got him out of a suit.",
+        "label": "PlowSite: Being sued for a slip and fall",
+        "url": "https://www.plowsite.com/threads/being-sued-for-a-slip-and-fall.122553/",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Independent contractors report that records decide claims and that claims cost money even when defended.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error). The summary drew on several PlowSite threads and does not say which quote came from which thread, so these quotes cannot be attributed to this specific thread. Search summary says the posts are roughly ten years old. Contract clauses, not software, were also cited as a fix."
+      },
+      {
+        "observation": "A Workopolis job posting for a snow removal operator requires accurately documenting site service records for every site, including times, services performed and weather conditions, and submitting paperwork promptly at the end of each shift.",
+        "label": "Workopolis job: snow removal operator documentation duties",
+        "url": "https://www.workopolis.com/jobsearch/viewjob/Wae4lFDi8IS7ateUMhkgXoCd2aa3GhQ32D9BYU6lhMLvyoiqV0w5sh7ZsI7zYRkU",
+        "sourceType": "job",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Employers make per-site service logging a routine paid task, often on paper.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; not fetched. Employer, size, pay and date unknown. A job post shows intent to hire, not a hire, and logging is an incidental duty, not spend on records software. Other postings seen in the same search (snow operations manager, production manager) listed similar duties."
+      },
+      {
+        "observation": "Yeti for Snow advertises weather data, GPS-verified service logs and time-stamped site photos, framed as protection against slip-and-fall claims; Yeti's app listing and site carry a client testimonial saying recorded data and pictures of each job make it easy to fight slip-and-fall litigation. A third-party roundup lists Yeti Snow from about $50 per month.",
+        "label": "Yeti Software: Yeti for Snow",
+        "url": "https://yetisoftware.com/?p=1632",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "An incumbent already sells this exact proposition to snow contractors (counterevidence).",
+        "level": "context",
+        "limitations": "Vendor marketing seen only in search summaries; the page fetch failed (DNS error). The testimonial is vendor-selected. The roughly $50 price is from a secondary roundup and may not match current Yeti pricing. Retention and export capabilities not verified."
+      },
+      {
+        "observation": "SnowPilot Pro's Product Hunt listing describes a $10 per month flat plan with a driver app that produces time-stamped proof-of-service photos, a $20 per month account covering summer and winter services, and a free trial.",
+        "label": "Product Hunt: SnowPilot Pro",
+        "url": "https://www.producthunt.com/products/snowpilot-pro",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Proof-of-service photos are available very cheaply, which caps pricing for a new entrant (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; not fetched. Prices are offers, not proof of buyers; the summary notes the trial length differs between versions of the listing. Customer count unknown."
+      },
+      {
+        "observation": "Plow360's App Store listing says GPS automatically logs where a plow has been, works offline when cell service is spotty, and offers per-property photo documentation with real-time dispatcher sync. Search results also showed SNOWiQ Driver (smartphone GPS instead of dedicated hardware) and IndusTrack (in-vehicle GPS plus snow app producing verified data for billing).",
+        "label": "App Store: Plow360",
+        "url": "https://apps.apple.com/ca/app/plow360/id6740414156",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Multiple newer and established tools already handle GPS logging and photos offline, addressing the driver-adoption problem (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; not fetched. Price, ratings and user count unknown. SNOWiQ and IndusTrack claims are from separate vendor pages also seen only as snippets."
+      }
+    ],
+    "sourceNote": "All page fetches failed in this run (WebFetch DNS errors; the egress proxy returned 403 for direct requests), so every entry relies on search-result summaries and is unverified until re-fetched. The sources show that slip-and-fall claims are the main liability for snow contractors, that claims can arrive years later, and that records often decide them. They also show many snow apps already sell GPS-verified, timestamped proof of service. No Reddit threads were found; PlowSite threads are reportedly about ten years old.",
+    "reviewedAt": "2026-10-12",
+    "sources": [
+      [
+        "Landscape Ontario: Battle of Evidence",
+        "https://landscapeontario.com/battle-of-evidence-the-side-with-the-best-records-often-wins-a-slip-and-fall-lawsuit"
+      ],
+      [
+        "Lawn & Landscape: Providing proof",
+        "https://www.lawnandlandscape.com/article/providing-proof"
+      ],
+      [
+        "Lawn & Landscape: Clean sheet",
+        "https://www.lawnandlandscape.com/news/clean-sheet"
+      ],
+      [
+        "Insurance Business: snow contractors' slip-and-fall exposure",
+        "https://www.insurancebusinessmag.com/ca/news/commercial-liability/snow-removal-contractors-face-relentless-slipandfall-exposure-expert-warns-566589.aspx"
+      ],
+      [
+        "Banker & Tradesman: Liability woes leave snow contractors on slippery ground",
+        "https://bankerandtradesman.com/liability-woes-leave-snow-contractors-on-slippery-ground"
+      ],
+      [
+        "PlowSite: Being sued for a slip and fall",
+        "https://www.plowsite.com/threads/being-sued-for-a-slip-and-fall.122553/"
+      ],
+      [
+        "Workopolis job: snow removal operator documentation duties",
+        "https://www.workopolis.com/jobsearch/viewjob/Wae4lFDi8IS7ateUMhkgXoCd2aa3GhQ32D9BYU6lhMLvyoiqV0w5sh7ZsI7zYRkU"
+      ],
+      [
+        "Yeti Software: Yeti for Snow",
+        "https://yetisoftware.com/?p=1632"
+      ],
+      [
+        "Product Hunt: SnowPilot Pro",
+        "https://www.producthunt.com/products/snowpilot-pro"
+      ],
+      [
+        "App Store: Plow360",
+        "https://apps.apple.com/ca/app/plow360/id6740414156"
+      ]
+    ]
   }
 ]
