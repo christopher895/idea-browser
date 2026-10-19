@@ -1854,5 +1854,535 @@ window.IDEAS = [
         "https://info.childcareaware.org/blog/ccdf-nprm-2026"
       ]
     ]
+  },
+  {
+    "id": "detention-claims",
+    "name": "Dock Clock",
+    "title": "Detention pay claims for owner-operators and small carriers",
+    "category": "Logistics",
+    "model": "B2B",
+    "type": "Workflow software",
+    "summary": "A tool to help owner-operators and small trucking carriers document, invoice and chase detention pay. The loss is large and well measured, but cheap detention-tracking apps already exist, and carriers say claims fail because brokers ignore them, not because proof is missing.",
+    "buyer": "Owner-operators and small for-hire carriers (roughly 1-20 trucks) hauling brokered freight. The owner, or a dispatcher or spouse doing back-office work, would both use and pay for it.",
+    "problem": "Drivers are routinely held at shipper and receiver docks past the usual two-hour free time. ATRI estimated detention cost the for-hire industry $3.6 billion in direct expenses and $11.5 billion in lost productivity in 2023, and found carriers invoice detention about 75% of the time but are paid on only about 55% of invoices. On trucking forums, small carriers describe brokers ignoring detention requests, asking for in/out times stamped on the bill of lading that docks will not provide, and letting small amounts go to protect broker relationships. All of these sources were seen only as search-result summaries.",
+    "solution": "If pursued at all: an evidence-and-collections assistant rather than another timer. It would pull arrival and departure from the ELD or phone GPS, match them to the rate confirmation's detention terms, send the free-time-expired notice to the broker in real time, attach the packet to the invoice or factoring submission, and track each claim through follow-up and, where justified, a bond claim.",
+    "revenue": "Hypothesis (unvalidated): $10-30 per truck per month, or a 10-20% success fee on detention actually recovered. Visible anchors are offers, not proof of buyers: Detention Pay Tracker at $19/month and Detention Source Lite at $9.99/month (both from search snippets, unverified). A success fee depends on recoveries that carriers report are often refused outright.",
+    "gap": "Alternatives: phone-GPS and ELD detention timers sold to carriers (Detention Pay Tracker, Detention Source Lite, DMRG Detention Pay, WaitClaim), broker-side tools that time and audit detention (Trucker Tools detention alerts, TrackFlo from $2,000/month for brokers, McLeod detention management, Bubba.ai using ELD geofences), factoring companies and their back offices, signed BOL times and ELD screenshots, and simply writing the money off. Documentation tools are already plentiful. The unserved part is leverage: getting a broker to pay a claim it chooses to ignore, which software alone does not supply.",
+    "timing": "Mixed. FMCSA has outlined a 12-month detention data study and a DOT Inspector General audit criticized its plan, and an unverified vendor blog reports 2026 hours-of-service pilots that touch dock time. Regulation that forced brokers to pay would change the economics, but none was found in force.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed trucking experience, no confirmed access to owner-operators or dispatchers, and limited capital. ELD integrations (Motive, Samsara and others) need partner access that is not confirmed.",
+    "risks": [
+      "Crowded low end: at least four carrier-side detention apps already sell for about $10-19/month (prices unverified).",
+      "Wrong bottleneck: in a small forum poll, most respondents said claims are ignored or not worth fighting, and only one said the issue was missing contract terms; better documentation may not raise payment rates.",
+      "Relationship cost: small carriers often drop detention claims to keep a regular broker, which caps how hard any tool can push.",
+      "Factoring friction: factors usually fund only confirmed line haul, so detention arrives late through reserves, if at all.",
+      "Broker-side tools (Trucker Tools, TrackFlo, McLeod) let brokers control the detention record, weakening an independent carrier-side record.",
+      "Evidence quality: every source was seen only as a search summary because page fetching was blocked."
+    ],
+    "pilot": [
+      "Before building, interview 8 owner-operators or small-carrier dispatchers about their last 3 detention events: was detention on the rate confirmation, was it invoiced, what evidence was sent, what was paid, and do they use a detention app. Stop if 5 of 8 say they already have adequate proof and the broker simply refuses, or if fewer than 3 had more than $300 unpaid detention in the last month.",
+      "If a segment emerges, run a 4-week concierge test with 3 carriers: they forward rate confirmations and ELD times, and the builder prepares and sends detention notices and invoices. Success: at least $1,000 in detention recovered across the three and one agreeing to pay a 15% fee. Stop if under $300 is recovered or no carrier will pay."
+    ],
+    "assumptions": [
+      "The $10-30 per truck per month and 10-20% success-fee prices are hypotheses, not observed willingness to pay.",
+      "That better-timed notices and evidence packets would raise payment rates is unproven; forum evidence points the other way.",
+      "ATRI 2023 figures cover the whole for-hire industry, not owner-operators specifically.",
+      "Competitor app prices come from search snippets and were not checked on the vendors' pages.",
+      "The forum poll is tiny (about 13 votes implied) and was started by someone who may be researching the market rather than a carrier."
+    ],
+    "level": "costly-workaround",
+    "verdict": "Pass",
+    "verdictRationale": "The cost is real and unusually well measured: ATRI puts unpaid and under-paid detention in the billions, and carriers describe giving up on claims. But the documentation problem a solo developer could solve is already covered by several cheap apps and by broker-side platforms, and carrier voices say the real barrier is that brokers ignore claims and carriers will not risk the relationship. Software cannot supply that leverage. Confidence is limited because every source was seen only through search summaries and the carrier-side poll is very small. This would move to Interview if several owner-operators said detention apps leave them with claims they could win but lack time to chase, and would pay a success fee, or if a federal rule made brokers liable for documented detention.",
+    "nextStep": "Shelve the idea. If revisiting, read the cited Truckers Report threads directly when page access works, and watch FMCSA's detention study and any rule that would make brokers pay documented detention.",
+    "evidence": "Researched report",
+    "status": "Large measured loss; documentation tools already cheap, collection blocked by leverage",
+    "sourceNote": "All sources were seen only through web-search result summaries because page fetching and direct HTTPS were blocked during this run. They establish that detention is frequent and often unpaid, that carriers voice repeated frustration, and that carrier- and broker-side detention tools already exist. No source showed carriers paying for a collection service, and the strongest carrier-voice source suggests claims fail on broker refusal rather than missing evidence.",
+    "reviewedAt": "2026-10-19",
+    "sources": [
+      [
+        "Trucknews: Truck driver detention costs industry $15 billion in 2023 (ATRI)",
+        "https://www.trucknews.com/transportation/truck-driver-detention-costs-industry-15-billion-in-2023-atri"
+      ],
+      [
+        "Truckers Report poll: What's the #1 reason your detention claims get denied?",
+        "https://www.thetruckersreport.com/truckingindustryforum/threads/whats-the-1-reason-your-detention-claims-get-denied-poll.2529156/page-3"
+      ],
+      [
+        "Truckers Report: what would you do if a broker doesn't pay detention",
+        "https://www.thetruckersreport.com/truckingindustryforum/goto/post?id=8023949"
+      ],
+      [
+        "Truckers Report: Detention claim process from your side — what actually works?",
+        "https://www.thetruckersreport.com/truckingindustryforum/threads/detention-claim-process-from-your-side-%E2%80%94-what-actually-works.2541683/"
+      ],
+      [
+        "Detention Pay Tracker: help and FAQ",
+        "https://pollen-pond-d92.notion.site/Detention-Pay-Tracker-Help-FAQ-39082e9d604e804ebb1efd01981f30ad"
+      ],
+      [
+        "App Store: Detention Source Lite",
+        "https://apps.apple.com/ca/app/detention-source-lite/id6480213112"
+      ],
+      [
+        "Trucker Tools: three ways to get detention pay",
+        "https://www.truckertools.com/three-ways-to-get-detention-pay/"
+      ],
+      [
+        "TrackFlo: pricing",
+        "https://www.trackflo.tech/pricing"
+      ],
+      [
+        "Bobtail: handling broker short pays",
+        "https://bobtail.com/?p=4722"
+      ]
+    ],
+    "evidenceLog": [
+      {
+        "observation": "Coverage of ATRI's study \"Costs and Consequences of Truck Driver Detention\", as summarized in search results, reports that detention cost the U.S. for-hire trucking industry $11.5 billion in lost productivity and $3.6 billion in direct expenses in 2023, that drivers were detained at 39.3% of stops, and that carriers invoice for detention about 75% of the time while shippers pay only about 55% of invoices, often at amounts that do not match carrier costs.",
+        "label": "Trucknews: Truck driver detention costs industry $15 billion in 2023 (ATRI)",
+        "url": "https://www.trucknews.com/transportation/truck-driver-detention-costs-industry-15-billion-in-2023-atri",
+        "sourceType": "news",
+        "publishedAt": "2024",
+        "observedAt": "2026-10-19",
+        "supports": "Detention is a frequent, quantified loss, and a large share of invoiced detention goes unpaid.",
+        "level": "costly-workaround",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. The study and figures were reported by news coverage, not read from ATRI's report. Industry-wide, not specific to owner-operators. The search summary blended several articles about the same ATRI study; figures were consistent across them. The 2024 publication year is inferred from the study covering 2023 operations."
+      },
+      {
+        "observation": "A Truckers Report forum poll started on August 12, 2025 asked why detention claims are denied. Per the search summary, about 54% chose that requests get ignored or are not worth the hassle to fight, about 38% said they usually get paid, about 8% blamed detention missing from the rate confirmation or contract, and options about disputed log times or appointments got no votes.",
+        "label": "Truckers Report poll: What's the #1 reason your detention claims get denied?",
+        "url": "https://www.thetruckersreport.com/truckingindustryforum/threads/whats-the-1-reason-your-detention-claims-get-denied-poll.2529156/page-3",
+        "sourceType": "community",
+        "publishedAt": "2025-08-12",
+        "observedAt": "2026-10-19",
+        "supports": "Carriers describe broker non-response, not missing proof, as the main reason detention goes unpaid (counterevidence for a documentation tool).",
+        "level": "repeated-pain",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Percentages imply roughly 13 votes, so this is anecdotal. The poll's author may be researching the market rather than a carrier. Vote counts were taken from the search summary."
+      },
+      {
+        "observation": "Search summaries of Truckers Report threads on unpaid detention show carriers asking what to do when a broker will not pay. Replies say to check whether detention was on the rate confirmation, bill it on the invoice, get in/out times signed on the bill of lading, and disagree on whether a broker bond claim works; one suggests letting small amounts go with a regular broker to protect the relationship.",
+        "label": "Truckers Report: what would you do if a broker doesn't pay detention",
+        "url": "https://www.thetruckersreport.com/truckingindustryforum/goto/post?id=8023949",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Independent carriers repeatedly raise unpaid detention and describe ad hoc workarounds and write-offs.",
+        "level": "repeated-pain",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. The search summary combined replies from several Truckers Report threads (including \"Detention pay\" and \"Broker doesn't want to pay\"), so which post said what is unverified. Dates unknown. Anecdotal."
+      },
+      {
+        "observation": "A May 2026 forum thread asks owner-operators and dispatchers to walk through recent detention claims and what evidence they submitted. The poster calls a shipper-signed BOL with times the strongest evidence and ELD or GPS a step down, describing that as an outsider's impression. Visible replies were a brief complaint about one broker and a question about documents.",
+        "label": "Truckers Report: Detention claim process from your side — what actually works?",
+        "url": "https://www.thetruckersreport.com/truckingindustryforum/threads/detention-claim-process-from-your-side-%E2%80%94-what-actually-works.2541683/",
+        "sourceType": "community",
+        "publishedAt": "2026-05",
+        "observedAt": "2026-10-19",
+        "supports": "Shows outside interest in the carrier claim process; little carrier engagement was visible.",
+        "level": "attention",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. The poster describes themself as an outsider and may be a would-be vendor. Only a few replies were visible in the summary, so the thread is weak evidence of demand."
+      },
+      {
+        "observation": "A Notion-hosted help page describes Detention Pay Tracker as a mobile app that automatically documents time spent waiting at facilities and produces a PDF certificate for the broker, priced at $19/month with a 14-day free trial and no contract.",
+        "label": "Detention Pay Tracker: help and FAQ",
+        "url": "https://pollen-pond-d92.notion.site/Detention-Pay-Tracker-Help-FAQ-39082e9d604e804ebb1efd01981f30ad",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "A carrier-side detention documentation app already exists at a low price (counterevidence and price anchor).",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Price and features from the vendor's own page via search summary; unverified. An offer is not proof of customers."
+      },
+      {
+        "observation": "Detention Source Lite, an iPhone app for tracking detention, lists a $9.99/month subscription with a one-month free trial. The same search also surfaced DMRG Detention Pay (BOL upload for detention requests) and WaitClaim (web-based, 14-day trial).",
+        "label": "App Store: Detention Source Lite",
+        "url": "https://apps.apple.com/ca/app/detention-source-lite/id6480213112",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Several low-priced carrier-side detention apps compete for the same buyer.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Price from search summary; unverified. DMRG and WaitClaim are mentioned from the same summary and not individually cited. App listings say nothing about adoption."
+      },
+      {
+        "observation": "Trucker Tools describes GPS-based detention alerts in its driver app that time waits at facilities against a configurable threshold, notify the broker and driver, and let drivers screenshot the load track as claim evidence. The feature works when the broker uses Trucker Tools' load tracking.",
+        "label": "Trucker Tools: three ways to get detention pay",
+        "url": "https://www.truckertools.com/three-ways-to-get-detention-pay/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Broker-run tracking platforms already time detention and supply carriers with evidence.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. The search summary drew on several Trucker Tools pages and a 2019 DC Velocity announcement; current behavior may differ. Vendor marketing."
+      },
+      {
+        "observation": "TrackFlo, a broker platform with a detention collection dashboard that audits loads past the detention threshold, prices by load volume with all features included; its lowest tier for brokers under 2,000 loads a month starts at $2,000 monthly.",
+        "label": "TrackFlo: pricing",
+        "url": "https://www.trackflo.tech/pricing",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Brokers already buy detention auditing inside larger platforms, so the detention record often sits with the broker, not the carrier.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Price from search summary; unverified. Sold to brokers, not carriers. An offer, not proof of buyers."
+      },
+      {
+        "observation": "A factoring company's guidance says missing in/out times on the bill of lading let brokers refuse detention, and recommends calling the broker, then the factor, then requesting transaction documents. A related forum reply in the same search says factors rarely advance unconfirmed extras such as detention, which instead arrive later through the reserve account.",
+        "label": "Bobtail: handling broker short pays",
+        "url": "https://bobtail.com/?p=4722",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Factoring workflows already handle short-pay follow-up and slow detention payment, another existing alternative.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. The URL is a post-ID link whose title was not visible; content from search summary only. The forum point came from a separate Truckers Report thread in the same summary and is not individually cited. Vendor content."
+      }
+    ]
+  },
+  {
+    "id": "dental-benefits-check",
+    "name": "Benefit Check",
+    "title": "Insurance eligibility and benefits checks for small dental practices",
+    "category": "Healthcare",
+    "model": "B2B",
+    "type": "Workflow software",
+    "summary": "A tool to cut the phone and portal time small dental offices spend verifying patients' insurance benefits before appointments. Practices clearly pay for this today, but the space is crowded with practice-software add-ons, payer APIs, AI phone agents and outsourced verification services.",
+    "buyer": "Owners or office managers at solo and small group dental practices (roughly 1-5 dentists). The office manager or front desk does the work; the owner dentist approves spend.",
+    "problem": "Before most appointments someone must confirm coverage, frequencies, waiting periods and remaining benefits, often by payer portal or phone. Practice-management articles say small practices rely on the office manager and front desk for this, and vendors selling automation claim a call takes about 15-30 minutes per patient (unverified). Practices hire verification specialists and pay outsourced services or overseas freelancers, and errors later surface as surprise patient bills. Sources were seen only as search-result summaries.",
+    "solution": "Not recommended to build. If pursued: a narrow layer on top of an existing payer eligibility API that writes plan limitations into the practice-management system's fields that drive estimates, for practices on systems without a native option. This is what several funded vendors already sell.",
+    "revenue": "Hypothesis (unvalidated): $100-250 per location per month. Visible anchors are offers, not proof of buyers: eAssist outsourced verification from $250/month per location for under 30 verifications, Outsource Strategies from about $500/month or about $3 per request, and software tools reported at $150-249/month in a Raft Labs blog seen only in search results. All figures are from search snippets and unverified.",
+    "gap": "Alternatives: Dentrix Eligibility Essentials and Eligibility Pro (Henry Schein One, 2024), Vyne Trellis with the Onederful eligibility API covering 240+ payers, AI and automation vendors (Foji, Pearl, SuperDial, Overjet and others), outsourced verification companies (eAssist, Outsource Strategies), Upwork and Fiverr freelancers at low hourly rates, and in-house verification staff. No underserved segment was found; Open Dental users appeared to rely on third-party tools, but several vendors already target them.",
+    "timing": "Unfavorable for a new entrant. Practice-software vendors have shipped native eligibility products and a payer-API layer was consolidated by Vyne in 2021; many AI vendors entered by 2026.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed dental-practice experience, HIPAA compliance setup, payer clearinghouse access or practice-management integration partnerships, and limited capital.",
+    "risks": [
+      "Crowded market: native practice-software add-ons, a payer API owned by a clearinghouse, many AI vendors and cheap outsourcing all compete.",
+      "Data access: real-time benefits depend on clearinghouse or payer connections and portal scraping, which a solo builder does not control.",
+      "Compliance: handling protected health information requires HIPAA safeguards and business associate agreements.",
+      "Integration: value depends on writing benefits into Dentrix, Eaglesoft or Open Dental fields, which needs partner access.",
+      "Low-cost labor: overseas freelancers advertise verification at low hourly rates.",
+      "Evidence quality: every source was seen only as a search summary; no independent practice voices were found."
+    ],
+    "pilot": [
+      "Only if revisiting: interview 6 office managers at practices on Open Dental or Eaglesoft about last week's verifications, time per check, tools used, and what still requires a phone call. Stop if 4 of 6 already use an outsourced service or software they are satisfied with.",
+      "If a specific unmet step appears (for example, frequency limits never available by API), offer a 2-week concierge test for that step to 2 practices. Success: at least 40 checks used and a written commitment to pay at least $150/month. Stop if fewer than 15 are used or no practice will pay."
+    ],
+    "assumptions": [
+      "The $100-250 per location per month price is a hypothesis, not observed willingness to pay.",
+      "Time-per-call figures come from vendors selling automation and may be overstated.",
+      "That Open Dental lacks native real-time eligibility was not confirmed from Open Dental itself.",
+      "Competitor prices are from search snippets and were not checked on vendors' pages.",
+      "Job posts show intent to hire, not completed hires."
+    ],
+    "level": "existing-spend",
+    "verdict": "Pass",
+    "verdictRationale": "Spend is clearly present: practices post paid verification jobs and buy outsourced verification on published per-location tiers. But that same spend already supports a crowded field of native practice-software add-ons, a clearinghouse-owned payer API, AI vendors and low-cost outsourcing. A solo developer without clearinghouse access, HIPAA infrastructure or practice-software integrations has no visible edge. Confidence is moderate on competition and low on practice sentiment, because no independent practice voices were found and all sources were seen only through search summaries. This would move to Interview only if office managers described a specific verification step that current tools and services fail at and that is reachable without payer contracts.",
+    "nextStep": "Shelve the idea. No further research is recommended unless a practice-side complaint about current verification tools turns up.",
+    "evidence": "Researched report",
+    "status": "Clear existing spend; saturated with incumbents and services",
+    "sourceNote": "All sources were seen only through web-search result summaries because page fetching and direct HTTPS were blocked during this run. They establish paid demand (job posts and outsourced service pricing) and a crowded competitive field. Most problem descriptions come from vendors and trade articles; no independent practice forum posts were found in search results.",
+    "reviewedAt": "2026-10-19",
+    "sources": [
+      [
+        "Upwork job: Dental Claims and Insurance Verification Specialist",
+        "https://www.upwork.com/jobs/~022067110157780444776"
+      ],
+      [
+        "MB2 Dental: Insurance Verification Specialist job",
+        "https://dentalcareers-mb2dental.icims.com/jobs/21339/insurance-verification-specialist/job"
+      ],
+      [
+        "eAssist: dental insurance verification pricing",
+        "https://dentalbilling.com/pricing-dental-insurance-verification/"
+      ],
+      [
+        "Outsource Strategies: dental insurance verification",
+        "https://www.outsourcestrategies.com/dental-insurance-verification/"
+      ],
+      [
+        "Business Wire: Henry Schein One introduces Dentrix eligibility offerings",
+        "https://www.businesswire.com/news/home/20240904669213/en/Henry-Schein-One-Introduces-Dentrix-Eligibility-Offerings"
+      ],
+      [
+        "Dental Compare: Vyne Dental acquires Onederful",
+        "https://www.dentalcompare.com/News/581985-Vyne-Dental-Acquires-Onederful/"
+      ],
+      [
+        "Foji: dental eligibility verification software in 2026",
+        "https://www.foji.io/blog/dental-insurance-eligibility-verification-software-what-the-best-practices-are-using-in-2026"
+      ],
+      [
+        "Pearl case study: freed from the insurance hold queue",
+        "https://hellopearl.com/case-studies/case-study-how-pearl-freed-a-busy-practice-from-the-insurance-hold-queue"
+      ],
+      [
+        "DentistryIQ: The dos and don'ts of navigating dental insurance",
+        "https://www.dentistryiq.com/practice-management/insurance/article/16367438/the-dos-and-donts-of-navigating-dental-insurance"
+      ]
+    ],
+    "evidenceLog": [
+      {
+        "observation": "An Upwork job for a small dental office seeks remote claims and insurance verification help, hourly at under 30 hours a week with a posted range of $5-20 per hour, requiring experience with DentalXchange.",
+        "label": "Upwork job: Dental Claims and Insurance Verification Specialist",
+        "url": "https://www.upwork.com/jobs/~022067110157780444776",
+        "sourceType": "job",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "A small practice is willing to pay for outsourced verification labor.",
+        "level": "existing-spend",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Posting date and whether anyone was hired are unknown. Pay range from search summary. A post shows intent to spend, not a hire."
+      },
+      {
+        "observation": "A dental group job listing for a full-time, in-person insurance verification specialist; the search summary reports pay of $22-27 per hour for such in-office postings.",
+        "label": "MB2 Dental: Insurance Verification Specialist job",
+        "url": "https://dentalcareers-mb2dental.icims.com/jobs/21339/insurance-verification-specialist/job",
+        "sourceType": "job",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Dental organizations budget dedicated paid roles for verification.",
+        "level": "existing-spend",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. This is a dental service organization, not a small independent practice. The pay range was attributed in the summary to in-office postings generally and may come from this or a sibling MB2 listing."
+      },
+      {
+        "observation": "eAssist lists outsourced verification on per-location monthly tiers: $250 for under 30 verifications, $650 for 31-75 and $825 for 76-100, with per-check add-ons and a $299 setup fee. An older version reportedly showed $225 for the smallest tier.",
+        "label": "eAssist: dental insurance verification pricing",
+        "url": "https://dentalbilling.com/pricing-dental-insurance-verification/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "A price anchor showing practices are offered outsourced verification at a few hundred dollars a month per location.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Prices from search summary; unverified and possibly out of date. An offer, not proof of customers."
+      },
+      {
+        "observation": "Outsource Strategies offers dental insurance verification on fixed plans as low as about $500 a month or per-request pricing as low as about $3.00, and says it works directly in Open Dental, Dentrix, Dentrix Ascend and Eaglesoft.",
+        "label": "Outsource Strategies: dental insurance verification",
+        "url": "https://www.outsourcestrategies.com/dental-insurance-verification/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Another outsourced service already competes on price for the same buyer.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Prices from search summary; unverified. Vendor marketing."
+      },
+      {
+        "observation": "Henry Schein One launched Eligibility Essentials and Eligibility Pro for Dentrix and Dentrix Ascend. Essentials presents payer insurance data in a uniform format inside Dentrix; Pro adds portal data such as patient history, frequency limitations, procedure-level coverage and remaining benefits.",
+        "label": "Business Wire: Henry Schein One introduces Dentrix eligibility offerings",
+        "url": "https://www.businesswire.com/news/home/20240904669213/en/Henry-Schein-One-Introduces-Dentrix-Eligibility-Offerings",
+        "sourceType": "vendor",
+        "publishedAt": "2024-09-04",
+        "observedAt": "2026-10-19",
+        "supports": "The leading practice-management vendor sells native eligibility verification, closing much of the gap for its users.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Press release via search summary; pricing and adoption unknown. Vendor marketing."
+      },
+      {
+        "observation": "Vyne Dental acquired Onederful, a set of APIs connected to hundreds of dental payers for eligibility and benefits, claims and remittance, and paired it with its Trellis billing platform, which offers batch and real-time eligibility. Vyne describes connections to more than 240 payers.",
+        "label": "Dental Compare: Vyne Dental acquires Onederful",
+        "url": "https://www.dentalcompare.com/News/581985-Vyne-Dental-Acquires-Onederful/",
+        "sourceType": "news",
+        "publishedAt": "2021-12-13",
+        "observedAt": "2026-10-19",
+        "supports": "The payer-data layer a new entrant would need is owned by an established clearinghouse.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Acquisition news via search summary; the 240-payer figure came from Vyne's own page in the same summary. API terms and pricing not seen."
+      },
+      {
+        "observation": "Foji, an automation vendor, says it pulls payer portal data and writes it back into Open Dental, Dentrix and other systems, and cites a survey in which 71% named real-time insurance verification their primary daily operational challenge.",
+        "label": "Foji: dental eligibility verification software in 2026",
+        "url": "https://www.foji.io/blog/dental-insurance-eligibility-verification-software-what-the-best-practices-are-using-in-2026",
+        "sourceType": "vendor",
+        "publishedAt": "2026",
+        "observedAt": "2026-10-19",
+        "supports": "Automation vendors already target practices on systems without native verification, including Open Dental.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Vendor marketing; the 71% survey figure is unverified and its sample is unknown. Publication year inferred from the title."
+      },
+      {
+        "observation": "A Pearl case study says a Manhattan practice's front desk spent 20+ hours a week on hold with insurers before moving verification to Pearl's software.",
+        "label": "Pearl case study: freed from the insurance hold queue",
+        "url": "https://hellopearl.com/case-studies/case-study-how-pearl-freed-a-busy-practice-from-the-insurance-hold-queue",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Shows the time cost practices report and that funded vendors already sell the fix.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Promotional single-practice case study; figures unverified and not independent customer evidence."
+      },
+      {
+        "observation": "A DentistryIQ practice-management article advises against calling carriers for breakdowns of benefits because the calls become very time consuming and the information may be inaccurate, and recommends checking online portals first for dated proof of benefits.",
+        "label": "DentistryIQ: The dos and don'ts of navigating dental insurance",
+        "url": "https://www.dentistryiq.com/practice-management/insurance/article/16367438/the-dos-and-donts-of-navigating-dental-insurance",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Trade press treats benefit verification as a recurring time drain for practice staff.",
+        "level": "repeated-pain",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Trade commentary, not a measured survey or a practice's own complaint. Another DentistryIQ article in the same search recommended calling, so advice is mixed. Date unknown."
+      }
+    ]
+  },
+  {
+    "id": "deposit-deadlines",
+    "name": "Deposit Clock",
+    "title": "Security deposit deadlines and itemized statements for small landlords",
+    "category": "Real estate",
+    "model": "B2B",
+    "type": "Workflow software",
+    "summary": "A tool to help small landlords return deposits or send compliant itemized deduction statements on time under each state's rules. Missing a deadline can forfeit deductions or trigger double or triple damages, but free state templates and guides are abundant and each landlord faces few move-outs a year.",
+    "buyer": "Individual landlords owning roughly 1-20 units who self-manage, mostly without a property manager. The owner both does the work and pays.",
+    "problem": "After a tenant leaves, the landlord must return the deposit or send an itemized statement of deductions within a state deadline, often 14-30 days, sometimes triggered by the later of move-out and a forwarding address. New York's Attorney General says a landlord who misses its 14-day deadline forfeits any right to keep the deposit; California allows up to twice the deposit in statutory damages for bad faith. On BiggerPockets, landlords describe being sued in small claims over grouped or poorly documented deductions. Sources were seen only as search-result summaries.",
+    "solution": "If pursued at all: a move-out checklist that starts the correct state clock, collects photos and receipts per deduction, and produces a dated itemized statement with proof of mailing. This overlaps heavily with free templates and with features rent platforms could add cheaply.",
+    "revenue": "Hypothesis (unvalidated): $5-15 per move-out or $5-10 per month bundled with other small-landlord tools. No source showed a landlord paying for deposit disposition specifically; existing landlord tools in the search offer templates and guides free as marketing.",
+    "gap": "Alternatives: free state-specific itemization letters and deadline guides (Ezel, Baselane, LandlordStudio, EstatePass, VerticalRent), lease and rent platforms (TurboTenant, Avail, RentRedi, Baselane) that collect or hold deposits, property managers, landlord attorneys and associations, and a spreadsheet or calendar reminder. Rent platforms' deposit-return features were not visible in search results, but free tools cover the letter and the deadline lookup.",
+    "timing": "No change found that creates new urgency. New York bills have proposed changing deadlines, but none was confirmed as enacted.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed landlord experience or audience. Keeping 50 states' deadlines and triggers correct is an ongoing legal-content burden with liability for errors.",
+    "risks": [
+      "Free substitutes: many sites give away state-specific itemization letters and deadline tables as lead generation.",
+      "Low frequency: a landlord with a few units sees few move-outs a year, so a subscription is hard to justify (inferred, not measured).",
+      "Platform risk: rent platforms that already hold deposits could add a statement generator as a free feature.",
+      "Legal accuracy: state rules differ in triggers, mailing and receipts; wrong guidance could cost users their deductions.",
+      "Evidence quality: every source was seen only as a search summary, and landlord voices are few."
+    ],
+    "pilot": [
+      "Only if revisiting: interview 8 self-managing landlords with at least 5 units about their last move-out: when the clock started, how they itemized, whether they were disputed, and what they would pay. Stop if 6 of 8 say a free template and a calendar reminder suffice.",
+      "If interest appears, sell a $15 per move-out statement service to landlords in one state through a local landlord association for 6 weeks. Success: 10 paid move-outs. Stop if fewer than 3."
+    ],
+    "assumptions": [
+      "The $5-15 per move-out price is a hypothesis, not observed willingness to pay.",
+      "Low move-out frequency per small landlord is inferred from unit counts, not measured.",
+      "BiggerPockets threads represent a broader pattern of small landlords losing deposit disputes; only a few were seen.",
+      "Penalty counts across states (for example 38 states with double damages) come from a landlord-software blog and are unverified.",
+      "That major rent platforms lack a statement generator is unconfirmed; it may exist and not have appeared in search results."
+    ],
+    "level": "repeated-pain",
+    "verdict": "Pass",
+    "verdictRationale": "The legal risk is real and well documented by state attorneys general, and landlords do lose small-claims cases over late or sloppy itemization. But the job is infrequent for small landlords, free state templates and deadline guides are everywhere, and rent platforms that already hold deposits are better placed to add it. No source showed anyone paying for this specific task. Confidence is limited because all sources were seen only as search summaries and landlord voices were few. This would move to Watch or Interview if landlords described paying attorneys or managers specifically to handle deposit disposition, or if a large state adopted strict new statement requirements.",
+    "nextStep": "Shelve the idea. If revisiting, read BiggerPockets threads directly when page access works and check whether TurboTenant, Avail or RentRedi already generate itemized statements.",
+    "evidence": "Researched report",
+    "status": "Real penalties, low frequency; covered by free templates",
+    "sourceNote": "All sources were seen only through web-search result summaries because page fetching and direct HTTPS were blocked during this run. Government sources establish penalties; a few forum threads show landlords sued over deductions; many vendors give templates away. No evidence of spend on this task was found.",
+    "reviewedAt": "2026-10-19",
+    "sources": [
+      [
+        "NY Attorney General: assurance of discontinuance on security deposits (2022)",
+        "https://ag.ny.gov/sites/default/files/22.03.28_sgw_aod_final_-_fully_executed.pdf"
+      ],
+      [
+        "California Attorney General: Know your rights, security deposits",
+        "https://www.oag.ca.gov/system/files/media/Know-Your-Rights-Security-Deposits-English.pdf"
+      ],
+      [
+        "BiggerPockets: Security deposit refund lawsuit",
+        "https://www.biggerpockets.com/forums/52/topics/1296737-security-deposit-refund-lawsuit"
+      ],
+      [
+        "BiggerPockets forum post on small claims and deposit documentation",
+        "https://www.biggerpockets.com/posts/470512"
+      ],
+      [
+        "Montgomery County MD: COLTA decision on security deposit",
+        "https://www.montgomerycountymd.gov/DHCA/Resources/Files/housing/landlordtenant/colta/decisions_orders/security_deposits/32755.pdf"
+      ],
+      [
+        "Ezel: security deposit itemization letter templates",
+        "https://ezel.ai/templates/security-deposit-itemization-letter/ky"
+      ],
+      [
+        "Baselane: security deposit return letter",
+        "https://www.baselane.com/resources/security-deposit-return-letter"
+      ],
+      [
+        "HousingWire: small investors and housing supply (2024 RHFS)",
+        "https://www.housingwire.com/articles/small-investors-housing-supply/"
+      ]
+    ],
+    "evidenceLog": [
+      {
+        "observation": "A New York Attorney General settlement states that a landlord who fails to provide an itemized statement or return the deposit within 14 days after the tenant vacates forfeits any right to retain any portion of the deposit, and bears the burden of proving the amount retained was reasonable.",
+        "label": "NY Attorney General: assurance of discontinuance on security deposits (2022)",
+        "url": "https://ag.ny.gov/sites/default/files/22.03.28_sgw_aod_final_-_fully_executed.pdf",
+        "sourceType": "government",
+        "publishedAt": "2022-03-28",
+        "observedAt": "2026-10-19",
+        "supports": "Missing the deadline has a severe, codified consequence in a large state, which makes timely itemization valuable.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. PDF via search summary only; the date is inferred from the file name. It describes a settlement with one landlord and the statute it applies, not how often landlords miss deadlines."
+      },
+      {
+        "observation": "The California Attorney General's tenant guide describes deposit return and itemized-statement rules, including providing the final statement and remaining deposit within 14 days of finishing repair work, and notes that local rules may add protections such as interest on deposits.",
+        "label": "California Attorney General: Know your rights, security deposits",
+        "url": "https://www.oag.ca.gov/system/files/media/Know-Your-Rights-Security-Deposits-English.pdf",
+        "sourceType": "government",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Rules are detailed and vary by locality, adding compliance complexity for landlords.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Search summary only; the 21-day main deadline and up-to-2x bad-faith damages came from a California attorney's site in another search and are not from this guide. Date unknown."
+      },
+      {
+        "observation": "A landlord in Hudson County, NJ describes being sued over a deposit after grouping deductions, including wear-and-tear items, at inflated estimates. Replies advise listing each invoice amount beside what was actually paid, conceding marginal items, and consulting a local landlord-tenant attorney.",
+        "label": "BiggerPockets: Security deposit refund lawsuit",
+        "url": "https://www.biggerpockets.com/forums/52/topics/1296737-security-deposit-refund-lawsuit",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Small landlords do get sued over deposit itemization and seek help preparing a defensible statement.",
+        "level": "repeated-pain",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Search summary only; date unknown. One landlord's case; replies are informal opinion."
+      },
+      {
+        "observation": "In BiggerPockets discussions surfaced by search, a contributor observes that many landlords get in trouble in small claims court because they fail to provide documentation for their deductions, and a moderator describes attaching copies of receipts to each deduction.",
+        "label": "BiggerPockets forum post on small claims and deposit documentation",
+        "url": "https://www.biggerpockets.com/posts/470512",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Experienced landlords see documentation failures as a common cause of lost deposit disputes.",
+        "level": "repeated-pain",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. The search summary combined several BiggerPockets post links (posts 470512, 780730, 554993) without attributing which said what; this URL is the first of them and the attribution is unverified. Dates unknown."
+      },
+      {
+        "observation": "A Montgomery County, Maryland landlord-tenant commission decision shows a landlord forfeiting the right to deductions by missing the itemized-list deadline, without the commission needing to decide the damage question.",
+        "label": "Montgomery County MD: COLTA decision on security deposit",
+        "url": "https://www.montgomerycountymd.gov/DHCA/Resources/Files/housing/landlordtenant/colta/decisions_orders/security_deposits/32755.pdf",
+        "sourceType": "government",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Missed deadlines cost landlords their deductions in practice, not just in statute.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Search summary only; date, parties and amounts unknown. One case."
+      },
+      {
+        "observation": "Ezel publishes state-specific landlord itemization letter templates, for example a Kentucky version citing the 30-day itemization window under Ky. Rev. Stat. Ann. 383.580(4) and a Connecticut version tied to Conn. Gen. Stat. 47a-21 that advises keeping proof of mailing.",
+        "label": "Ezel: security deposit itemization letter templates",
+        "url": "https://ezel.ai/templates/security-deposit-itemization-letter/ky",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Free state-specific templates already cover the core document.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Search summary only; statute citations not checked. Whether the templates are free to download was not confirmed beyond the summary."
+      },
+      {
+        "observation": "Baselane, a banking and rent platform for landlords, publishes a deposit return letter guide saying most states require an itemized list of deductions backed by receipts, estimates or photos, and maintains state pages with deadlines (for example Washington 21 days, Texas 30 days after move-out and forwarding address).",
+        "label": "Baselane: security deposit return letter",
+        "url": "https://www.baselane.com/resources/security-deposit-return-letter",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "A landlord platform that already holds deposits gives away the guidance and templates as content marketing.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Search summary only. Whether Baselane's product generates statements was not confirmed."
+      },
+      {
+        "observation": "Citing the 2024 Rental Housing Finance Survey from HUD and the Census Bureau, HousingWire reports individual investors own about 59% of U.S. rental properties but about 32% of rental units.",
+        "label": "HousingWire: small investors and housing supply (2024 RHFS)",
+        "url": "https://www.housingwire.com/articles/small-investors-housing-supply/",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-19",
+        "supports": "Individual landlords are numerous, but each tends to own few units, implying few move-outs per landlord.",
+        "level": "context",
+        "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Search summary of a news article, not the survey tables. Does not count landlords or move-outs."
+      }
+    ]
   }
 ];
