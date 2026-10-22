@@ -1,6 +1,6 @@
 # Weekly research run
 
-Instructions for the scheduled research agent. A human reviews every run as a pull request before anything is published.
+Instructions for the scheduled research agent. Each run opens a pull request, which `.github/workflows/research-automerge.yml` merges and publishes automatically if it changes only `dist/ideas.json` and `dist/data.js` and the checks pass. There is no human review before publishing, so the evidence rules below are the only safeguard.
 
 Read `docs/RESEARCH_METHOD.md` first and follow it. Today's date is the date the run starts; use it for `observedAt` and `reviewedAt`.
 
@@ -29,8 +29,8 @@ Aim for 6–10 evidence entries per report, at least 2 from customer, community,
 ## Finish
 
 1. Run `node scripts/build-data.mjs` and `node --test tests/build-data.test.mjs`. Both must pass; fix the report, never the validator.
-2. Create a branch `research/YYYY-MM-DD`, commit `dist/ideas.json` and `dist/data.js`, push, and open a pull request against `main` titled `Research: YYYY-MM-DD`.
+2. Start from the latest `main`. If a research pull request is still open (a failed auto-merge), do not duplicate its reports. Create a branch `research/YYYY-MM-DD`, commit `dist/ideas.json` and `dist/data.js`, push, and open a pull request against `main` titled `Research: YYYY-MM-DD`.
 3. In the PR description, list each new or refreshed report with its verdict, level, a one-line summary, and any sources you could not verify.
-4. Never push to `main` directly and never merge your own pull request.
+4. Never push to `main` directly and never merge your own pull request; the workflow merges it. Change no other files in the research pull request, or it will not auto-merge.
 
 If nothing worth reporting turns up, open no PR and say so in your final message.

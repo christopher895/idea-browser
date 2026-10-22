@@ -14,11 +14,11 @@ Every researched opportunity should explain:
 - A cheap experiment that tests willingness to pay.
 Keep evidence strength separate from founder fit. An AI score is not a probability of business success. Online complaints are leads; payment, repeat use, and renewal provide stronger validation.
 ## Current status
-This repository contains a static browsing app, a documented research method, and a structured evidence store. It is a place to browse and read; there is no email or notification feature. It does **not** include an automated demand-research engine or a continuously refreshed feed; reports are researched and reviewed by hand.
+This repository contains a static browsing app, a documented research method, and a structured evidence store. It is a place to browse and read; there is no email or notification feature. It does **not** include an automated demand-research engine or a continuously refreshed feed; reports are researched by a weekly agent and published automatically once they pass validation.
 The published site: <https://christopher895.github.io/idea-browser/>. Pushing changes under `dist/` to `main` republishes it.
 The app includes search; industry, business-model, evidence-level, and verdict filters; full reports with an evidence log, verdict, and next step; a saved shortlist; local notes; and JSON export and import. Researched reports carry an `evidenceLog` in which every entry has a source URL, source type, dates, the claim it supports, and its limitations. Remaining concept briefs are labeled as unvalidated hypotheses.
 
-A scheduled research agent runs weekly. It follows `research/AGENT_INSTRUCTIONS.md` to add 2–3 new reports and refresh stale ones, then opens a pull request. Nothing is published until that pull request is merged. Reports reviewed in the last seven days appear under **New this week**.
+A scheduled research agent runs weekly. It follows `research/AGENT_INSTRUCTIONS.md` to add 2–3 new reports and refresh stale ones, then opens a pull request. If the pull request changes only `dist/ideas.json` and `dist/data.js` and the checks pass, `.github/workflows/research-automerge.yml` merges it and publishes the site; otherwise it stays open for review. Reports reviewed in the last seven days appear under **New this week**.
 Bookmarks and notes are stored in the browser on the current origin. They do not sync across devices. Export a JSON backup and import it on another browser; import merges the shortlist and appends differing notes rather than overwriting them.
 ## Run locally
 No package installation or API key is required. With Python 3 installed:
@@ -42,6 +42,7 @@ node --check dist/data.js
 | `docs/RESEARCH_METHOD.md` | Discovery sources, evidence standards, evaluation, and validation |
 | `docs/ROADMAP.md` | Research-first implementation sequence |
 | `.github/workflows/pages.yml` | Validates the collection and publishes `dist/` to GitHub Pages |
+| `.github/workflows/research-automerge.yml` | Merges and publishes weekly research pull requests that pass validation |
 | `research/AGENT_INSTRUCTIONS.md` | What the weekly research agent does and the evidence rules it follows |
 | `research/IDEA_TEMPLATE.md` | Template for a source-backed opportunity report |
 | `dist/` | Early browser prototype and starter content |

@@ -1,0 +1,41 @@
+name: Auto-merge research runs
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+concurrency:
+  group: research-automerge
+  cancel-in-progress: false
+jobs:
+  merge:
+    if: startsWith(github.head_ref, 'research/') && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PR: ${{ github.event.pull_request.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Only data files may change
+        run: |
+          other=$(gh pr diff "$PR" --name-only | grep -vxE 'dist/ideas\.json|dist/data\.js' || true)
+          if [ -n "$other" ]; then echo "Not auto-merging; this PR also changes:"; echo "$other"; exit 1; fi
+      - name: Validate the collection and check it matches the published data
+        run: |
+          node scripts/build-data.mjs
+          git diff --exit-code dist/data.js || { echo 'dist/data.js is stale. Run node scripts/build-data.mjs and commit.'; exit 1; }
+      - name: Run checks
+        run: |
+          node --test tests/build-data.test.mjs
+          node --check dist/app.js
+      - name: Merge and publish
+        # Merges made with GITHUB_TOKEN do not trigger push workflows, so start the deploy explicitly.
+        run: |
+          gh pr merge "$PR" --squash --delete-branch --match-head-commit "${{ github.event.pull_request.head.sha }}"
+          gh workflow run pages.yml --ref main
