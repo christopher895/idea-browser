@@ -2384,5 +2384,400 @@ window.IDEAS = [
         "limitations": "WebFetch and direct HTTPS were blocked in this research environment (DNS failure / proxy 403), so this entry relies only on a web-search result summary; the page itself was not read and wording is unverified. Search summary of a news article, not the survey tables. Does not count landlords or move-outs."
       }
     ]
+  },
+  {
+    "id": "signing-agent-receivables",
+    "name": "Signing Ledger",
+    "title": "Receivables tracking and payment follow-up for notary loan signing agents",
+    "category": "Real estate services",
+    "model": "B2B",
+    "type": "Workflow software",
+    "summary": "A tool that logs each loan signing, its payer and expected pay date, sends overdue reminders and flags slow payers. Signing agents clearly complain about late and missing pay, but low-cost notary tools (NotaryGadget, NotaryAssist, NotaryNext) already track paid status and overdue invoices, and payer reputation data is free on NotaryRotary and Notary Cafe.",
+    "buyer": "Independent notary signing agents (sole proprietors) who take per-signing assignments from signing services and title or escrow companies. The agent does the work and approves the purchase. Most are price-sensitive, and many work part time.",
+    "problem": "Signing agents are paid per signing, often by signing services that sit between title companies and the agent. Forum threads describe pay that arrives months late or never (one report of over 6 months, write-offs as bad debt, a $240 signing unpaid from late 2025), and agents chase payment with emails, calls, demand letters and escalation to the title company. All of these figures come from search snippets and are unverified. Agents also check company reputations before accepting orders.",
+    "solution": "If pursued: a receivables ledger for signing agents. It would log each signing with payer, fee and the payer's typical pay time, send scheduled reminders at day 30, 45 and 60 using NNA-style letter templates, show aging, and flag payers whose pay times are getting longer, possibly using pooled data from users. Evidence suggests most of this already exists in NotaryGadget, NotaryAssist and NotaryNext, and the pooled-reputation idea overlaps with free NotaryRotary ratings and Notary Cafe threads.",
+    "revenue": "Hypothesis (unvalidated): $5-15 per month per agent. Anchors seen only in search snippets (unverified): NotaryGadget about $11.95 per month or about $119.95 per year, and NotaryNext Starter $15 per month with overdue escalation included. A receivables-only tool would likely have to be priced at or below these all-in-one tools, which caps revenue per user at very small amounts.",
+    "gap": "Alternatives: NotaryGadget (invoices, paid tracking, A/R reports), NotaryAssist (unpaid invoice tracking), NotaryNext (automated overdue reminders and escalation), QuickBooks or Wave for invoicing, Excel, NotaryRotary company ratings, Notary Cafe's searchable warning threads, and NNA sample collection letters. One forum comment says a day-30 follow-up gets almost everyone paid. No evidence was found of a missing capability. The only possible gap is structured, shared payer pay-time data (median days-to-pay by company), as opposed to star ratings and threads, and nothing showed agents asking for that.",
+    "timing": "Weak. The 2023-2025 mortgage slowdown reduced refinance signings (forum anecdotes; no direct signing-volume figure was found), and loan officer headcount at independent mortgage banks fell in 2025 (HousingWire, snippet only). Fewer signings per agent means fewer receivables to track. A rate-driven refinance rebound would raise volume and could also raise slow-pay incidents, but incumbents would benefit equally.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed access to notary communities, no confirmed experience as a signing agent, and limited capital. Distribution would depend on Notary Cafe, NotaryRotary, Facebook groups and NNA-adjacent channels, where incumbents are already well known.",
+    "risks": [
+      "Incumbent coverage: NotaryGadget, NotaryAssist and NotaryNext already track paid status, unpaid invoices and (NotaryNext) automated overdue reminders, at about $9-15 per month (unverified snippet prices).",
+      "Free reputation data: NotaryRotary ratings and Notary Cafe threads already serve the 'flag bad payers' need at no cost and are the community's habit.",
+      "Simple workaround works: one forum member reports a day-30 follow-up resolves nearly all delays, so automation saves little time.",
+      "Root cause is counterparty behavior: software cannot collect from companies that go out of business or refuse to pay. The remedies are title-company escalation, small claims or bond claims.",
+      "Low and cyclical volume: the mortgage slowdown cut signings, and many agents are part time with few receivables to track.",
+      "Defamation and moderation risk if pooled payer reputation data names companies as non-payers.",
+      "Weak verification: every source in this run was seen only as a search snippet because all page fetches were blocked."
+    ],
+    "pilot": [
+      "Before building, interview 8 active signing agents (5+ signings a month) from Notary Cafe or Facebook groups. Ask about the last late or unpaid signing, how they found it, what they did and what it cost, and what software they pay for. Stop if fewer than 4 report an unpaid balance over 60 days in the last 6 months, or if 6 or more already track A/R in NotaryGadget, NotaryAssist or NotaryNext and are satisfied.",
+      "If interviews pass, run a 6-week concierge test with 5 agents: you maintain a shared spreadsheet of their open signings, send day-30, 45 and 60 reminders on their behalf, and log days-to-pay by company. Success means at least 3 agents recover or speed up at least one payment and at least 3 prepay $10 or more per month to continue. Stop if fewer than 2 commit to pay."
+    ],
+    "assumptions": [
+      "That a meaningful share of signing agents have recurring receivables older than 60 days is assumed from self-selected forum threads, not measured.",
+      "The $5-15 per month price band is a hypothesis; competitor prices are snippet-only and unverified.",
+      "That incumbents lack payer days-to-pay analytics is unverified; their feature pages could not be read.",
+      "That agents would contribute payment data to a shared database, and that publishing it is legally manageable, is untested.",
+      "Mortgage-slowdown effects on signing volume are inferred from forum anecdotes and loan officer data, not signing counts."
+    ],
+    "level": "existing-spend",
+    "verdict": "Pass",
+    "verdictRationale": "The pain is real and recurring: signing agents describe months-late and unpaid signings across many company-specific warning threads. But the proposed product duplicates cheap, established notary tools that already track paid status, accounts receivable and (NotaryNext) overdue reminders. The 'shared payer reputation' angle already exists for free on NotaryRotary and Notary Cafe. Forum comments suggest a manual day-30 follow-up fixes most delays, and the rest are counterparty failures software cannot solve. The market is price-sensitive and shrank with the mortgage slowdown. Existing spend is shown only for incumbent all-in-one tools, not for a standalone receivables product. Confidence is limited: every page fetch was blocked in this run, so all entries rely on search snippets, and no Reddit or Facebook group content could be reached. This would move to Interview if agents showed they want structured days-to-pay data by company (not star ratings), and incumbents turned out to lack it.",
+    "nextStep": "Shelve the idea. If revisiting, re-fetch NotaryGadget, NotaryAssist and NotaryNext feature pages to confirm reminder and aging features, then check whether NotaryRotary shows pay-time data. Drop the idea for good if it does.",
+    "evidence": "Researched report",
+    "status": "Real pain; served by cheap incumbents and free reputation sites",
+    "sourceNote": "All page fetches in this run were blocked (WebFetch DNS errors; curl got proxy CONNECT 403), and Reddit was not available to search. Every entry relies on search-result summaries and is unverified until re-fetched. Community sources are Notary Cafe threads and one Trustpilot review. No Facebook group or r/notary content was seen. Duplicate company-specific non-payment threads are counted as one signal.",
+    "reviewedAt": "2026-10-12",
+    "evidenceLog": [
+      {
+        "observation": "A Notary Cafe thread titled 'Too Many Signing Companies Not Paying' reports, per the search summary, an uptick in slow or non-payment by signing companies. One member describes a $240 signing from late 2025 that was still unpaid. Another member says that when they follow up at day 30, payment arrives the same or next day '99% of time'.",
+        "label": "Notary Cafe: Too Many Signing Companies Not Paying",
+        "url": "https://forum.notarycafe.com/t/too-many-signing-companies-not-paying/41792",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Signing agents report recurring slow and non-payment. The day-30 follow-up comment is also counterevidence: a simple manual reminder often fixes the delay.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. The summary combined several results, so tying each comment to this exact thread is likely but not certain. Thread date unknown. Self-selected forum posters; no count of how common the problem is."
+      },
+      {
+        "observation": "A Notary Cafe thread headed 'OUT OF BUSINESS: SIGNING TRAC, another bad payer' is summarized in search results as one notary saying it took over 6 months to get paid and another writing the company off as a bad debt.",
+        "label": "Notary Cafe: Signing Trac, another bad payer",
+        "url": "https://forum.notarycafe.com/t/out-of-business-signing-trac-another-bad-payer/8124",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Some signing companies pay very late or never, and agents absorb the loss.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. Probably several years old. Search results also showed many similar company-specific warning threads on the same forum (for example 'Non-payment from Prestige Horizons LLC', 'Docs2Go - Scam no payment'); these are counted together as one repeated-pain signal and were not read."
+      },
+      {
+        "observation": "Search summaries of Notary Cafe threads, including 'Why Companies Pay Some Notaries but Not Others?', describe free reputation resources agents already use before accepting work: NotaryRotary's company ratings with notary comments (its 'Signing Central' section, where agents post about pay problems) and the Notary Cafe forum search, which one user called a 'GOLDMINE'. A long-time notary's rule of thumb was that 4 and 5 star companies are fine, while a 3 star company trending down should be paid in advance.",
+        "label": "Notary Cafe: Why Companies Pay Some Notaries but Not Others?",
+        "url": "https://forum.notarycafe.com/t/why-companies-pay-some-notaries-but-not-others/1907",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Counterevidence: shared payer reputation data, the proposed differentiator, already exists for free on NotaryRotary and Notary Cafe.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. The summary drew on several threads, so the exact quotes may come from other threads in the same results. NotaryRotary itself (notaryrotary.com) was also blocked and its ratings pages were not seen directly. Search summaries noted these are self-reported and unverified."
+      },
+      {
+        "observation": "Notary Cafe threads comparing NotaryGadget and QuickBooks ('NotaryGadget or Quick Books') are summarized in search results as follows: NotaryGadget is the most recommended. One member says it 'does everything' they need at about $119.95 a year, and another uses it for scheduling, mileage, and income and accounts receivable reports. QuickBooks covers invoicing but not appointment tracking, entering signings in both was called frustrating, and some notaries use Excel or Quicken.",
+        "label": "Notary Cafe: NotaryGadget or Quick Books",
+        "url": "https://forum.notarycafe.com/t/notarygadget-or-quick-books/55197",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Agents already pay for notary-specific tools that include accounts receivable tracking. That shows a budget, but it is already spent on incumbents (counterevidence on the gap).",
+        "level": "existing-spend",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. The search summary noted the quoted price is probably years old. Statements may come from the related 'Quickbooks VS Notary Gadget' thread in the same results."
+      },
+      {
+        "observation": "NotaryGadget's home page (per search result text) says it automatically generates invoices, calculates mileage and notarial tax deductions, and tracks whether you have been paid. A third-party review in the same summary says the free trial covers the first 15 signings and the monthly plan is $11.95, with a lower annual rate.",
+        "label": "NotaryGadget home page",
+        "url": "https://www.notarygadget.com/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Counterevidence: an established, low-priced signing-agent tool already logs signings, invoices and paid status.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. The $11.95 figure came from an unnamed third-party review in the summary, not the vendor's pricing page, and is unverified. Not checked: whether it has overdue reminders or aging reports. Vendor marketing, not a customer voice."
+      },
+      {
+        "observation": "NotaryAssist's site, as summarized in search results, says its expense module can track unpaid invoices and lists tracking invoices and non-payments as part of a signing agent's job. Its iPhone app listing showed a 4.9 rating from 172 ratings. The summary found no explicit overdue-reminder feature.",
+        "label": "NotaryAssist software",
+        "url": "https://notaryassist.com/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Counterevidence: a second long-running signing-agent tool already covers unpaid-invoice tracking.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. Price not verified: a figure seen in the summary ($8.99) came from a Capterra India listing that was not fetched. The rating count came from an App Store listing seen only in the summary. Vendor marketing."
+      },
+      {
+        "observation": "Capterra's NotaryNext listing, per search summaries, describes automatic invoice generation and delivery to title companies after a signing, overdue payment reminders that send follow-ups on a schedule once an invoice is past due, and a Starter plan at $15 per month that includes overdue invoice escalation. The listing showed 0 user reviews.",
+        "label": "Capterra: NotaryNext",
+        "url": "https://www.capterra.com/p/10050796/NotaryNext/",
+        "sourceType": "vendor",
+        "publishedAt": "2026",
+        "observedAt": "2026-10-12",
+        "supports": "Counterevidence: the automated overdue-reminder feature is already sold to notaries at $15 per month.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. Listing data comes from the vendor. Zero reviews means no evidence of customers. Reminder intervals and settings unknown."
+      },
+      {
+        "observation": "An NNA Notary Bulletin article on getting overdue notary invoices paid, per the search summary, cites the Freelancers Union figure that 71% of independent contractors have had trouble getting paid, owed on average more than $6,000. NNA also publishes non-payment resources with sample collection letters and 'Nine tips to ensure you get paid and on time'.",
+        "label": "NNA: Overdue notary invoices: getting paid",
+        "url": "https://www.nationalnotary.org/notary-bulletin/blog/2016/09/overdue-notary-invoices-getting-paid",
+        "sourceType": "news",
+        "publishedAt": "2016-09",
+        "observedAt": "2026-10-12",
+        "supports": "The main trade association treats late payment as a standing problem for signing agents and gives free collection templates (both a sign of pain and a free alternative).",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. The 71% figure covers freelancers in general, not signing agents, and is from 2016 or earlier. Association content, not a customer voice."
+      },
+      {
+        "observation": "A 2026 Trustpilot review of Mobile Notary Zone, per the search summary, says the reviewer had not been paid for a February 2026 trust signing and the company stopped responding. It also says typical turnaround for some third-party notary companies is about 30 days.",
+        "label": "Trustpilot: Mobile Notary Zone reviews",
+        "url": "https://www.trustpilot.com/review/mobilenotaryzone.com",
+        "sourceType": "review",
+        "publishedAt": "2026",
+        "observedAt": "2026-10-12",
+        "supports": "Recent (2026) first-hand report of non-payment by a signing intermediary, outside the Notary Cafe forum.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. A single review of one company, and the claims are not verified. Reviewer details are omitted on purpose."
+      },
+      {
+        "observation": "HousingWire's 2025 review of MBA data, per the search summary, says loan officer headcount at independent mortgage banks and other lenders fell 11.7% to 74,969, while banks and credit unions grew and MBA expected originations to rise through 2027. A separate search found no 2025 figure for notary signing volume. Forum anecdotes describe refinance volume as 'NOT there anymore' and a shift toward HELOC signings.",
+        "label": "HousingWire: loan officer growth 2025",
+        "url": "https://www.housingwire.com/articles/loan-officer-growth-2025/",
+        "sourceType": "news",
+        "publishedAt": "2025",
+        "observedAt": "2026-10-12",
+        "supports": "Timing context: lower mortgage activity means fewer signings per agent, which lowers the value of receivables software. A recovery would help.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch was blocked (DNS failure in WebFetch, proxy CONNECT 403 via curl), so wording and figures are unverified. Loan officer headcount is only an indirect proxy for signing volume. Forum anecdotes about the refinance slowdown came from other threads and are not cited separately."
+      }
+    ],
+    "sources": [
+      [
+        "Notary Cafe: Too Many Signing Companies Not Paying",
+        "https://forum.notarycafe.com/t/too-many-signing-companies-not-paying/41792"
+      ],
+      [
+        "Notary Cafe: Signing Trac, another bad payer",
+        "https://forum.notarycafe.com/t/out-of-business-signing-trac-another-bad-payer/8124"
+      ],
+      [
+        "Notary Cafe: Why Companies Pay Some Notaries but Not Others?",
+        "https://forum.notarycafe.com/t/why-companies-pay-some-notaries-but-not-others/1907"
+      ],
+      [
+        "Notary Cafe: NotaryGadget or Quick Books",
+        "https://forum.notarycafe.com/t/notarygadget-or-quick-books/55197"
+      ],
+      [
+        "NotaryGadget home page",
+        "https://www.notarygadget.com/"
+      ],
+      [
+        "NotaryAssist software",
+        "https://notaryassist.com/"
+      ],
+      [
+        "Capterra: NotaryNext",
+        "https://www.capterra.com/p/10050796/NotaryNext/"
+      ],
+      [
+        "NNA: Overdue notary invoices: getting paid",
+        "https://www.nationalnotary.org/notary-bulletin/blog/2016/09/overdue-notary-invoices-getting-paid"
+      ],
+      [
+        "Trustpilot: Mobile Notary Zone reviews",
+        "https://www.trustpilot.com/review/mobilenotaryzone.com"
+      ],
+      [
+        "HousingWire: loan officer growth 2025",
+        "https://www.housingwire.com/articles/loan-officer-growth-2025/"
+      ]
+    ]
+  },
+  {
+    "id": "snow-service-proof",
+    "name": "Storm File",
+    "title": "Slip-and-fall defense records for small commercial snow contractors",
+    "category": "Field services",
+    "model": "B2B",
+    "type": "Workflow software",
+    "summary": "Per-site, per-storm evidence files (timestamps, salt, weather, photos, GPS) that a 1-15 truck snow contractor can pull years later when a slip-and-fall claim arrives. The pain is real and well documented, but GPS-verified, timestamped proof of service is already a headline feature of many snow apps, including at least one listed at about $10 a month.",
+    "buyer": "Owners of small commercial snow and ice removal companies (1-15 trucks) serving parking lots and walkways for property managers, retail and multi-family sites. The owner usually feels the claim risk, approves software spend, and deals with the insurer; drivers and subcontractors do the logging.",
+    "problem": "Snow contracts often push slip-and-fall liability onto the contractor, and claims can arrive years after the storm. Trade press and an attorney quoted in Lawn & Landscape advise keeping arrival and departure times, crew, weather, and salt amounts for at least five years, because contractors may not hear of a suit for two to three years. Contractors on PlowSite describe claims dropped because they had a log and before-and-after photos. Those without records lose leverage, and even a defended claim can raise premiums. A Massachusetts contractor said his insurer settled a claim for $365,000 two years after the fall and then dropped his business (per search summaries; unverified).",
+    "solution": "If pursued at all: a mobile check-in app that drivers and subcontractors use per site visit (geofenced arrival and departure, salt or deicer quantity, timestamped photos), automatically attached weather data, and a durable archive that exports a sealed per-site, per-storm evidence packet (PDF plus raw data and hashes) for the insurer or defense counsel. The search results suggest this would mostly duplicate Yeti, Plow360, SnowPilot Pro, Aspire and other snow tools that already advertise GPS-verified, timestamped proof of service.",
+    "revenue": "Hypothesis (unvalidated): $20-60 per month per company, or a per-site seasonal fee. Price anchors seen only in search results: SnowPilot Pro advertises about $10 per month flat (Product Hunt listing), and a third-party roundup lists Yeti Snow from about $50 per month. Both are offers, not proof of buyers, and suggest little room for a premium standalone price.",
+    "gap": "Alternatives: snow-specific apps that advertise GPS-verified logs and timestamped photos (Yeti for Snow, Plow360, SNOWiQ Driver, SnowPilot Pro, IndusTrack, Aspire, Routeware for municipal work), general field-service tools plus photo apps (Jobber plus CompanyCam), hardware GPS trackers, paper logs and handwritten diaries, and contract clauses that shift liability back to the owner. The only possible gap seen is the retrieval end: a claim-ready per-storm packet with long retention independent of whether the contractor still pays for the operations app years later. No contractor post was found asking for that specifically, and incumbents' export and retention capabilities were not verified because their pages could not be fetched.",
+    "timing": "Neutral to weak. Liability and insurance pressure is ongoing (2025 Massachusetts coverage of contractors losing coverage and a stalled contract-reform bill; Insurance Business coverage of slip-and-fall exposure; Ontario's 60-day notice rule for slip-and-fall claims). But smartphone GPS and photo proof of service is already mainstream in snow software, so there is no new technical or regulatory opening that incumbents lack.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed access to snow contractors, no confirmed knowledge of snow contracts, insurance or premises-liability evidence rules, and limited capital. The business is seasonal and regional (US snow belt and Canada), which concentrates sales and support into a few months.",
+    "risks": [
+      "Crowded feature: Yeti, Plow360, SNOWiQ, SnowPilot Pro, IndusTrack and Aspire all advertise GPS-verified, timestamped service records and photos as liability protection.",
+      "Low price ceiling: at least one snow app lists about $10 per month, and broader field-service tools bundle photos and GPS.",
+      "Adoption depends on drivers and subcontractors logging every visit in bad weather and poor signal; vendor content itself warns that drivers revert to paper when apps add friction.",
+      "Records do not settle every case: court decisions turn on contract scope, whether the contractor created the hazard, and state law, so the value of better records is real but hard to quantify for a buyer.",
+      "Much of the cost is upstream (contract indemnity clauses, insurer exits, premium increases) and is not fixed by software.",
+      "Evidence quality: every page fetch failed in this run, so all entries rely on search-result summaries; no Reddit threads were found and PlowSite threads are about ten years old."
+    ],
+    "pilot": [
+      "Before building, interview 8 owners of 1-15 truck commercial snow companies (via a state landscape association or SIMA chapter). Ask about the last slip-and-fall claim or records request, how long after the storm it came, what records they produced, how long retrieval took, and what software they use today. Stop if fewer than 3 of 8 had a claim or records request in the last 3 years, or if 5 or more already use an app with GPS and photo proof of service and are satisfied with its exports.",
+      "If interviews pass, run a one-season concierge test with 3 contractors who still use paper or a generic tool: give drivers a simple check-in form, attach weather data, and produce a per-storm packet within 24 hours of any request. Success means at least 2 contractors keep logging through 5 or more storms and at least 2 agree in writing to pay $30 or more per month next season. Stop if drivers stop logging after 2 storms or no one commits to pay."
+    ],
+    "assumptions": [
+      "That a meaningful share of 1-15 truck contractors still rely on paper logs is assumed, not observed.",
+      "That incumbents' archives are hard to search or export years later is unverified; their product pages could not be fetched.",
+      "The $20-60 per month price band is a hypothesis; observed anchors (about $10 and about $50 per month) are snippet-only and unverified.",
+      "That better records measurably reduce claim payouts or premiums rests on trade press, attorney advice and anecdote, not data.",
+      "That timestamped app records and photos are admissible and persuasive varies by jurisdiction and was not checked with counsel."
+    ],
+    "level": "repeated-pain",
+    "verdict": "Pass",
+    "verdictRationale": "The pain is real and repeated: trade press, insurers, attorneys and contractors agree that slip-and-fall claims are the main liability for snow contractors, that claims can arrive years later, and that contemporaneous records often decide them. But the proposed solution is exactly what existing snow apps already sell: GPS-verified logs, timestamped photos and weather data pitched as slip-and-fall protection, with at least one app listed at about $10 per month. No customer source asked for a separate evidence tool or complained that current apps fail at retrieval years later. Confidence is limited because every page fetch failed (DNS and proxy errors) and all entries come from search-result summaries. This would move to Interview if contractors reported that records from their current app were missing, unexportable, or lost after cancelling when a claim arrived, and said they would pay for an independent long-term archive.",
+    "nextStep": "Shelve the idea. If revisiting, re-fetch the cited pages, then check Yeti's, Plow360's and Aspire's documentation for multi-year retention and per-site export, and ask 3-5 contractors who changed or cancelled snow software whether they could still produce old storm records.",
+    "evidence": "Researched report",
+    "status": "Real pain; proof-of-service already a standard snow-app feature",
+    "evidenceLog": [
+      {
+        "observation": "Landscape Ontario's September 2019 article argues that the side with better records usually wins a slip-and-fall lawsuit. Per the search summaries, the related content recommends snow plow logs with time of removal, equipment, precise location and weather, salt logs, GPS records and handwritten diaries for each site visit, and mentions a Newfoundland case where a contractor's daily salting log showed a vigilant effort to control freeze-thaw conditions.",
+        "label": "Landscape Ontario: Battle of Evidence",
+        "url": "https://landscapeontario.com/battle-of-evidence-the-side-with-the-best-records-often-wins-a-slip-and-fall-lawsuit",
+        "sourceType": "news",
+        "publishedAt": "2019-09",
+        "observedAt": "2026-10-12",
+        "supports": "Records are the main defense in snow slip-and-fall claims, and the record types match the proposed evidence file.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error), so wording is unverified. Trade association content, not a customer voice. Article is from 2019 and Ontario law has since changed (60-day notice rule)."
+      },
+      {
+        "observation": "Lawn & Landscape's 'Providing proof' quotes attorney Baakman: the statute of limitations on a slip-and-fall claim is two years, but snow contractors should keep documents for at least five years, and a contractor may not learn of a suit for two to three years. She recommends cloud storage and keeping both paper and transcribed versions of reports.",
+        "label": "Lawn & Landscape: Providing proof",
+        "url": "https://www.lawnandlandscape.com/article/providing-proof",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Claims arrive years later, so long-term retention and retrieval of per-site records matters.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error). Publication date unknown. The retention advice is one attorney's view and limitation periods vary by state."
+      },
+      {
+        "observation": "Lawn & Landscape's 'Clean sheet' treats documentation as the main defense, listing arrival and departure times, worker names, weather conditions and the amount of salt or deicer used, and reports contractors advising that paperwork be kept for years because some claims are not reported until years after the incident.",
+        "label": "Lawn & Landscape: Clean sheet",
+        "url": "https://www.lawnandlandscape.com/news/clean-sheet",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Contractors already know what to record; the workflow is established practice.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error) and the proxy denied a direct request. Publication date unknown (a related URL suggests 2018 but this is unverified)."
+      },
+      {
+        "observation": "Insurance Business reports SWG Specialty's Brian Mahoney calling slip-and-fall third-party injury claims the biggest exposure for snow removal contractors, noting a contractor can be drawn into a claim even after clearing a site because no lot is fully free of snow or ice, and that some contractual performance guarantees fall outside standard CGL coverage.",
+        "label": "Insurance Business: snow contractors' slip-and-fall exposure",
+        "url": "https://www.insurancebusinessmag.com/ca/news/commercial-liability/snow-removal-contractors-face-relentless-slipandfall-exposure-expert-warns-566589.aspx",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Slip-and-fall claims are the dominant liability for snow contractors per an insurance specialist.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error). Publication date unknown. Canadian focus; an insurance broker's view, not a contractor's."
+      },
+      {
+        "observation": "State House News Service coverage (May 2025, reprinted by Banker & Tradesman) quotes Massachusetts contractor Doug McDuff saying his company's slip-and-fall claim was settled by his insurer two years later for $365,000 and the insurer then dropped his business; contractors say liability is raising rates and reducing insurers' willingness to cover them, and back a contract-reform bill that stalled in Senate Ways and Means.",
+        "label": "Banker & Tradesman: Liability woes leave snow contractors on slippery ground",
+        "url": "https://bankerandtradesman.com/liability-woes-leave-snow-contractors-on-slippery-ground",
+        "sourceType": "news",
+        "publishedAt": "2025-05",
+        "observedAt": "2026-10-12",
+        "supports": "Named contractors report costly claims, late settlements and loss of coverage.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; the related WWLP page fetch failed (DNS error) and this page was not fetched. The $365,000 figure is unverified. The article does not say better records would have changed the outcome; the main complaint is contract terms and insurance."
+      },
+      {
+        "observation": "PlowSite forum threads on being sued for slip and falls, as summarized in search results: contractors say detailed records are the only protection; one says a suit was dropped before trial because of before-and-after pictures and a permanent log of visit times; another keeps records five years; another says a claim he was not liable for still sat on his insurance record as pending and raised his premium by almost $10,000; one says a contract clause shifting slip-and-fall responsibility to the client got him out of a suit.",
+        "label": "PlowSite: Being sued for a slip and fall",
+        "url": "https://www.plowsite.com/threads/being-sued-for-a-slip-and-fall.122553/",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Independent contractors report that records decide claims and that claims cost money even when defended.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in a search-result summary; the page fetch failed (DNS error). The summary drew on several PlowSite threads and does not say which quote came from which thread, so these quotes cannot be attributed to this specific thread. Search summary says the posts are roughly ten years old. Contract clauses, not software, were also cited as a fix."
+      },
+      {
+        "observation": "A Workopolis job posting for a snow removal operator requires accurately documenting site service records for every site, including times, services performed and weather conditions, and submitting paperwork promptly at the end of each shift.",
+        "label": "Workopolis job: snow removal operator documentation duties",
+        "url": "https://www.workopolis.com/jobsearch/viewjob/Wae4lFDi8IS7ateUMhkgXoCd2aa3GhQ32D9BYU6lhMLvyoiqV0w5sh7ZsI7zYRkU",
+        "sourceType": "job",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Employers make per-site service logging a routine paid task, often on paper.",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; not fetched. Employer, size, pay and date unknown. A job post shows intent to hire, not a hire, and logging is an incidental duty, not spend on records software. Other postings seen in the same search (snow operations manager, production manager) listed similar duties."
+      },
+      {
+        "observation": "Yeti for Snow advertises weather data, GPS-verified service logs and time-stamped site photos, framed as protection against slip-and-fall claims; Yeti's app listing and site carry a client testimonial saying recorded data and pictures of each job make it easy to fight slip-and-fall litigation. A third-party roundup lists Yeti Snow from about $50 per month.",
+        "label": "Yeti Software: Yeti for Snow",
+        "url": "https://yetisoftware.com/?p=1632",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "An incumbent already sells this exact proposition to snow contractors (counterevidence).",
+        "level": "context",
+        "limitations": "Vendor marketing seen only in search summaries; the page fetch failed (DNS error). The testimonial is vendor-selected. The roughly $50 price is from a secondary roundup and may not match current Yeti pricing. Retention and export capabilities not verified."
+      },
+      {
+        "observation": "SnowPilot Pro's Product Hunt listing describes a $10 per month flat plan with a driver app that produces time-stamped proof-of-service photos, a $20 per month account covering summer and winter services, and a free trial.",
+        "label": "Product Hunt: SnowPilot Pro",
+        "url": "https://www.producthunt.com/products/snowpilot-pro",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Proof-of-service photos are available very cheaply, which caps pricing for a new entrant (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; not fetched. Prices are offers, not proof of buyers; the summary notes the trial length differs between versions of the listing. Customer count unknown."
+      },
+      {
+        "observation": "Plow360's App Store listing says GPS automatically logs where a plow has been, works offline when cell service is spotty, and offers per-property photo documentation with real-time dispatcher sync. Search results also showed SNOWiQ Driver (smartphone GPS instead of dedicated hardware) and IndusTrack (in-vehicle GPS plus snow app producing verified data for billing).",
+        "label": "App Store: Plow360",
+        "url": "https://apps.apple.com/ca/app/plow360/id6740414156",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-12",
+        "supports": "Multiple newer and established tools already handle GPS logging and photos offline, addressing the driver-adoption problem (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in a search-result summary; not fetched. Price, ratings and user count unknown. SNOWiQ and IndusTrack claims are from separate vendor pages also seen only as snippets."
+      }
+    ],
+    "sourceNote": "All page fetches failed in this run (WebFetch DNS errors; the egress proxy returned 403 for direct requests), so every entry relies on search-result summaries and is unverified until re-fetched. The sources show that slip-and-fall claims are the main liability for snow contractors, that claims can arrive years later, and that records often decide them. They also show many snow apps already sell GPS-verified, timestamped proof of service. No Reddit threads were found; PlowSite threads are reportedly about ten years old.",
+    "reviewedAt": "2026-10-12",
+    "sources": [
+      [
+        "Landscape Ontario: Battle of Evidence",
+        "https://landscapeontario.com/battle-of-evidence-the-side-with-the-best-records-often-wins-a-slip-and-fall-lawsuit"
+      ],
+      [
+        "Lawn & Landscape: Providing proof",
+        "https://www.lawnandlandscape.com/article/providing-proof"
+      ],
+      [
+        "Lawn & Landscape: Clean sheet",
+        "https://www.lawnandlandscape.com/news/clean-sheet"
+      ],
+      [
+        "Insurance Business: snow contractors' slip-and-fall exposure",
+        "https://www.insurancebusinessmag.com/ca/news/commercial-liability/snow-removal-contractors-face-relentless-slipandfall-exposure-expert-warns-566589.aspx"
+      ],
+      [
+        "Banker & Tradesman: Liability woes leave snow contractors on slippery ground",
+        "https://bankerandtradesman.com/liability-woes-leave-snow-contractors-on-slippery-ground"
+      ],
+      [
+        "PlowSite: Being sued for a slip and fall",
+        "https://www.plowsite.com/threads/being-sued-for-a-slip-and-fall.122553/"
+      ],
+      [
+        "Workopolis job: snow removal operator documentation duties",
+        "https://www.workopolis.com/jobsearch/viewjob/Wae4lFDi8IS7ateUMhkgXoCd2aa3GhQ32D9BYU6lhMLvyoiqV0w5sh7ZsI7zYRkU"
+      ],
+      [
+        "Yeti Software: Yeti for Snow",
+        "https://yetisoftware.com/?p=1632"
+      ],
+      [
+        "Product Hunt: SnowPilot Pro",
+        "https://www.producthunt.com/products/snowpilot-pro"
+      ],
+      [
+        "App Store: Plow360",
+        "https://apps.apple.com/ca/app/plow360/id6740414156"
+      ]
+    ]
   }
 ];
