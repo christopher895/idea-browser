@@ -2779,5 +2779,564 @@ window.IDEAS = [
         "https://apps.apple.com/ca/app/plow360/id6740414156"
       ]
     ]
+  },
+  {
+    "id": "hfc-leak-records",
+    "name": "Leak Ledger",
+    "title": "HFC leak-rate records for small commercial refrigeration contractors",
+    "category": "Field services",
+    "model": "B2B",
+    "type": "Compliance software",
+    "summary": "A leak-rate calculator and record log that small refrigeration and HVAC shops fill in on each service call, so their restaurant, grocery and light-industrial customers can meet EPA's AIM Act leak repair rule, which since January 2026 reaches appliances holding 15 pounds or more of HFC refrigerant. The rule is real, but several tools already sell exactly this to 1-8 truck shops (one lists $29-89 a month), and no contractor or owner complaint about the paperwork was found.",
+    "buyer": "Owners of small commercial refrigeration or HVAC service companies (roughly 1-10 technicians) whose customers are restaurants, independent grocers, convenience stores and small cold-storage sites. The legal duty sits with the equipment owner or operator, but guides say owners commonly rely on the servicing contractor to calculate leak rates and supply documentation, so the contractor is the likely user and payer.",
+    "problem": "EPA's Emissions Reduction and Reclamation rule (final October 2024) requires owners of appliances holding 15 pounds or more of an HFC refrigerant with GWP above 53 to repair leaks above set rates (per law-firm summaries: 20% for commercial refrigeration, 30% for industrial process refrigeration, 10% for comfort cooling), with a single compliance date of January 1, 2026; residential and light commercial air conditioning is exempt. Vendor guides say each refrigerant addition needs a documented leak-rate calculation and that service, inspection and verification records must be kept for three years. Previously the federal 608 leak repair threshold for these duties was 50 pounds, so many smaller systems are newly in scope. Trade press cites penalties of tens of thousands of dollars per violation per day (figures conflict across sources).",
+    "solution": "If pursued: a phone-first service log where the technician enters refrigerant added, full charge and date; the app computes the leak rate, flags threshold breaches, starts the repair and verification clocks, and keeps a per-appliance history the contractor can share with the equipment owner as an audit-ready report. Search results show this is already the core feature set of Ref LeakLog, RefriComply, OxMaint, Trakref and several field-service tools.",
+    "revenue": "Hypothesis (unvalidated): $20-60 per month per contractor. The only observed price anchor is Ref LeakLog's reported $29, $59 and $89 monthly tiers for 1-8 truck shops (from a software directory search result; unverified), which is an offer, not proof of buyers. Trakref does not publish pricing.",
+    "gap": "Alternatives: dedicated refrigerant compliance tools (Ref LeakLog for small shops; Trakref, now part of Fexa, for multi-site operators; RefriComply, OxMaint, Nexasphere, Carbon Connector), refrigerant tracking modules in field-service and CMMS software, free leak-rate calculation templates, compliance consultancies such as OneEnv, and the invoice notes technicians already write. No underserved segment was identified: the one small-contractor niche that looked open is already targeted by at least one priced product.",
+    "timing": "Strong regulatory trigger but already being served. The January 1, 2026 compliance date is in effect and EPA's FAQ still lists it; a May 2026 EPA proposal would exempt transport refrigeration units, and a separate May 2026 final rule reconsidered Technology Transitions dates, so further scope changes are possible. Vendors moved quickly: many 2026 guides and products target the 15-pound rule.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed knowledge of refrigeration service, EPA 608 or AIM Act rules, no confirmed access to refrigeration contractors, and limited capital. Getting a leak-rate calculation wrong would create regulatory exposure for customers, which raises support and liability burden.",
+    "risks": [
+      "Crowded: at least five tools found that market AIM Act leak-rate tracking, including one priced for 1-8 truck shops.",
+      "Regulatory flux: EPA is proposing scope exemptions and reconsidering related HFC rules in 2026, which could shrink or shift the covered population.",
+      "The legal duty sits with equipment owners, not contractors, so the payer is unclear and contractors may treat records as a free service on the invoice.",
+      "Correctness liability: wrong thresholds or leak-rate math could expose customers to penalties; sources themselves disagree on thresholds and penalty amounts.",
+      "No customer voice found: every source is government, law-firm, trade press or vendor content; no contractor or owner complaint about the paperwork was seen.",
+      "Evidence quality: page fetches failed in this run, so every entry relies on search-result summaries."
+    ],
+    "pilot": [
+      "Before building, interview 8 owners of 1-10 technician commercial refrigeration shops (via a RSES chapter or refrigeration supply house). Ask how they recorded the last refrigerant addition on a 15-50 pound HFC system, whether a customer or inspector asked for leak-rate records in 2026, and what software they use. Stop if fewer than 3 of 8 report a records request or compliance worry in 2026, or if 4 or more already use a tool that calculates leak rates and are satisfied.",
+      "If interviews pass, offer 3 shops a free 60-day concierge log (form plus a monthly per-customer leak-rate report). Success means at least 2 shops log 80% of refrigerant additions and at least 2 commit in writing to pay $30 or more per month. Stop if technicians stop logging within a month or no one commits."
+    ],
+    "assumptions": [
+      "That many small shops still track refrigerant additions on paper invoices is assumed, not observed.",
+      "That contractors, rather than equipment owners, would pay is a hypothesis; guides say the legal duty sits with owners.",
+      "The $20-60 monthly price is a hypothesis; the only anchor ($29-89 per month for Ref LeakLog) comes from a directory snippet and is unverified.",
+      "Rule details (thresholds, record contents, three-year retention, penalty amounts) come from secondary summaries and were not checked against 40 CFR Part 84 Subpart C.",
+      "That incumbents are hard for small shops to adopt is unverified; their pages could not be fetched."
+    ],
+    "level": "attention",
+    "verdict": "Pass",
+    "verdictRationale": "The regulatory trigger is real and current: since January 1, 2026, leak repair and recordkeeping duties reach HFC appliances of 15 pounds or more, which brings many smaller commercial systems into scope. But no contractor or owner was found complaining about the records or asking for a tool, and the market already has several dedicated products, including one aimed at 1-8 truck shops at about $29-89 a month. The strongest buyer-side signal is the National Grocers Association calling the 2026 date near-impossible for independents, and that concerns equipment conversion costs rather than recordkeeping. Confidence is limited because every page fetch failed and all entries come from search summaries. This would move to Interview if refrigeration contractors reported customers or inspectors demanding leak-rate records they cannot easily produce, and said existing tools are too heavy or too expensive for them.",
+    "nextStep": "Shelve the idea. If revisiting, re-fetch EPA's leak repair fact sheet and 40 CFR Part 84 Subpart C to confirm record contents, check the status of EPA's 2026 reconsiderations, and search refrigeration trade forums for contractor discussion of 2026 records requests.",
+    "evidence": "Researched report",
+    "status": "New 2026 rule; small-shop tools already on the market; no customer voices found",
+    "evidenceLog": [
+      {
+        "observation": "Beveridge & Diamond's summary of EPA's final Emissions Reduction and Reclamation rule (published October 11, 2024) says appliances with a full charge of 15 pounds or more of a refrigerant containing an HFC with GWP above 53 must repair leaks above thresholds of 30% (industrial process refrigeration), 20% (commercial refrigeration) and 10% (comfort cooling and others); EPA set a single compliance date of January 1, 2026 and a narrow exemption for residential and light commercial air conditioning and heat pumps.",
+        "label": "Beveridge & Diamond: EPA finalizes HFC Emissions Reduction and Reclamation Program",
+        "url": "https://www.bdlaw.com/publications/epa-finalizes-hfc-emissions-reduction-and-reclamation-program/",
+        "sourceType": "news",
+        "publishedAt": "2024-10",
+        "observedAt": "2026-10-26",
+        "supports": "A new federal rule brings smaller commercial refrigeration systems into leak repair duties from 2026.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Law-firm summary, not the rule text. The National Law Review summary seen in the same search also mentions a January 1, 2027 date for some existing commercial and industrial equipment, which conflicts with the single-date description and was not resolved."
+      },
+      {
+        "observation": "EPA's Frequent Questions page on the HFC phasedown still lists January 1, 2026 as the leak repair start date under 40 CFR 84.106, per search summaries. Search results also showed a May 2026 proposal signed by Administrator Zeldin to exempt road and intermodal transport refrigeration units from the leak repair requirements, and a separate May 2026 final rule reconsidering Technology Transitions dates; no general delay of the leak repair date was found.",
+        "label": "EPA: Frequent Questions on the Phasedown of Hydrofluorocarbons",
+        "url": "https://www.epa.gov/hfcs/frequent-questions-phasedown-hydrofluorocarbons",
+        "sourceType": "government",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "The compliance date appears to be in effect as of this review, though EPA is adjusting related rules.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Absence of a delay in search results is not proof that none exists; the Federal Register was not checked directly."
+      },
+      {
+        "observation": "FMHero's equipment owner compliance guide says facilities commonly rely on a servicing contractor to calculate the leak rate, but the obligation sits with the owner or operator, who remains responsible for documenting that required leak inspections were completed. Other guides in the same search list the records as refrigerant additions (date, amount, technician certification), recoveries and leak inspections, kept for three years.",
+        "label": "FMHero: Equipment Owner Compliance Guide",
+        "url": "https://www.fmhero.com/equipment-owner-compliance-guide/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Records work happens at the contractor but the legal duty sits with the owner, which makes the payer unclear.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Vendor content; sources in the same search disagreed on whether all record duties apply at 15 or 50 pounds."
+      },
+      {
+        "observation": "A National Grocers Association issue brief on HFCs calls the EPA's January 1, 2026 commercial compliance date a nearly impossible target for independents, cites partner estimates of about $1.5 million per store to convert refrigeration, and stresses independent grocers' thin margins.",
+        "label": "National Grocers Association: HFC issue brief",
+        "url": "https://www.nationalgrocers.org/wp-content/uploads/2025/04/2024-12-NGA_Issue-Brief_HFC.pdf",
+        "sourceType": "community",
+        "publishedAt": "2024-12",
+        "observedAt": "2026-10-26",
+        "supports": "Independent grocers, a likely end customer, are under cost pressure from HFC rules.",
+        "level": "attention",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. An industry association advocacy brief, not individual customers. Its complaint concerns equipment conversion under the phasedown, not leak recordkeeping, so it does not show demand for a records tool."
+      },
+      {
+        "observation": "ACHR News reporting on a NASRC summit said small grocers will likely keep repairing existing equipment as long as possible and that the AIM Act may raise refrigerant prices for them.",
+        "label": "ACHR News: Small stores may struggle with refrigerant transition",
+        "url": "https://achrnews.com/articles/145809-small-stores-may-struggle-with-refrigerant-transition",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Small stores will keep servicing older HFC systems, so leak repair and records will recur.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Publication date unknown and likely predates the final 2024 rule."
+      },
+      {
+        "observation": "ACHR News's \"Are you actually ready for an EPA audit?\" cites a penalty of $59,114 per violation per day as of January 2025; an OxMaint article in the same search cites up to $44,539 per day, and another vendor cites $69,733.",
+        "label": "ACHR News: Are you actually ready for an EPA audit?",
+        "url": "https://www.achrnews.com/articles/165786-are-you-actually-ready-for-an-epa-audit",
+        "sourceType": "news",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Non-compliance carries large potential penalties, which vendors use to sell tracking tools.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Penalty figures conflict across sources and none was checked against EPA's civil penalty adjustment rule. Potential penalties are not evidence of enforcement against small sites."
+      },
+      {
+        "observation": "Software directory listings describe Ref LeakLog as EPA refrigerant compliance software for small HVAC/R contractors (one-to-eight-truck shops) that logs top-offs, applies Subpart C thresholds, starts the 30-day repair clock and generates audit records, with reported tiers of $29 (Independent), $59 (Crew) and $89 (Business) per month.",
+        "label": "GetApp: Ref LeakLog",
+        "url": "https://www.getapp.com/compliance-software/a/ref-leaklog/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "A priced product already targets exactly this buyer and workflow (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. The prices appeared in a summary of several directory listings (GetApp, Software Advice, SaaSworthy, AlternativeTo) and could not be attributed to this specific page. Listings disagreed on whether a free trial exists. Prices are offers, not proof of buyers; customer count unknown."
+      },
+      {
+        "observation": "G2 says Fexa-Trakref has not provided pricing information; SafetyCulture lists Trakref as custom pricing; Net Zero Compare describes it as refrigerant compliance software for organisations operating HVAC/R and refrigeration assets across multiple sites. Trakref was acquired by Fexa.",
+        "label": "G2: Fexa-Trakref pricing",
+        "url": "https://www.g2.com/products/fexa-trakref/pricing",
+        "sourceType": "review",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "The established incumbent targets multi-site operators with quote-based pricing, leaving small contractors to lighter tools.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Acquisition year (2023) is from a search summary and unverified. Absence of a small tier in summaries is not proof none exists."
+      },
+      {
+        "observation": "RefriComply publishes a guide titled \"EPA AIM Act Compliance for HVAC Contractors: What the 15-Pound Rule Means for Your Business\"; the same and related searches returned AIM Act leak tracking content from OxMaint, Nexasphere (EPA 608 refrigerant logs for Texas HVAC contractors), Carbon Connector, iFactory and the compliance service OneEnv.",
+        "label": "RefriComply: AIM Act compliance for HVAC contractors",
+        "url": "https://www.refricomply.com/blog/aim-act-compliance-hvac-contractors",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Many vendors already market AIM Act leak-rate tracking to contractors (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Vendor marketing; prices, customer counts and feature depth of these tools were not verified."
+      }
+    ],
+    "sourceNote": "All page fetches failed in this run (WebFetch DNS errors; the egress proxy returned 403 for direct requests), so every entry relies on search-result summaries and is unverified until re-fetched. The sources establish the 2026 regulatory trigger and a crowded vendor field, including a tool priced for small contractors. Searches aimed at Reddit, HVAC-Talk and other technician forums returned no contractor or owner discussion of the new records duty, so customer demand is unobserved.",
+    "reviewedAt": "2026-10-26",
+    "sources": [
+      [
+        "Beveridge & Diamond: EPA finalizes HFC Emissions Reduction and Reclamation Program",
+        "https://www.bdlaw.com/publications/epa-finalizes-hfc-emissions-reduction-and-reclamation-program/"
+      ],
+      [
+        "EPA: Frequent Questions on the Phasedown of Hydrofluorocarbons",
+        "https://www.epa.gov/hfcs/frequent-questions-phasedown-hydrofluorocarbons"
+      ],
+      [
+        "FMHero: Equipment Owner Compliance Guide",
+        "https://www.fmhero.com/equipment-owner-compliance-guide/"
+      ],
+      [
+        "National Grocers Association: HFC issue brief",
+        "https://www.nationalgrocers.org/wp-content/uploads/2025/04/2024-12-NGA_Issue-Brief_HFC.pdf"
+      ],
+      [
+        "ACHR News: Small stores may struggle with refrigerant transition",
+        "https://achrnews.com/articles/145809-small-stores-may-struggle-with-refrigerant-transition"
+      ],
+      [
+        "ACHR News: Are you actually ready for an EPA audit?",
+        "https://www.achrnews.com/articles/165786-are-you-actually-ready-for-an-epa-audit"
+      ],
+      [
+        "GetApp: Ref LeakLog",
+        "https://www.getapp.com/compliance-software/a/ref-leaklog/"
+      ],
+      [
+        "G2: Fexa-Trakref pricing",
+        "https://www.g2.com/products/fexa-trakref/pricing"
+      ],
+      [
+        "RefriComply: AIM Act compliance for HVAC contractors",
+        "https://www.refricomply.com/blog/aim-act-compliance-hvac-contractors"
+      ]
+    ]
+  },
+  {
+    "id": "gpsr-handmade",
+    "name": "EU Ready",
+    "title": "EU product-safety (GPSR) compliance for small handmade sellers outside the EU",
+    "category": "Commerce",
+    "model": "B2B",
+    "type": "Compliance software",
+    "summary": "A low-cost kit for US and UK handmade and small-batch sellers on Etsy and Shopify to keep selling into the EU under the General Product Safety Regulation: appoint an EU Responsible Person, write product risk assessments, and fill required listing fields. Sellers clearly find the rule painful, and some simply turned off EU sales, but the space already has many GPSR tools and Responsible Person services from about €139-199 a year, and Etsy has built-in fields and partner providers.",
+    "buyer": "Owners of small handmade or small-batch shops outside the EU (often solo makers on Etsy, Shopify or Folksy) with modest EU sales. The owner feels the problem and pays.",
+    "problem": "Since December 13, 2024, the EU General Product Safety Regulation (EU 2023/988) has applied to non-food consumer products sold to EU (and Northern Ireland) buyers. Non-EU sellers must name an EU-based Responsible Person, guides say a documented risk assessment is needed per product type, and marketplaces can remove non-compliant listings. Sellers on Shopify's community forum called it a \"total nightmare\" and said Responsible Person fees are hard to justify at low EU volume; on Etsy's forum a US seller who turned off EU sales says EU buyers keep contacting them about listings they cannot buy.",
+    "solution": "If pursued: a guided GPSR pack for makers covering product-type risk-assessment templates (candles, jewelry, textiles, ceramics), a bundled Responsible Person service from a partner, bulk-fill of marketplace GPSR fields, and a decision tool on whether EU sales are worth keeping. Search results show nearly every part of this already sold by GPSR-specific vendors.",
+    "revenue": "Hypothesis (unvalidated): €10-20 per month or €100-200 per year per shop, bundled with a partner Responsible Person. Observed anchors from search results: EAS lists a €199 starting annual plan; Webinterpret lists $30 a month or $360 a year; a Shopify thread cites services from €139 a year. These are offers, not proof of buyers.",
+    "gap": "Alternatives: Etsy's shop-wide GPSR fields and its partner Responsible Person providers (Cert-Rep, International Associates), standalone Responsible Person and authorised-representative services (EAS, Webinterpret, 24hour-AR, euverify), GPSR checklist and document tools aimed at Etsy sellers (GPSR Kit, EU Proof, ShieldMyShop, Specifek, GPSR Hub, InsightAgent), craft inventory tools that explain GPSR (Craftybase), free government guidance, and simply opting out of EU sales. No underserved segment was found; the cheapest and most common choice for low-volume sellers appears to be opting out.",
+    "timing": "Weak. The rule has applied since December 2024 and the scramble has already produced many vendors and Etsy's own tooling; 2026 guides are mostly maintenance content. The problem is a one-time setup for many sellers rather than a recurring workflow.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed knowledge of EU product-safety law, no EU legal entity to act as Responsible Person, no confirmed access to maker communities, and limited capital. A Responsible Person service carries legal obligations that a solo developer cannot take on without a partner.",
+    "risks": [
+      "Crowded: at least six GPSR tools aimed at Etsy and Shopify sellers and several Responsible Person services were seen, plus Etsy's own partner providers.",
+      "The regulated service (Responsible Person) requires an EU-based entity; a software-only offer must resell a partner, leaving thin margins.",
+      "Low willingness to pay: forum sellers say fees are not worth it at low EU volume, and opting out of EU sales is free.",
+      "Mostly a one-time setup, which limits recurring revenue.",
+      "Legal exposure if templates or advice are wrong; vendor guides disagree on costs and obligations.",
+      "Evidence quality: page fetches failed in this run, so every entry relies on search-result summaries; one forum thread summary was itself AI-generated."
+    ],
+    "pilot": [
+      "Before building, interview 10 US or UK makers who sold to the EU before December 2024 (via Etsy teams or maker groups). Ask what they did about GPSR, what it cost, whether EU sales are on or off, and what EU sales are worth to them per year. Stop if fewer than 4 of 10 want to restore or keep EU sales, or if most who kept EU sales are satisfied with Etsy's partners or an existing service.",
+      "If interviews pass, sell a €49 one-time risk-assessment template pack for one product category through a landing page shared in 3 maker communities. Success means 20 purchases within 4 weeks. Stop if fewer than 5 sell."
+    ],
+    "assumptions": [
+      "That many makers turned off EU sales and want them back is suggested by forum threads and vendor content but not measured.",
+      "That makers would pay for risk-assessment templates separately from a Responsible Person service is assumed.",
+      "Price anchors (€139, €199, $30 per month) are snippet-only and unverified.",
+      "The scope of obligations for handmade sellers (risk assessment per product type, technical file retention) comes from vendor guides and was not checked against the regulation text."
+    ],
+    "level": "repeated-pain",
+    "verdict": "Pass",
+    "verdictRationale": "The pain is real and repeated: sellers on the Shopify and Etsy forums describe GPSR as a nightmare, say Responsible Person fees are not worth it at their EU volume, and some turned off EU sales entirely. But the market responded quickly. Etsy added shop-wide GPSR fields and partner Responsible Person providers, and at least six GPSR tools and several Responsible Person services already target small sellers, with annual plans from about €139-199. The regulated piece needs an EU entity, which a solo developer lacks, and the free fallback (stop selling to the EU) caps willingness to pay. Confidence is limited because every page fetch failed and one forum thread's summary was AI-generated. This would move to Watch if makers who kept EU sales reported recurring work (new products, audits, marketplace takedowns) that existing tools fail to handle.",
+    "nextStep": "Shelve the idea. If revisiting, re-fetch the Etsy and Shopify threads to confirm seller statements, and look for evidence of recurring GPSR enforcement (listing takedowns, market-surveillance requests) affecting small makers in 2026.",
+    "evidence": "Researched report",
+    "status": "Real seller pain; crowded with GPSR tools and Etsy partner services",
+    "evidenceLog": [
+      {
+        "observation": "A Shopify Community thread titled \"EU/NI General Product Safety Regulations (GPSD / GPSR), Total Nightmare\" opens with an AI-generated summary saying non-EU sellers need an EU Responsible Person, small sellers find services from about €139 a year hard to afford, Shopify offers no built-in compliance or Responsible Person service, and some third-party apps have appeared. One reply says the seller's EU and Northern Ireland sales volume does not justify the annual fee.",
+        "label": "Shopify Community: GPSR \"Total Nightmare\" thread",
+        "url": "https://community.shopify.com/t/eu-ni-general-product-safety-regulations-gpsd-gpsr-total-nightmare/338849/11",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Small sellers find GPSR burdensome and resist paying for a Responsible Person at low EU volume.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. The thread summary is AI-generated and may misstate details. Year of posting not shown (summary dated \"October 30\"). Number of distinct sellers in the thread unknown."
+      },
+      {
+        "observation": "In an Etsy Community thread, a US-based seller who turned off EU sales because of GPSR says EU buyers keep contacting them about listings they cannot buy and asks Etsy to hide those listings; another maker replies that Etsy's GPSR setting blocks checkout only for EU and Northern Ireland addresses, so listings still appear in search and ads and sellers can be charged for ad clicks that cannot convert.",
+        "label": "Etsy Community: Suggested Change for GPSR",
+        "url": "https://community.etsy.com/t5/Technical-Issues/Suggested-Change-for-GPSR/m-p/149067502",
+        "sourceType": "community",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Some sellers chose to drop EU sales rather than comply, and the opt-out itself has friction.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Two community members, not Etsy; posting date unknown."
+      },
+      {
+        "observation": "An Etsy Community thread on GPSR blocks for digital sales (late 2024) shows sellers of digital downloads worried about the rules and one complaining that Etsy had \"stonewalled on providing any GPSR help whatsoever.\"",
+        "label": "Etsy Community: EU & NI GPSR block for digital sales",
+        "url": "https://community.etsy.com/t5/Technical-Issues/EU-amp-NI-GPSR-block-for-Digital-Sales/td-p/147230486/highlight/true/page/2",
+        "sourceType": "community",
+        "publishedAt": "2024",
+        "observedAt": "2026-10-26",
+        "supports": "Confusion about scope was widespread at launch.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. One seller's view; concerns digital products, which may fall outside GPSR, so it shows confusion rather than a compliance need. Dated late 2024, before Etsy added shop-wide fields."
+      },
+      {
+        "observation": "Etsy's help center says manufacturers based outside the EU may appoint a Responsible Person, that Etsy has partnered with Cert-Rep and International Associates for this, and that sellers can opt out of selling their products to GPSR countries.",
+        "label": "Etsy Help: What is the General Product Safety Regulation (GPSR)?",
+        "url": "https://help.etsy.com/hc/en-in/articles/28211364687383-What-is-the-General-Product-Safety-Regulation-GPSR",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "The main marketplace already offers built-in partners and a free opt-out (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Partner pricing not shown in the summary."
+      },
+      {
+        "observation": "Craftybase's GPSR explainer for makers says GPSR applies to non-food handmade products sold to EU customers regardless of seller size or location, that Etsy now lets sellers add Responsible Person details shop-wide (from April 2025), and that non-compliant listings can be removed and EU sales suspended.",
+        "label": "Craftybase: What is GPSR?",
+        "url": "https://craftybase.com/blog/what-is-gpsr",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Handmade sellers are in scope and face listing removal, while Etsy has reduced the data-entry burden.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Vendor content from a craft inventory tool; the April 2025 date is from the summary and unverified."
+      },
+      {
+        "observation": "EAS's GPSR page lists a \"Starting\" annual plan at €199 for automated EU GPSR compliance including Responsible Person service.",
+        "label": "EAS: Automated EU GPSR compliance",
+        "url": "https://easproject.com/gpsr/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Responsible Person services are already sold at low annual prices (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Plan contents and limits unknown; price is an offer, not proof of buyers."
+      },
+      {
+        "observation": "Webinterpret's comparison page lists a GPSR option at $30 a month with no commitment, $360 a year; the same comparison table also shows a \"starting from 400 EUR/year\" figure. Other guides in the same search put dedicated Responsible Person services at roughly €150-500 a year and up to €500-2,000 a year for larger catalogs.",
+        "label": "Webinterpret: compare Webinterpret and VATAI",
+        "url": "https://resources.webinterpret.com/compare-webinterpret-and-vatai/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Price anchors for the regulated service exist across a wide range (counterevidence and pricing context).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Comparison page written by one of the compared vendors. The €150-500 and €500-2,000 ranges came from other vendor guides (euverify, Fivex) in the same summary."
+      },
+      {
+        "observation": "EUverify markets GPSR compliance specifically for Etsy listings and claims to be trusted by 1,000+ users. Searches in this run also returned GPSR tools and guides aimed at Etsy and Shopify sellers from GPSR Kit, EU Proof, ShieldMyShop, Specifek, GPSR Hub, InsightAgent and 24hour-AR.",
+        "label": "EUverify: GPSR for Etsy",
+        "url": "https://euverify.com/gpsr-for-etsy/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "The niche is already crowded with tools aimed at this exact buyer (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. The 1,000+ users figure is a vendor claim and unverified. Features and prices of the other tools were not checked."
+      },
+      {
+        "observation": "The UK government's publication on EU Regulation 2023/988 says the GPSR applies directly in respect of Northern Ireland from 13 December 2024.",
+        "label": "GOV.UK: EU Regulation 2023/988 on general product safety",
+        "url": "https://gov.uk/government/publications/eu-regulation-2023988-on-general-product-safety/eu-regulation-on-general-product-safety-2023988",
+        "sourceType": "government",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Confirms the rule and its December 2024 start for Northern Ireland, which also affects UK sellers.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified."
+      }
+    ],
+    "sourceNote": "All page fetches failed in this run (WebFetch DNS errors; the egress proxy returned 403 for direct requests), so every entry relies on search-result summaries and is unverified until re-fetched. Seller pain is supported by Shopify and Etsy forum threads; no Reddit threads surfaced. Pricing and competitor information comes from vendor pages and guides with a commercial interest. Some vendor content claimed many Etsy shops turned off EU shipping in December 2024 and left it off, but that claim could not be attributed to a specific source and is not used.",
+    "reviewedAt": "2026-10-26",
+    "sources": [
+      [
+        "Shopify Community: GPSR \"Total Nightmare\" thread",
+        "https://community.shopify.com/t/eu-ni-general-product-safety-regulations-gpsd-gpsr-total-nightmare/338849/11"
+      ],
+      [
+        "Etsy Community: Suggested Change for GPSR",
+        "https://community.etsy.com/t5/Technical-Issues/Suggested-Change-for-GPSR/m-p/149067502"
+      ],
+      [
+        "Etsy Community: EU & NI GPSR block for digital sales",
+        "https://community.etsy.com/t5/Technical-Issues/EU-amp-NI-GPSR-block-for-Digital-Sales/td-p/147230486/highlight/true/page/2"
+      ],
+      [
+        "Etsy Help: What is the General Product Safety Regulation (GPSR)?",
+        "https://help.etsy.com/hc/en-in/articles/28211364687383-What-is-the-General-Product-Safety-Regulation-GPSR"
+      ],
+      [
+        "Craftybase: What is GPSR?",
+        "https://craftybase.com/blog/what-is-gpsr"
+      ],
+      [
+        "EAS: Automated EU GPSR compliance",
+        "https://easproject.com/gpsr/"
+      ],
+      [
+        "Webinterpret: compare Webinterpret and VATAI",
+        "https://resources.webinterpret.com/compare-webinterpret-and-vatai/"
+      ],
+      [
+        "EUverify: GPSR for Etsy",
+        "https://euverify.com/gpsr-for-etsy/"
+      ],
+      [
+        "GOV.UK: EU Regulation 2023/988 on general product safety",
+        "https://gov.uk/government/publications/eu-regulation-2023988-on-general-product-safety/eu-regulation-on-general-product-safety-2023988"
+      ]
+    ]
+  },
+  {
+    "id": "market-token-ledger",
+    "name": "Token Tally",
+    "title": "SNAP token and incentive reconciliation for farmers market managers",
+    "category": "Food and beverage",
+    "model": "B2B",
+    "type": "Workflow software",
+    "summary": "A simple tool that replaces the after-market token count, vendor reimbursement and SNAP incentive report that farmers market staff do in spreadsheets each week. Markets do pay part-time coordinators for these hours, but free accounting templates and market-management platforms with token reimbursement already exist, many markets rely on volunteers, and budgets are small and seasonal.",
+    "buyer": "Managers or boards of independent farmers markets (often small nonprofits) that accept SNAP/EBT and run nutrition-incentive programs such as Double Up or Link Match. The market manager does the work; a board or the nonprofit's director approves spending, often from grant funds.",
+    "problem": "Markets that accept SNAP usually run a central card terminal and issue tokens or scrip; vendors turn tokens in, and the market counts them, reconciles against card batch reports and bank deposits, reimburses each vendor and reports SNAP and incentive totals to funders. Job postings budget roughly 1-5 paid hours a week for this work, with reports due within 48 hours in one case. A 2014 USDA study found funders reporting that multiple currencies and token systems were challenging for accounting, and a 2026 bookkeeping guide notes that the payment rails do not reconcile against each other automatically.",
+    "solution": "If pursued: a phone-and-laptop tool where staff enter card terminal batches and per-vendor token returns for each currency (SNAP, incentive, credit), get a reconciled market-day report, generate vendor reimbursement statements, and export season totals for grant reporting. Marketspread already offers automatic vendor reimbursement for SNAP currency, and the Farmers Market Coalition publishes free templates for the same flow.",
+    "revenue": "Hypothesis (unvalidated): $150-400 per market per season. Anchors seen only in search results: Farm2Facts membership at $350-600 in the first year and $200-350 after (a broader data toolkit); paid coordinator time at about $18-19 an hour for a few hours a week. Marketspread's price was not found.",
+    "gap": "Alternatives: the Farmers Market Coalition's free token accounting spreadsheets (developed with Washington State University and a CPA), state program templates such as NOFA-VT's Crop Cash tracking guide, market-management platforms with token or currency reconciliation (Marketspread; Manage My Market and MarketWurks for vendor management), Farm2Facts' token and sales tools, general bookkeeping software, and paid or volunteer coordinators. The possible gap is markets too small for a full management platform that have outgrown spreadsheets, but no manager was found asking for that.",
+    "timing": "Neutral. USDA renewed related incentive-program information collections in 2026 and incentive programs continue, but token systems are long established and nothing new forces markets to change tools.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed experience in farmers market operations, SNAP retailer rules or grant reporting, no confirmed access to market managers, and limited capital. The work is seasonal and the buyers are many small nonprofits, so sales effort per dollar is high.",
+    "risks": [
+      "Free alternatives: the Farmers Market Coalition's CPA-reviewed templates cover the same reconciliation.",
+      "Incumbents: Marketspread already automates reimbursement for SNAP currency, and Farm2Facts offers token tools to members.",
+      "Small, seasonal budgets: many markets rely on volunteer managers and grant funds; a USDA survey found volunteer managers more common than paid ones.",
+      "The reconciliation still requires physical token counts, so software saves only part of the labor.",
+      "Program rules differ by state and funder, which multiplies report formats and support.",
+      "Evidence quality: page fetches failed in this run, so every entry relies on search-result summaries; no manager complaint threads were found."
+    ],
+    "pilot": [
+      "Before building, interview 8 managers of markets that run SNAP and an incentive program (via a state farmers market association). Ask how they reconciled last market day, how long it took, what tools they use, and who would approve paying for a tool. Stop if fewer than 4 of 8 report more than an hour of reconciliation per market day, or if 4 or more already use Marketspread or the FMC templates and are satisfied.",
+      "If interviews pass, run the reconciliation for 3 markets for 6 market days using a shared form and a generated report. Success means each market says it saved at least 30 minutes per market day and at least 2 commit in writing to pay $150 or more for the next season. Stop if no market commits."
+    ],
+    "assumptions": [
+      "Reconciliation time per market day (about 1-3.5 hours) is inferred from job postings, not measured.",
+      "That markets would pay from grant or operating funds for a narrow tool is assumed.",
+      "That Marketspread's token feature is too heavy or costly for small markets is unverified; its price was not found.",
+      "The $150-400 per season price is a hypothesis; the Farm2Facts anchor is for a broader membership."
+    ],
+    "level": "costly-workaround",
+    "verdict": "Pass",
+    "verdictRationale": "The workflow cost is real and visible: several 2025-2026 market job postings pay coordinators about $18-19 an hour and budget up to 3.5 to 5 hours a week for token reconciliation, vendor reimbursement and reporting, and a USDA study recorded accounting difficulty with multiple currencies. But the problem is already addressed by free CPA-reviewed templates and by market-management software that automates SNAP reimbursement, and many buyers are volunteer-run nonprofits with seasonal, grant-dependent budgets. No manager was found asking for a better tool. Confidence is limited because every page fetch failed and Marketspread's pricing was not found. This would move to Interview if market managers using spreadsheets or Marketspread reported that reconciliation still takes hours and said they had budget for a dedicated tool.",
+    "nextStep": "Shelve the idea. If revisiting, fetch the FMC templates and Marketspread's pricing, and ask a state farmers market association whether its member markets report reconciliation as a top time cost.",
+    "evidence": "Researched report",
+    "status": "Paid hours for manual reconciliation; free templates and incumbents already cover it",
+    "evidenceLog": [
+      {
+        "observation": "A 2026 Idealist posting for a part-time, temporary SNAP/EBT Coordinator at the Waltham Farmers' Market (Massachusetts) runs May 18 to November 6, 2026 at $18.75 an hour; duties include processing EBT cards for tokens and collecting tokens from vendors and issuing receipts at the end of each market day.",
+        "label": "Idealist: Farmers Market SNAP Coordinator, Waltham",
+        "url": "https://www.idealist.org/en/nonprofit-job/4aee36fa5f2f4314887615d90746e2a9-farmers-market-snap-coordinator-waltham-farmers-market-waltham",
+        "sourceType": "job",
+        "publishedAt": "2026",
+        "observedAt": "2026-10-26",
+        "supports": "Markets pay staff for token handling and vendor reimbursement.",
+        "level": "costly-workaround",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. A job post shows intent to spend, not a hire. Reconciliation is part of a broader coordinator role; hours devoted to it are not stated."
+      },
+      {
+        "observation": "A Good Food Jobs posting from Forty Acres Fresh Market for an EBT Coordinator at the Austin Town Hall Farmers Market in Chicago (season June 11 to October 29, 2026) covers SNAP transactions and Link Match coupon distribution, plus flexible time of up to 3.5 hours for transaction reconciliation, processing reimbursements and reporting, including reconciling EBT transactions daily and reimbursing vendors for the previous week's EBT sales.",
+        "label": "Good Food Jobs: Farmers Market EBT Coordinator",
+        "url": "https://www.goodfoodjobs.com/jobs/183009/farmers-market-ebt-coordinator",
+        "sourceType": "job",
+        "publishedAt": "2026",
+        "observedAt": "2026-10-26",
+        "supports": "A market budgets up to 3.5 paid hours a week specifically for reconciliation, reimbursement and reporting.",
+        "level": "costly-workaround",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Two search summaries gave different market-day hours (11am-7pm vs 1-6pm). Pay was not shown. A job post shows intent to spend, not a hire."
+      },
+      {
+        "observation": "A Virginia Community Food Connections posting (2021) for a seasonal part-time Market Token Operator at 6-7 hours a week includes about 1 hour of after-market reconciliation, completed within 48 hours of market close, counting the token bank, reconciling with transaction activity, and completing reconciliation reports in Excel and an online tracking program.",
+        "label": "Virginia Cooperative Extension: Market Token Operator position",
+        "url": "https://caroline.ext.vt.edu/content/dam/caroline_ext_vt_edu/VCFCMarketTokenOperator-BGFMPosition2021.pdf",
+        "sourceType": "job",
+        "publishedAt": "2021",
+        "observedAt": "2026-10-26",
+        "supports": "Reconciliation is a routine paid task done in Excel plus a tracking system.",
+        "level": "costly-workaround",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Dated 2021; may not reflect current practice. One market."
+      },
+      {
+        "observation": "An Urban Food Connections of Utah internship description for a seasonal part-time EBT/SNAP Manager includes tracking SNAP token distribution at the farmers market and reconciliation duties, with up to five additional hours a week of office work.",
+        "label": "University of Utah: Urban Food Connections EBT/SNAP internship",
+        "url": "https://internships.csbs.utah.edu/_resources/documents/internship-descriptions/urban-food-connections-ebt-snap.pdf",
+        "sourceType": "job",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Another market staffs token tracking and reconciliation, here partly with interns.",
+        "level": "costly-workaround",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Year not stated; an internship, so it may be low-paid or unpaid, which also shows how little budget some markets have."
+      },
+      {
+        "observation": "The Farmers Market Coalition hosts token and incentive accounting templates developed with Washington State University and a CPA; the Token Accounting Spreadsheet records vendor information from paper forms, token counts and card-machine batch reports, reconciles against accounting records and expedites check writing to vendors.",
+        "label": "Farmers Market Coalition: Token & Incentive Accounting Templates",
+        "url": "https://farmersmarketcoalition.org/resource/token-accounting-templates/",
+        "sourceType": "research",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "A free, credible alternative already covers the core workflow (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Adoption of the templates is unknown."
+      },
+      {
+        "observation": "Marketspread's help article on token reconciliation says admins mark currencies such as SNAP as chargeable or reimbursable; each time daily sales are reported the system generates an invoice with fees and reimbursements applied, and a negative balance means the market owes the vendor, settled with a Reimburse button. Marketspread's farmers market page lists token currencies among its features.",
+        "label": "Marketspread: Token reconciliation",
+        "url": "https://marketspread.com/learning/articles/token-reconciliation/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "An incumbent market-management platform already automates vendor token reimbursement (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Marketspread's pricing and customer count were not found. The article does not say how physical token counts are verified."
+      },
+      {
+        "observation": "Farm2Facts, run by the University of Wisconsin-Madison, offers a market data toolkit with a Central Terminal Tokens Tool and a Central Terminal Sales Tool; search summaries give membership pricing of $600 then $350 a year for a market organization, $350 then $200 for an individual market.",
+        "label": "Farm2Facts",
+        "url": "https://farm2facts.org/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Markets already have a low-cost, university-backed tool for token and sales tracking (counterevidence and price anchor).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. The pricing appeared in a summary of several farm2facts.org pages and could not be attributed to a specific page. The tokens tool's features were not described."
+      },
+      {
+        "observation": "USDA's 2019 National Farmers Market Managers Survey found volunteer managers the most common arrangement (37%, versus 29% paid market employees in the full report), with managers averaging 19.4 hours a week; rural and suburban markets relied more on volunteers.",
+        "label": "USDA AMS: National Farmers Market Managers Survey",
+        "url": "https://www.ams.usda.gov/sites/default/files/media/FarmersMarketMangersSurvey.pdf",
+        "sourceType": "government",
+        "publishedAt": "2019",
+        "observedAt": "2026-10-26",
+        "supports": "Many buyers are volunteer-run with limited budgets, which caps willingness to pay (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. The overview gave slightly different shares (34% volunteer, 29% paid). Data is from 2019."
+      },
+      {
+        "observation": "A USDA FNS study of farmers market incentive providers found staffing and accounting cited as major challenges, and funders reported that multiple forms of currency and token systems were challenging for accounting.",
+        "label": "USDA FNS: Farmers Market Incentive Provider Study summary",
+        "url": "https://fns-prod.azureedge.us/sites/default/files/FarmersMarketIncentiveProvider_Summary.pdf",
+        "sourceType": "government",
+        "publishedAt": "2014",
+        "observedAt": "2026-10-26",
+        "supports": "Token accounting difficulty is a long-recognized, repeated problem across incentive programs.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. The search summary described \"a 2014 FNS study\" without naming the URL; attribution to this PDF is the closest match in the results and unverified. Over a decade old."
+      },
+      {
+        "observation": "Ohio State Extension's fact sheet says most markets have a single staff member or volunteer processing SNAP transactions and distributing incentive tokens, and recommends separate tokens for SNAP and nutrition-incentive funds to keep records clear.",
+        "label": "Ohioline: Ohio State Extension fact sheet CDFS-4116",
+        "url": "https://ohioline.osu.edu/factsheet/cdfs-4116",
+        "sourceType": "research",
+        "publishedAt": null,
+        "observedAt": "2026-10-26",
+        "supports": "Token handling typically falls on one person, and multiple currencies complicate records.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (DNS error and egress proxy 403), so wording is unverified. Extension guidance, not a measurement of time spent. Exact page title unverified."
+      }
+    ],
+    "sourceNote": "All page fetches failed in this run (WebFetch DNS errors; the egress proxy returned 403 for direct requests), so every entry relies on search-result summaries and is unverified until re-fetched. Job postings show markets paying for reconciliation hours; government and extension sources confirm the workflow and its accounting difficulty. Free templates and existing platforms cover the same work. No Reddit or forum threads from market managers were found.",
+    "reviewedAt": "2026-10-26",
+    "sources": [
+      [
+        "Idealist: Farmers Market SNAP Coordinator, Waltham",
+        "https://www.idealist.org/en/nonprofit-job/4aee36fa5f2f4314887615d90746e2a9-farmers-market-snap-coordinator-waltham-farmers-market-waltham"
+      ],
+      [
+        "Good Food Jobs: Farmers Market EBT Coordinator",
+        "https://www.goodfoodjobs.com/jobs/183009/farmers-market-ebt-coordinator"
+      ],
+      [
+        "Virginia Cooperative Extension: Market Token Operator position",
+        "https://caroline.ext.vt.edu/content/dam/caroline_ext_vt_edu/VCFCMarketTokenOperator-BGFMPosition2021.pdf"
+      ],
+      [
+        "University of Utah: Urban Food Connections EBT/SNAP internship",
+        "https://internships.csbs.utah.edu/_resources/documents/internship-descriptions/urban-food-connections-ebt-snap.pdf"
+      ],
+      [
+        "Farmers Market Coalition: Token & Incentive Accounting Templates",
+        "https://farmersmarketcoalition.org/resource/token-accounting-templates/"
+      ],
+      [
+        "Marketspread: Token reconciliation",
+        "https://marketspread.com/learning/articles/token-reconciliation/"
+      ],
+      [
+        "Farm2Facts",
+        "https://farm2facts.org/"
+      ],
+      [
+        "USDA AMS: National Farmers Market Managers Survey",
+        "https://www.ams.usda.gov/sites/default/files/media/FarmersMarketMangersSurvey.pdf"
+      ],
+      [
+        "USDA FNS: Farmers Market Incentive Provider Study summary",
+        "https://fns-prod.azureedge.us/sites/default/files/FarmersMarketIncentiveProvider_Summary.pdf"
+      ],
+      [
+        "Ohioline: Ohio State Extension fact sheet CDFS-4116",
+        "https://ohioline.osu.edu/factsheet/cdfs-4116"
+      ]
+    ]
   }
 ];
