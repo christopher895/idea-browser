@@ -3338,5 +3338,459 @@ window.IDEAS = [
         "https://ohioline.osu.edu/factsheet/cdfs-4116"
       ]
     ]
+  },
+  {
+    "id": "backflow-report-filing",
+    "name": "Backflow Filer",
+    "title": "One place for independent backflow testers to file test reports across many water districts",
+    "category": "Field services",
+    "model": "B2B",
+    "type": "Field service software",
+    "summary": "A tool for independent backflow testers who serve several water utilities: they enter each test result once and it is filed in whatever form each district demands, whether that is the district's own portal, a vendor portal such as BSI Online, VEPO or Syncta, or a paper form. The fragmentation is real: municipal pages show different portals, forms, deadlines and per-report fees from district to district. But Syncta (owned by Watts) already sells tester plans that submit into purveyor portals, cheaper tester apps exist, and no tester complaint about filing was found.",
+    "buyer": "Owner-operator backflow testers and small plumbing or fire-protection firms (roughly 1-5 certified testers) that test commercial and residential assemblies for customers spread across several water districts. The tester does the filing and would pay; the property owner pays for the test and, in some districts, a per-report filing fee.",
+    "problem": "Utilities require annual tests of backflow prevention assemblies and each runs its own reporting channel. Search summaries of municipal pages show own-form-only rules (Dawsonville, GA), online-only portals (Yakima, WA), mail-only hardcopy with bureau stickers (Portland, OR), different deadlines (10 days in Post Falls, ID versus 30 days in Lincoln, NE), and per-report filing fees charged through third-party portals (for example $14.95 in Lakeville, MN via BSI Online and $11.50 in Georgetown, TX via VEPO). A tester working several districts must keep multiple accounts, forms and fee arrangements. How much time this costs a tester was not observed.",
+    "solution": "If pursued: a phone-first test entry app that stores each assembly's history and outputs the district-specific form, portal-ready data or printable report, with a deadline tracker per district. Search results show Syncta already offers test entry with submission into purveyor portals, and other tester apps (The Backflow Assistant, C3Backflow, GoCanvas templates) cover paperless reports.",
+    "revenue": "Hypothesis (unvalidated): $10-30 per month per tester. Observed price anchors are offers, not proof of buyers: Syncta's help center reportedly lists a $25 monthly minimum with the first five tests free and $4.95 per extra test, $99 per tester per month, or $549 per month for unlimited testers; The Backflow Assistant iPhone app is listed at $9.99 per month. All prices come from search summaries and are unverified.",
+    "gap": "Alternatives: Syncta (tester plans with portal submission; some utilities, such as Truckee Donner PUD, require it), utility-side portals run by BSI Online, VEPO, SAMS and MTS FAST that testers must use anyway, tester apps such as The Backflow Assistant and C3Backflow, form tools such as GoCanvas, general field-service software such as Jobber, and paper forms. Where a district mandates its own portal, a third-party tool still has to re-enter data there unless the portal accepts imports, which limits any time saving. No underserved segment was identified; the multi-district submission feature is already Syncta's pitch.",
+    "timing": "No new trigger found. Utilities have been moving testers onto portals for years (Truckee Donner PUD from January 2021; RDNO added a data entry fee for reports filed outside its FAST system from January 2023), and that consolidation is mostly utility-driven and vendor-specific.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed backflow testing knowledge, no confirmed access to testers or tester associations, and limited capital. Keeping per-district form templates and portal workflows current would be an ongoing operational burden.",
+    "risks": [
+      "Syncta, backed by Watts, already sells portal submission to testers, and some utilities mandate it.",
+      "Utility portals are controlled by the utilities and their vendors; without import APIs, a third-party tool cannot remove the double entry.",
+      "Testers may treat filing as a small part of a billable visit and not pay for a separate tool.",
+      "Per-district templates and rules change, creating ongoing maintenance.",
+      "No tester voice found: every source is a utility page, vendor page or directory listing apart from one short review remark.",
+      "Evidence quality: all page fetches failed in this run, so every entry relies on search-result summaries."
+    ],
+    "pilot": [
+      "Before building, interview 8 independent testers who file with 3 or more districts (reach them via ABPA or AWWA cross-connection chapters, or tester lists that utilities publish). Ask how many minutes the last batch of filings took, which portals they used, whether they pay for Syncta or another app, and what annoys them. Stop if fewer than 3 of 8 say filing takes more than 2 hours a month, or if most are satisfied Syncta users.",
+      "If interviews pass, file reports for 3 testers by hand for one month in their real districts (a concierge service) at $2 per report. Success means at least 2 testers send 20 or more reports each and agree to keep paying. Stop if they do not send reports or will not pay."
+    ],
+    "assumptions": [
+      "That multi-district filing costs testers meaningful time is inferred from the variety of district rules, not observed in any tester report.",
+      "That a meaningful share of testers work across 3 or more districts is assumed.",
+      "The $10-30 monthly price is a hypothesis; anchors are vendor offers from search summaries.",
+      "That Syncta's portal coverage is incomplete for small testers is unverified; its documentation could not be fetched."
+    ],
+    "level": "attention",
+    "verdict": "Pass",
+    "verdictRationale": "The structural problem is real: every water district sets its own reporting channel, form, deadline and filing fee, so testers working several districts juggle many workflows. But the obvious product already exists. Syncta sells tester plans built around submission into purveyor portals, starting at about $25 a month, and utilities that mandate their own vendor portal leave little room for a third-party tool to save time. No tester was found complaining about filing; the only customer remark seen was one Capterra reviewer saying Syncta's mobile app is not great. Confidence is limited because every page fetch failed. This would move to Interview if testers described losing hours a month to multi-district filing and said Syncta does not cover their districts or costs too much.",
+    "nextStep": "Shelve the idea. If revisiting, re-fetch Syncta's plan and portal documentation, read the full Capterra reviews for Syncta and C3Backflow, and ask in a backflow tester group how people handle districts with different portals.",
+    "evidence": "Researched report",
+    "status": "District-by-district filing rules confirmed; incumbent already sells portal submission; no tester complaints found",
+    "sourceNote": "All page fetches failed in this run (WebFetch DNS errors; the egress proxy returned 403 for direct requests), so every entry relies on search-result summaries and is unverified until re-fetched. Utility pages establish the fragmentation and per-report fees; vendor pages and directories show existing tester tools. Searches aimed at Reddit and tester forums returned no tester discussion of filing burdens, so demand is unobserved.",
+    "reviewedAt": "2026-11-02",
+    "evidenceLog": [
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Search summaries of municipal pages show different reporting rules by district: Dawsonville, GA says testers must use the city form and incomplete forms are not accepted; Brighton, CO accepts its form or any form with all required information; Post Falls, ID asks for reports within ten days while Lincoln, NE allows 30 days; Yakima, WA accepts reports only through an online portal.",
+        "label": "City of Dawsonville: Backflow device test form",
+        "url": "https://www.dawsonville-ga.gov/utilities/page/backflow-device-test-form",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "Testers serving several districts face different forms, channels and deadlines.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. The Brighton, Post Falls, Lincoln and Yakima details came from the same search summary and are attributed to their own pages, not this one."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Portland Water Bureau's page on submitting backflow test reports says it still only accepts hardcopy test reports by mail, and reports will not be processed without the Water Bureau-provided sticker label.",
+        "label": "Portland Water Bureau: Submit backflow test reports",
+        "url": "https://www.portland.gov/water/backflow-prevention/submit-backflow-test-reports",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "Some large utilities still require paper filing, which a digital tool cannot replace.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Page date unknown; the policy may have changed."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Boulder's backflow portal FAQ notes that the same address can have multiple account numbers, that a \"close match\" is sometimes a different assembly, and that the portal cannot show the last test reports.",
+        "label": "City of Boulder: Backflow portal FAQ",
+        "url": "https://bouldercolorado.gov/backflow-portal-frequently-asked-questions",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "District portals have their own matching quirks that testers must learn.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. A utility FAQ, not a tester complaint."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Search summaries of utility pages list per-report filing fees through third-party portals: Lakeville, MN lists $14.95 per test report submittal; Vancouver, BC about $20-21; Wilton Manors, FL $25.00; Plantation, FL $35.95 via BSI Online; Georgetown, TX $11.50 per report via VEPO. Warren County, OH says testers pay BSI Online directly; Lewisville, TX says testers collect a $25 fee on top of their testing fee.",
+        "label": "City of Lakeville: Commercial and residential property backflow devices",
+        "url": "https://lakevillemn.gov/1178/Commercial-and-Residential-Property-Back",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "Money already flows to portal vendors per report, but it is mandated by utilities, not chosen by testers.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Fees for other cities came from the same summary and are attributed to their own pages. These fees pay for utility-mandated portals, so they are not evidence that testers would pay for a separate tool."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Georgetown, Texas says testers submit test reports and a fee of $11.50 per report via the VEPO website.",
+        "label": "City of Georgetown: Backflow knowledge base article",
+        "url": "https://georgetowntexas.qscend.com/askgtx/knowledgebase/article/4487",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "A second portal vendor (VEPO) is mandated by some districts.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Date unknown."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Truckee Donner PUD's backflow page says it only accepts tests through Syncta as of January 1, 2021.",
+        "label": "Truckee Donner PUD: Backflow and cross connection",
+        "url": "https://www.tdpud.org/departments/water/backflow-cross-connection",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "Some utilities mandate the incumbent tester platform, which locks testers in (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. One utility; how many utilities mandate Syncta is unknown."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Syncta's help center plan article reportedly lists a per-test plan with a $25 monthly minimum, the first five tests free and $4.95 per additional test (unlimited testers), a $99 per tester per month plan, and a $549 per month unlimited-tester tier. A Capterra listing in the same search showed a conflicting starting price of $29.",
+        "label": "Syncta help center: Syncta's plans",
+        "url": "https://help.syncta.com/en/articles/2842141-syncta-s-plans",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "A priced incumbent already sells test entry and submission to small testers (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Prices conflict between sources and are offers, not proof of buyers; customer count unknown."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Syncta's help center says that where a water purveyor charges for submissions, submission portal users are charged only the first time they submit a test, not for retests or resubmissions of rejected tests.",
+        "label": "Syncta help center: Charges for retests and resubmissions",
+        "url": "https://help.syncta.com/en/articles/6702470-are-submission-portal-users-charged-to-submit-retests-or-resubmit-rejected-tests",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Syncta already handles submission into purveyor portals and their fee rules (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Vendor documentation; which districts it covers was not seen."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Trade press on Watts' Syncta launch said it makes backflow test reporting and submission 10x faster than completing paperwork manually.",
+        "label": "PHCP Pros: Watts announces Syncta backflow test management software",
+        "url": "https://www.phcppros.com/articles/7926-watts-announces-syncta-backflow-test-management-software",
+        "sourceType": "news",
+        "publishedAt": null,
+        "supports": "A large manufacturer has targeted this workflow for years (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Vendor claim relayed by trade press; the speed figure is unverified and the article date is unknown."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "A search summary of Syncta's Capterra reviews page quoted one reviewer saying the mobile app is \"not great in my opinion\"; another search found no other cons.",
+        "label": "Capterra: Syncta reviews",
+        "url": "https://www.capterra.com/p/208106/Syncta/reviews/",
+        "sourceType": "review",
+        "publishedAt": null,
+        "supports": "A paying user of the incumbent has at least one complaint.",
+        "level": "attention",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. One short remark of unknown date and context; the review count and overall rating were not seen."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "The Backflow Assistant, an iPhone app for paperless backflow test reports, is listed at $9.99 per month with a 7-day free trial and says it suits individual testers and small businesses.",
+        "label": "App Store: The Backflow Assistant",
+        "url": "https://apps.apple.com/ca/app/the-backflow-assistant/id6746165015",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Cheap tester apps already exist (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Whether it submits to district portals was not seen. The price is an offer; download and ratings counts were not seen."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Capterra lists C3Backflow as software designed specifically for backflow, with a 4.5 overall rating and small businesses among its typical users.",
+        "label": "Capterra: C3Backflow",
+        "url": "https://www.capterra.com/p/165034/C3Backflow/",
+        "sourceType": "review",
+        "publishedAt": null,
+        "supports": "Another backflow-specific tool competes for the same buyers (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Review count, pricing and portal submission features were not seen."
+      }
+    ],
+    "sources": [
+      [
+        "City of Dawsonville: Backflow device test form",
+        "https://www.dawsonville-ga.gov/utilities/page/backflow-device-test-form"
+      ],
+      [
+        "Portland Water Bureau: Submit backflow test reports",
+        "https://www.portland.gov/water/backflow-prevention/submit-backflow-test-reports"
+      ],
+      [
+        "City of Boulder: Backflow portal FAQ",
+        "https://bouldercolorado.gov/backflow-portal-frequently-asked-questions"
+      ],
+      [
+        "City of Lakeville: Commercial and residential property backflow devices",
+        "https://lakevillemn.gov/1178/Commercial-and-Residential-Property-Back"
+      ],
+      [
+        "City of Georgetown: Backflow knowledge base article",
+        "https://georgetowntexas.qscend.com/askgtx/knowledgebase/article/4487"
+      ],
+      [
+        "Truckee Donner PUD: Backflow and cross connection",
+        "https://www.tdpud.org/departments/water/backflow-cross-connection"
+      ],
+      [
+        "Syncta help center: Syncta's plans",
+        "https://help.syncta.com/en/articles/2842141-syncta-s-plans"
+      ],
+      [
+        "Syncta help center: Charges for retests and resubmissions",
+        "https://help.syncta.com/en/articles/6702470-are-submission-portal-users-charged-to-submit-retests-or-resubmit-rejected-tests"
+      ],
+      [
+        "PHCP Pros: Watts announces Syncta backflow test management software",
+        "https://www.phcppros.com/articles/7926-watts-announces-syncta-backflow-test-management-software"
+      ],
+      [
+        "Capterra: Syncta reviews",
+        "https://www.capterra.com/p/208106/Syncta/reviews/"
+      ],
+      [
+        "App Store: The Backflow Assistant",
+        "https://apps.apple.com/ca/app/the-backflow-assistant/id6746165015"
+      ],
+      [
+        "Capterra: C3Backflow",
+        "https://www.capterra.com/p/165034/C3Backflow/"
+      ]
+    ]
+  },
+  {
+    "id": "certified-payroll-subs",
+    "name": "Prevail Sheet",
+    "title": "Weekly certified payroll reports for small public-works subcontractors on ordinary payroll software",
+    "category": "Construction",
+    "model": "B2B",
+    "type": "Compliance software",
+    "summary": "A converter that turns a small subcontractor's ordinary payroll run (Gusto, QuickBooks and similar) into weekly prevailing-wage certified payroll reports: the federal WH-347 or the upload file for LCPtracker and similar agency systems. The work is weekly and paid for: job posts hire LCPtracker payroll specialists, freelancers sell WH-347 preparation, and one subcontractor said it takes several hours a week. But many tools already do this (Points North, Sunburst, eBacon, PrevailComply), LCPtracker offers free entry routes, and mistakes carry wage-law liability.",
+    "buyer": "Owners or office managers at specialty subcontractors (roughly 5-30 field employees: electrical, concrete, landscaping, painting) who take occasional federal, state or municipal prevailing-wage jobs and run payroll in general small-business software. The office manager does the work; the owner signs the statement of compliance and pays.",
+    "problem": "Davis-Bacon and many state and local public works contracts require weekly certified payroll reports with job classifications, prevailing wage and fringe rates and a signed statement of compliance. Agencies and primes increasingly require submission through systems such as LCPtracker, and a sub must be added to the project by the prime before it can certify. One specialty subcontractor on the CFMA forum said using LCPtracker across many projects takes them several hours per week; an LCPtracker estimate cited by North Dakota DOT says a contractor with 15 or fewer employees can do a weekly payroll in under 30 minutes once employee data is entered. An affiliate blog says Gusto does not natively support certified payroll, leaving manual transfer or spreadsheet work.",
+    "solution": "If pursued: import the payroll export, map employees to project classifications and wage determinations, check that wage and fringe totals meet the determination, and output a WH-347 PDF plus the agency system's upload file, with weekly deadline reminders per project. Search results suggest Points North already works alongside existing payroll and outputs over 100 report formats, and that eBacon and Sunburst serve QuickBooks contractors.",
+    "revenue": "Hypothesis (unvalidated): $50-150 per month per subcontractor during active public jobs. Anchors from search summaries are unverified third-party estimates, not vendor price lists: one comparison put eBacon at $200-600 a month quote-based; another put Contractor Foreman at $50 a month plus $6.50 per employee; a remote contract job reviewing certified payroll in LCPtracker paid $35-45 an hour.",
+    "gap": "Alternatives: LCPtracker's own entry screens and spreadsheet upload (often free to contractors on projects whose owner or prime holds the license; LCPcertified advertises free use for a first project), certified payroll add-ons and report tools (Points North, Sunburst, eBacon, PrevailComply), construction payroll suites (Foundation's Payroll4Construction, Sage, Coins with an LCPtracker export), payroll services such as Paychex and ADP, freelancers who prepare WH-347s, and in-house office staff. A narrow niche of Gusto-based subs may be underserved, but Points North's reported \"works alongside your existing payroll\" positioning appears to cover it, and that was not disproven.",
+    "timing": "Steady rather than new: IIJA-funded infrastructure keeps Davis-Bacon work flowing, DOL released an updated WH-347 valid through January 2028, and agencies keep changing systems (Multnomah County, the City of Portland and the Port of Portland moved from LCPtracker to eComply on September 9, 2026). Platform churn creates small switching moments but no new demand trigger.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed knowledge of prevailing-wage law or construction payroll, no confirmed access to public-works subcontractors, and limited capital. Wrong classifications or fringe calculations could expose customers to back-wage claims and debarment, so correctness and support burden would be high.",
+    "risks": [
+      "Crowded: several dedicated certified payroll tools and add-ons already target small contractors, including one that reportedly works with any payroll system.",
+      "Free routes: subs on projects whose owner or prime licenses LCPtracker usually submit at no cost, and LCPcertified advertises a free first project.",
+      "Liability: errors in wage determinations or fringe math can lead to back wages and penalties, which raises support and insurance burden.",
+      "Demand is episodic: many small subs only need certified payroll during occasional public jobs, which hurts retention.",
+      "Fragmentation: each agency system (LCPtracker, eComply, Elations and others) has its own upload format, which multiplies maintenance.",
+      "Weak customer voice: one forum anecdote; the rest is job posts, agency guides and vendor or affiliate content.",
+      "Evidence quality: all page fetches failed in this run, so every entry relies on search-result summaries."
+    ],
+    "pilot": [
+      "Before building, interview 8 office managers at specialty subs with a current prevailing-wage job (find them through state DOT DBE directories or local ABC and AGC chapters). Ask how long last week's certified payroll took, what payroll software they use, what tool or person prepares the report, and what they pay. Stop if fewer than 3 of 8 spend 2 or more hours a week, or if most already use Points North, eBacon, Sunburst or a payroll service and are satisfied.",
+      "If interviews pass, prepare weekly certified payroll by hand for 3 subs for 4 weeks (a concierge service) at $75 per project-week. Success means all 3 send payroll on time each week and at least 2 agree to continue paying. Stop if reports are rejected for errors that the process cannot prevent, or if no one pays after the trial."
+    ],
+    "assumptions": [
+      "That many small subs run payroll in Gusto or QuickBooks without a certified payroll add-on is assumed from vendor and affiliate content, not observed.",
+      "That the several-hours-a-week burden is typical is unverified; it is one forum anecdote, and LCPtracker claims under 30 minutes after setup.",
+      "The $50-150 monthly price is a hypothesis; anchors are unverified third-party estimates.",
+      "That incumbent tools are too expensive or complex for small subs was not checked; their pricing pages could not be fetched.",
+      "Whether Gusto itself now offers certified payroll was not confirmed from Gusto's own documentation."
+    ],
+    "level": "existing-spend",
+    "verdict": "Pass",
+    "verdictRationale": "This is a real, weekly, paid-for chore: certified payroll is legally required on prevailing-wage jobs, employers hire LCPtracker payroll specialists, freelancers sell WH-347 preparation, and one subcontractor reported several hours a week. But the market is already served at every price point: free agency-licensed LCPtracker access, LCPcertified's free first project, add-ons such as Points North, Sunburst and eBacon, PrevailComply for small subs, and construction payroll suites. Wage-law liability makes it a poor fit for a solo builder without payroll compliance expertise. Confidence is limited because every page fetch failed and only one customer voice was seen. This would move to Interview if several Gusto- or QuickBooks-based subs said existing add-ons are too costly or do not produce their agency's upload format, and that they pay a person to re-key payroll each week.",
+    "nextStep": "Shelve the idea. If revisiting, re-fetch Points North, eBacon and PrevailComply pricing and supported formats, check Gusto's help center for certified payroll, and read the CFMA thread in full.",
+    "evidence": "Researched report",
+    "status": "Paid recurring chore confirmed; many tools and free routes already exist; one customer voice found",
+    "sourceNote": "All page fetches failed in this run (WebFetch DNS errors; the egress proxy returned 403 for direct requests), so every entry relies on search-result summaries and is unverified until re-fetched. Job posts and a freelance offer show money spent on the work; agency guides establish the weekly obligation; vendor and affiliate pages show a crowded field. Searches aimed at Reddit returned no threads, so subcontractor demand rests on one forum post. Competitor names and prices for Points North, Sunburst, eBacon and Contractor Foreman appeared in unattributed summaries of third-party comparison guides and are not logged as evidence entries.",
+    "reviewedAt": "2026-11-02",
+    "evidenceLog": [
+      {
+        "observedAt": "2026-11-02",
+        "observation": "A specialty subcontractor posting on the CFMA discussion forum said they have to use LCPTracker for many of their projects and it takes them several hours per week, and asked for help or a partner.",
+        "label": "CFMA forum: Certified payroll / LCP Tracker partner help",
+        "url": "https://cafe.cfma.org/discussion/certified-payroll-lcp-tracker-partnerhelp-1",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "A small subcontractor reports a recurring weekly time cost.",
+        "level": "costly-workaround",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. One anecdote of unknown date; the poster's company size and payroll software were not seen."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "North Dakota DOT's LCPtracker FAQ says LCPtracker estimates that a contractor with 15 or fewer employees can do a weekly payroll in under 30 minutes once employee data is entered.",
+        "label": "North Dakota DOT: LCPtracker FAQ",
+        "url": "https://www.dot.nd.gov/sites/www/files/documents/civil-rights/FAQ-LCPtracker-pdf.pdf",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "After setup the weekly burden may be small (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. A vendor estimate relayed by an agency; setup, classification and correction time are excluded."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "A remote \"Payroll & LCPtracker Specialist\" posting by ProScore Technologies, syndicated across several Built In sites, asks for 2+ years of payroll experience, hands-on LCPtracker and certified payroll reporting experience and familiarity with prevailing wage laws, with duties including preparing and submitting certified payroll reports through LCPtracker.",
+        "label": "Built In: ProScore Technologies Payroll & LCPtracker Specialist",
+        "url": "https://www.builtinaustin.com/job/payroll-lcptracker-specialist/10030808",
+        "sourceType": "job",
+        "publishedAt": null,
+        "supports": "Employers pay staff specifically to prepare certified payroll.",
+        "level": "existing-spend",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. One employer syndicated to many sites (counted once). A post shows intent to hire, not a hire. Salary not seen; the employer may be a services firm rather than a small sub."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "A contract Labor Compliance Specialist posting pays $35-45 an hour to review certified payroll reports in LCPtracker, including those from lower-tier subcontractors.",
+        "label": "Legal.io: Contract Compliance Analyst",
+        "url": "https://www.legal.io/jobs/5848041/Contract/Compliance-Analyst",
+        "sourceType": "job",
+        "publishedAt": null,
+        "supports": "Primes or agencies pay for review of subs' certified payroll, showing the reports are error-prone enough to check.",
+        "level": "existing-spend",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. The summary covered two Legal.io postings and the pay figure could not be attributed with certainty to this one. Reviewer-side spend, not subcontractor spend."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "An Upwork service listing offers to populate Federal Form WH-347 for a certified payroll project.",
+        "label": "Upwork: Federal Form WH347 populated for your certified payroll project",
+        "url": "https://www.upwork.com/services/product/admin-customer-support-federal-form-wh347-populated-for-your-certified-payroll-project-1626409221001830400",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Freelancers sell manual WH-347 preparation.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. A seller's offer; price, order count and reviews were not seen, so it is not proof of buyers."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Minneapolis's contractor compliance checklist says Davis-Bacon projects require weekly certified payroll submittals.",
+        "label": "City of Minneapolis: Contractor compliance checklist",
+        "url": "https://www.minneapolismn.gov/media/-www-content-assets/documents/Contractor-Compliance-Checklist_edited.pdf",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "The obligation recurs weekly for the life of a covered job.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Date unknown."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Colorado DOT's subcontractor guide says subcontractors must be listed as part of a project in LCPtracker before payroll can be certified; its approver guide says rejections require a reason and the contractor receives an email notice.",
+        "label": "Colorado DOT: Certify payroll in LCPtracker (subcontractor)",
+        "url": "https://www.codot.gov/business/civilrights/compliance/construction/assets/training-tools/4a-6-certify-payroll-in-lcptracker-subcontractor.pdf",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "Submission depends on prime setup and agency review, adding handoffs and rejections.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. The rejection detail came from a separate CDOT guide in the same search."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "LCPtracker's LCPcertified page lists it as a cloud single-contractor certified payroll application, \"Free for first project\"; search summaries also say LCPtracker Pro submissions are typically free for contractors required to use it under a project owner's or prime's license, and that LCPtracker accepts export files from multiple payroll providers.",
+        "label": "LCPtracker: LCPcertified",
+        "url": "https://lcptracker.com/solutions/lcpcertified/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Free or low-cost entry routes already exist for small subs (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. The free-tier announcement dates to 2018; current terms were not confirmed. The free-under-license and export-file claims came from the same summary and may come from other LCPtracker pages."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "An affiliate-supported blog says Gusto does not natively support certified payroll reporting, so contractors either manually transfer data from Gusto reports to WH-347 forms or export payroll data and rework it in spreadsheets.",
+        "label": "Office Consumer: Can Gusto do certified payroll?",
+        "url": "https://officeconsumer.com/can-gusto-do-certified-payroll-w-examples-faqs/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Subs on general payroll software may face manual re-keying.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Affiliate content, not Gusto documentation; another ranking site in a later search claimed Gusto's reports support certified payroll needs, so the claim is contested."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "Coins ERP+ documents a \"Certified WH-347 LCP Export\" function that exports a file for import into LCPtracker.",
+        "label": "Coins help center: LCP Tracker integration",
+        "url": "https://help-coins-usa.theaccessgroup.com/en/articles/13686105-lcp-tracker-integration",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Payroll-to-LCPtracker export is an established integration pattern (counterevidence for novelty).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Coins targets larger contractors; this does not show coverage for Gusto or QuickBooks users."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "A BetaList listing describes PrevailComply as automating certified payroll for small subcontractors on public works.",
+        "label": "BetaList: PrevailComply",
+        "url": "https://betalist.com/startups/prevailcomply",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "A new entrant already targets this exact buyer (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Launch listing only; pricing, traction and current status unknown."
+      },
+      {
+        "observedAt": "2026-11-02",
+        "observation": "A Multnomah County presentation says its certified payroll system will move from LCPtracker to eComply on September 9, 2026, as part of a regional change including the City of Portland and Port of Portland.",
+        "label": "Multnomah County: Certified payroll system transition presentation",
+        "url": "https://multco.us/file/pdf_of_presentation_with_links/download",
+        "sourceType": "government",
+        "publishedAt": "2026",
+        "supports": "Agencies switch reporting platforms, so subs face multiple systems and formats.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; the page fetch failed (WebFetch DNS error and egress proxy 403), so wording is unverified. Publication date inferred from the stated transition date; the presentation itself was not read."
+      }
+    ],
+    "sources": [
+      [
+        "CFMA forum: Certified payroll / LCP Tracker partner help",
+        "https://cafe.cfma.org/discussion/certified-payroll-lcp-tracker-partnerhelp-1"
+      ],
+      [
+        "North Dakota DOT: LCPtracker FAQ",
+        "https://www.dot.nd.gov/sites/www/files/documents/civil-rights/FAQ-LCPtracker-pdf.pdf"
+      ],
+      [
+        "Built In: ProScore Technologies Payroll & LCPtracker Specialist",
+        "https://www.builtinaustin.com/job/payroll-lcptracker-specialist/10030808"
+      ],
+      [
+        "Legal.io: Contract Compliance Analyst",
+        "https://www.legal.io/jobs/5848041/Contract/Compliance-Analyst"
+      ],
+      [
+        "Upwork: Federal Form WH347 populated for your certified payroll project",
+        "https://www.upwork.com/services/product/admin-customer-support-federal-form-wh347-populated-for-your-certified-payroll-project-1626409221001830400"
+      ],
+      [
+        "City of Minneapolis: Contractor compliance checklist",
+        "https://www.minneapolismn.gov/media/-www-content-assets/documents/Contractor-Compliance-Checklist_edited.pdf"
+      ],
+      [
+        "Colorado DOT: Certify payroll in LCPtracker (subcontractor)",
+        "https://www.codot.gov/business/civilrights/compliance/construction/assets/training-tools/4a-6-certify-payroll-in-lcptracker-subcontractor.pdf"
+      ],
+      [
+        "LCPtracker: LCPcertified",
+        "https://lcptracker.com/solutions/lcpcertified/"
+      ],
+      [
+        "Office Consumer: Can Gusto do certified payroll?",
+        "https://officeconsumer.com/can-gusto-do-certified-payroll-w-examples-faqs/"
+      ],
+      [
+        "Coins help center: LCP Tracker integration",
+        "https://help-coins-usa.theaccessgroup.com/en/articles/13686105-lcp-tracker-integration"
+      ],
+      [
+        "BetaList: PrevailComply",
+        "https://betalist.com/startups/prevailcomply"
+      ],
+      [
+        "Multnomah County: Certified payroll system transition presentation",
+        "https://multco.us/file/pdf_of_presentation_with_links/download"
+      ]
+    ]
   }
 ];
