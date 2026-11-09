@@ -3792,5 +3792,560 @@ window.IDEAS = [
         "https://multco.us/file/pdf_of_presentation_with_links/download"
       ]
     ]
+  },
+  {
+    "id": "bookstore-consignment-ledger",
+    "name": "Shelf Consign",
+    "title": "Local-author consignment tracking for independent bookstores",
+    "category": "Retail",
+    "model": "B2B",
+    "type": "Vertical SaaS",
+    "summary": "A small tool for independent bookstores that take self-published local authors' books on consignment: intake, per-author sales, payout statements, and reminders when a consignment period ends and unsold copies must be returned. Booksellers say the program is labor-intensive and charge authors $20-50 per title to cover it, and authors complain about poor communication. But the spend is tiny, stores already offset the cost with fees, and generic consignment software and simple POS departments already cover the job.",
+    "buyer": "Owners or operations managers at independent bookstores (the American Booksellers Association reported 3,417 member stores in May 2026) that run a local-author consignment program. The owner both feels the work and approves spending; consigning authors are a secondary audience who want statements.",
+    "problem": "Consignment stock belongs to the author until it sells, so for each author the store must open an account, record copies received, track sales, pay a share (often 60% to the author), and return or dispose of unsold copies after a fixed period (commonly 90 days to six months). One bookseller's handout calls this labor-intensive and charges a one-time $25 fee per author for it; Bookshop Santa Cruz reported 200 to 300 active consigning authors at a time. Payment schedules vary (quarterly, at period end, or twice a year), and authors report poor communication about sales.",
+    "solution": "If pursued: an intake form that records ISBN, copies, price and period; import of POS sales by ISBN or a \"Consignment\" department; automatic author statements and payout batches; and end-of-period notices telling authors to collect unsold copies. Possibly an author-facing page so authors can check sales without phoning the store.",
+    "revenue": "Hypothesis (unvalidated): $15-30 per month per store, or a per-author fee the store passes through. Anchors: stores already charge authors $20-50 per title in handling fees (seen on store policy pages); general consignment software such as ConsignCloud lists $139 per month (Basic) and $189 per month per location (Pro) on its pricing page, per search summaries.",
+    "gap": "Alternatives: a POS \"Consignment\" department plus a spreadsheet (suggested in a bookseller handout), bookstore POS systems some of which reportedly include consignment tracking (HelixDash per a review; Bibliopolis has consignor lot reports), general consignment software (ConsignCloud, SimpleConsign), Gumroad spreadsheet templates sold for this job, and simply charging authors a fee to cover staff time. Whether Basil, Bookmanager or IBID handle consignor payouts was not confirmed. No evidence was found that stores want to pay for software rather than raise the fee or cap the program.",
+    "timing": "Mild tailwind: ABA membership reached 3,417 stores in May 2026, up 540 in a year, and self-publishing keeps producing local authors who ask stores to stock them. No regulatory or platform change forces new spend.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed bookstore experience or access to booksellers. The build is small (forms, CSV import, statements), but reaching stores would likely go through ABA regional associations and trade events, and per-store revenue would be low.",
+    "risks": [
+      "Tiny budget: stores already pass the cost to authors through $20-50 fees, so software spend must beat a fee they collect.",
+      "Low volume per store: many stores consign a handful to a few hundred authors, which a spreadsheet can handle.",
+      "POS lock-in: sales live in the bookstore POS; without clean exports or integrations the tool needs manual entry.",
+      "Some stores may cap or drop consignment instead of tooling it up.",
+      "Evidence quality: all page fetches failed; only one bookseller voice (a handout) and author-side blog posts were seen."
+    ],
+    "pilot": [
+      "Interview 8 owners of independent bookstores with an active consignment program (find them through store \"local author\" pages and regional bookseller associations). Ask how many consigned titles they carry, how many staff hours a month the program takes, how they pay authors, and what tool they use. Stop if fewer than 3 of 8 spend 4 or more hours a month or would pay at least $15 a month.",
+      "If interviews pass, run the payout statements by hand from POS exports for 3 stores for one payout cycle at $25 per cycle. Success means at least 2 stores supply exports on time and agree to pay for the next cycle. Stop if stores cannot export consignment sales without manual work or decline to pay."
+    ],
+    "assumptions": [
+      "That staff time is meaningful is drawn from one bookseller handout calling it labor-intensive; hours were not measured.",
+      "That common bookstore POS systems lack consignor payouts was not confirmed from vendor documentation.",
+      "The $15-30 price is a hypothesis with no buyer evidence.",
+      "That authors would value self-service sales statements is inferred from author blog complaints, not tested."
+    ],
+    "level": "costly-workaround",
+    "verdict": "Pass",
+    "verdictRationale": "The chore is real and recurring: booksellers describe consignment as labor-intensive, charge authors $20-50 per title to cover it, and one store reported 200-300 active consigning authors. But the market is small and the money is thin: stores already recover their cost through author fees, spreadsheets and POS departments are the recommended workaround, and generic consignment software exists. No bookseller was seen asking for a tool or paying for one. Confidence is limited because every page fetch failed and only one bookseller voice was found. This would move to Interview if several store owners said consignment takes many staff hours a month and that their POS cannot produce author payouts.",
+    "nextStep": "Shelve the idea. If revisiting, check Basil, Bookmanager and IBID documentation for consignor payouts and ask booksellers on ABA forums how many hours the program takes.",
+    "status": "Booksellers call it labor-intensive and charge fees to cover it; no evidence stores would pay for software",
+    "sourceNote": "All page fetches failed in this run (WebFetch could not resolve hosts; the egress proxy returned 403 for direct requests), so every entry relies on search-result summaries and is unverified until re-fetched. Store policy pages establish fees, splits and periods; the strongest seller-side voice is a bookseller handout distributed through a trade association. Author complaints come from personal blogs. No Reddit or bookseller forum threads were returned by searches.",
+    "evidenceLog": [
+      {
+        "observedAt": "2026-11-09",
+        "observation": "A bookseller handout distributed through a booksellers association says consignment is labor-intensive because creating accounts, tracking sales, managing stock and issuing payment must be done for each consigned author, and that the store (PRINT) charges a non-refundable one-time fee of $25 per vendor or author in recognition of this. The handout also suggests setting up a \"Consignment\" department in the POS to run consignment sales reports.",
+        "label": "Bookseller handout: Independent study buying criteria (PRINT)",
+        "url": "https://assets.noviams.com/novi-file-uploads/pbs/pdfs-and-documents/Independent_Study/IS_Buying_Criteria_Handout-f34f2e07.pdf",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "A bookstore reports a per-author labor cost large enough to charge for, and describes a POS-department workaround.",
+        "level": "costly-workaround",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. One store. The trade association and date are not confirmed; the store attribution comes from the summary. The fee offsets the cost, which weakens the case for software."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "Kirkus quotes Bookshop Santa Cruz saying it has consigned books from over 1,100 Bay Area authors since 2009 and has 200 to 300 active participants at any time; for $25 the store accepts five copies, pays the author 60 percent after sale, and returns unsold copies after six months.",
+        "label": "Kirkus Reviews: Selling books at your local independent bookstore",
+        "url": "https://kirkusreviews.com/writers-center/marketing/selling-books-your-local-independent-bookstore",
+        "sourceType": "news",
+        "publishedAt": null,
+        "supports": "A single store can carry hundreds of concurrent consignment accounts.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Article date not shown, so figures may be old. One large store; typical stores may carry far fewer."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "Loganberry Books sells consigned books on a 60/40 split in the author's favor and says it reconciles inventory levels and payments quarterly.",
+        "label": "Loganberry Books: Local Voices consignment program",
+        "url": "https://loganberrybooks.com/membership/local-voices.htm",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Stores run a periodic reconciliation and payout cycle.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Store policy page; frequency and effort of reconciliation not stated."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "A search summary of store policies listed per-title handling fees ($25 or $50 per title at different stores), pick-up windows of 10 to 30 days after a consignment period ends, and checks issued twice a year at one store; Galaxy Bookshop's policy page was among the results.",
+        "label": "Galaxy Bookshop: Independent author consignment policy",
+        "url": "https://galaxybookshop.com/consignment-policy",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Fees, periods and payout schedules vary by store, so there is no standard workflow to automate.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. The summary aggregated several store pages and the specific terms could not be attributed with certainty to Galaxy Bookshop."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "A consignment contract gives authors 30 days after the period ends to collect unsold books, after which they become property of Wicked Good Books.",
+        "label": "Wicked Good Books: Consignment contract",
+        "url": "https://cdn.shopify.com/s/files/1/0431/9633/files/WGBConsignmentContract19.pdf?2",
+        "sourceType": "vendor",
+        "publishedAt": "2019",
+        "supports": "End-of-period returns are a recurring step stores must notify authors about.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Year inferred from the file name. One store's contract."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "An author writing about indie bookstore consignment describes frustration with the lack of communication from bookstore staff in consignment programs.",
+        "label": "Goodreads author blog: The truth about indie bookstore consignment",
+        "url": "https://www.goodreads.com/author_blog_posts/25517110-the-truth-about-indie-bookstore-consignment-what-authors-should-know?tab=book",
+        "sourceType": "customer",
+        "publishedAt": null,
+        "supports": "Authors (the store's counterparties) feel the tracking and communication gap.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Author-side voice, not the paying buyer. One post; exact wording and date not seen."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "An author essay titled \"Consignment Blues\" appeared in searches for bookstore consignment frustrations.",
+        "label": "WritersWeekly: Consignment Blues",
+        "url": "https://writersweekly.com/this-weeks-article/consignment-blues-by-mark-laflamme",
+        "sourceType": "customer",
+        "publishedAt": null,
+        "supports": "Author dissatisfaction with consignment is a recurring theme.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Only the title and that it concerns consignment were seen; its specific complaints are unknown."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "An article recommends a spreadsheet for sales tracking with a monthly routine of filtering sales by author and adding payment details to a per-author royalty sheet.",
+        "label": "Self-Publishing Advice: Tracking book sales",
+        "url": "https://selfpublishingadvice.org/tracking-book-sales/",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "The established workaround is a spreadsheet routine.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Written for authors and small publishers, not bookstores."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "ConsignCloud's pricing page lists Basic at $139 per month for one location and Pro at $189 per month per location, with Enterprise quoted.",
+        "label": "ConsignCloud: Pricing",
+        "url": "https://consigncloud.com/pricing",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "General consignment software exists at a price far above what a bookstore side-program likely justifies.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. A price is an offer, not proof of bookstore buyers. Third-party listings showed lower, older prices."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "AP reporting puts American Booksellers Association membership at 3,417 stores, up 540 over the past year and the highest since the late 1990s.",
+        "label": "AP via Daily Journal of Commerce: Independent bookstores are multiplying",
+        "url": "https://www.djc.com/news/bu/12176046.html",
+        "sourceType": "news",
+        "publishedAt": "2026-05",
+        "supports": "Sizes the outer bound of potential buyers.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Not all member stores run consignment programs; the share that do is unknown."
+      }
+    ],
+    "evidence": "Researched report",
+    "reviewedAt": "2026-11-09",
+    "sources": [
+      [
+        "Bookseller handout: Independent study buying criteria (PRINT)",
+        "https://assets.noviams.com/novi-file-uploads/pbs/pdfs-and-documents/Independent_Study/IS_Buying_Criteria_Handout-f34f2e07.pdf"
+      ],
+      [
+        "Kirkus Reviews: Selling books at your local independent bookstore",
+        "https://kirkusreviews.com/writers-center/marketing/selling-books-your-local-independent-bookstore"
+      ],
+      [
+        "Loganberry Books: Local Voices consignment program",
+        "https://loganberrybooks.com/membership/local-voices.htm"
+      ],
+      [
+        "Galaxy Bookshop: Independent author consignment policy",
+        "https://galaxybookshop.com/consignment-policy"
+      ],
+      [
+        "Wicked Good Books: Consignment contract",
+        "https://cdn.shopify.com/s/files/1/0431/9633/files/WGBConsignmentContract19.pdf?2"
+      ],
+      [
+        "Goodreads author blog: The truth about indie bookstore consignment",
+        "https://www.goodreads.com/author_blog_posts/25517110-the-truth-about-indie-bookstore-consignment-what-authors-should-know?tab=book"
+      ],
+      [
+        "WritersWeekly: Consignment Blues",
+        "https://writersweekly.com/this-weeks-article/consignment-blues-by-mark-laflamme"
+      ],
+      [
+        "Self-Publishing Advice: Tracking book sales",
+        "https://selfpublishingadvice.org/tracking-book-sales/"
+      ],
+      [
+        "ConsignCloud: Pricing",
+        "https://consigncloud.com/pricing"
+      ],
+      [
+        "AP via Daily Journal of Commerce: Independent bookstores are multiplying",
+        "https://www.djc.com/news/bu/12176046.html"
+      ]
+    ]
+  },
+  {
+    "id": "food-truck-permit-tracker",
+    "name": "Route Permits",
+    "title": "Multi-city permit and renewal tracking for food truck operators",
+    "category": "Food & Beverage",
+    "model": "B2B",
+    "type": "Vertical SaaS",
+    "summary": "A permit calendar for food truck owners who work across several cities or counties: each jurisdiction's health, fire and vending permits, expiry dates, required documents, and event-specific temporary permits in one place with reminders. Owners do complain that complying with many local rules is costly and slow. But the trend is toward fewer permits, not more: Texas launched a single statewide license on July 1, 2026, Florida preempts local licensing, and Georgia and Utah added reciprocity. Spend per truck is low and a calendar or spreadsheet does the job.",
+    "buyer": "Owner-operators of 1-3 food trucks that work events, breweries and office parks across several cities or counties in states without statewide permits. The owner feels the pain and pays.",
+    "problem": "Each city or county may require its own health permit, fire inspection and vending license, each with different renewal dates, documents (commissary agreement, insurance, vehicle inspection) and fees. Guides suggest annual renewals cost roughly $300-1,500 and say late fees can double the original fee. Indianapolis Business Journal reported owners complaining that complying with myriad local rules is costly and time-consuming and hampers working in multiple jurisdictions.",
+    "solution": "If pursued: a per-jurisdiction permit register with expiry reminders, a document locker that attaches current insurance and commissary letters to each application, and a library of jurisdiction requirements for one metro area. Possibly event-organizer sharing so trucks can send their permit pack to event hosts.",
+    "revenue": "Hypothesis (unvalidated): $10-20 per month per truck. No anchor for permit-specific spend was found; the nearest priced tools are POS systems (Toast was cited at $165 or more per month per truck in a vendor blog) that do not track permits.",
+    "gap": "Alternatives: calendar reminders and a spreadsheet with one row per jurisdiction (the advice in most guides), city and county online renewal portals, newer apps such as PermitKeep (an App Store listing with almost no reviews), operator-network platforms such as Best Food Trucks that say they manage permits for their vendors, and state reform that removes local permits outright. No evidence was found that owners pay for permit tracking today.",
+    "timing": "Unfavorable: state preemption and reciprocity are shrinking the problem. Texas HB 2844 created a single statewide mobile food vendor license from July 1, 2026; Florida Statute 509.102 already preempts local licensing; Georgia HB 1443 (2022) eased multi-county operation; Utah passed a 2017 law against redundant permits. Institute for Justice continues to push cities to drop restrictions.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed food truck experience or contacts. The software is simple, but keeping jurisdiction requirements current is ongoing research work, and buyers are price-sensitive small operators.",
+    "risks": [
+      "Shrinking problem: statewide licenses and reciprocity in Texas, Florida, Georgia and Utah remove much of the multi-jurisdiction burden.",
+      "Low willingness to pay: a phone calendar or spreadsheet solves expiry reminders for a handful of permits.",
+      "Content maintenance: requirements and fees change often and differ by city, so a requirements library is costly to keep accurate.",
+      "Seasonal churn: many trucks operate seasonally or close within a few years.",
+      "Evidence quality: all page fetches failed; owner complaints came through news articles rather than first-hand posts."
+    ],
+    "pilot": [
+      "Interview 10 food truck owners in one metro area of a state without statewide permits (find them at food truck rallies and through local food truck associations). Ask how many active permits they hold, what lapsed or nearly lapsed in the last year, what it cost, and how they track renewals. Stop if fewer than 4 of 10 hold 4 or more local permits or report a lapse or late fee in the past year.",
+      "If interviews pass, track permits by hand for 5 trucks for one season at $15 a month, sending renewal reminders and document packs. Success means at least 3 pay for a second month and one avoided late fee is documented. Stop if fewer than 2 pay after the first month."
+    ],
+    "assumptions": [
+      "That multi-jurisdiction trucks hold enough permits to need a tool is assumed; counts per truck were not observed.",
+      "Renewal cost ranges and the late-fee doubling claim come from content-marketing guides, not official fee schedules.",
+      "That states without preemption will keep local permitting is assumed; more states may follow Texas.",
+      "The $10-20 price is a hypothesis with no buyer evidence."
+    ],
+    "level": "repeated-pain",
+    "verdict": "Pass",
+    "verdictRationale": "Owners do complain, through news coverage and policy research, that juggling local permits across jurisdictions is costly and slow. But no one was seen paying for a fix, the workaround (calendar or spreadsheet) is cheap, and the policy trend is erasing the problem: Texas moved to a single statewide license in July 2026, Florida preempts local licensing, and Georgia and Utah eased multi-county operation. Confidence is limited because every page fetch failed and no first-hand owner posts were found. This would move to Watch if owners in a state without preemption reported repeated lapses and fines and said they would pay to avoid them.",
+    "nextStep": "Shelve the idea. If revisiting, look for first-hand owner threads in states without statewide permits (for example Kentucky or Indiana) and check whether more states adopt Texas-style licensing in 2027 sessions.",
+    "status": "Owners complain about local permit patchworks; states are consolidating permits; no evidence of spend",
+    "sourceNote": "All page fetches failed in this run (WebFetch could not resolve hosts; the egress proxy returned 403 for direct requests), so every entry relies on search-result summaries and is unverified until re-fetched. Owner complaints come through news reporting and policy research rather than first-hand posts; searches aimed at Reddit returned no threads. Cost ranges from content-marketing guides were not logged as evidence. State law entries are counterevidence.",
+    "evidenceLog": [
+      {
+        "observedAt": "2026-11-09",
+        "observation": "IBJ reported food truck owners complaining that complying with myriad local rules is costly and time-consuming and hampers their ability to do business in multiple jurisdictions; it said some Indiana counties required paper sales-tax records and cashier's checks, and that a shared statewide database was proposed to cut paperwork.",
+        "label": "Indianapolis Business Journal: Food truck operators feel regulatory pinch",
+        "url": "https://www.ibj.com/articles/food-truck-operators-feel-regulatory-pinch",
+        "sourceType": "news",
+        "publishedAt": null,
+        "supports": "Several owners report the same multi-jurisdiction burden.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Reported through a news article; owners' exact words and the article date were not seen. Indiana later capped county fees per the same summary, so the situation may have changed."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "Stateline reported in 2017 that states were streamlining food truck licensing to reduce separate local permits.",
+        "label": "Pew Stateline: To keep on trucking, states streamline food truck licensing",
+        "url": "https://www.pewtrusts.org/en/research-and-analysis/blogs/stateline/2017/04/18/to-keep-on-trucking-states-streamline-food-truck-licensing",
+        "sourceType": "news",
+        "publishedAt": "2017-04-18",
+        "supports": "The policy response to the pain started years ago (counterevidence for timing).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Old article; only the headline and topic were seen."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "Texas HB 2844 creates a statewide mobile food vendor license from the Department of State Health Services and preempts local authority to prohibit or regulate mobile food vendors in a manner that conflicts with the chapter.",
+        "label": "Texas Legislature: HB 2844 enrolled bill text",
+        "url": "https://capitol.texas.gov/tlodocs/89R/billtext/html/HB02844S.htm",
+        "sourceType": "government",
+        "publishedAt": "2025",
+        "supports": "The largest food truck state removed most local permitting (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Bill text version seen in search was the Senate-passed version; the final enrolled text and DSHS rules were not read. Local rules that do not conflict still apply."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "KXXV reported that Texas would launch its statewide food truck permit system on July 1, 2026 under HB 2844.",
+        "label": "KXXV: Texas to launch a statewide food truck permit on July 1",
+        "url": "https://www.kxxv.com/news/texas-news/texas-to-launch-a-statewide-food-truck-permit-on-july-1",
+        "sourceType": "news",
+        "publishedAt": "2026",
+        "supports": "The statewide license is in effect as of this review.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Implementation details and uptake not seen."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "Florida law preempts to the state the regulation of mobile food dispensing vehicles involving licenses, registrations, permits and fees.",
+        "label": "Florida Statutes 509.102",
+        "url": "https://florida.public.law/statutes/fla._stat._509.102",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "Another large market without local permit patchworks (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Local location rules may still apply; enforcement disputes continue (IJ letters to Miami Gardens and others in 2026)."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "A 7shifts guide says Georgia HB 1443 (2022) lets food trucks operate across counties by submitting copies of their current permit and commissary agreement without a new full fee or inspection.",
+        "label": "7shifts: Food truck license requirements in Georgia",
+        "url": "https://www.7shifts.com/blog/food-truck-license-georgia/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Reciprocity reduces repeat permitting (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Vendor content marketing, not the statute."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "Utah Policy says that despite a 2017 state law meant to stop redundant food truck inspections and permits, some municipalities still run their own processes, and describes a bill for statewide reciprocity.",
+        "label": "Utah Policy: How Utah puts food trucks in idle",
+        "url": "https://utahpolicy.com/politics/62753-how-utah-puts-food-trucks-in-idle",
+        "sourceType": "news",
+        "publishedAt": null,
+        "supports": "Even after reform, some local duplication persists, so the pain is not fully gone.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Article undated in results; current status unknown."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "PermitKeep, a newer permit-tracking app on the App Store, appeared in searches for food truck permit tracking software, with almost no reviews.",
+        "label": "App Store: PermitKeep",
+        "url": "https://apps.apple.com/us/app/permitkeep/id6759765758",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "A low-cost tracker already exists; lack of reviews suggests little traction.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. App description, price and target users not confirmed."
+      }
+    ],
+    "evidence": "Researched report",
+    "reviewedAt": "2026-11-09",
+    "sources": [
+      [
+        "Indianapolis Business Journal: Food truck operators feel regulatory pinch",
+        "https://www.ibj.com/articles/food-truck-operators-feel-regulatory-pinch"
+      ],
+      [
+        "Pew Stateline: To keep on trucking, states streamline food truck licensing",
+        "https://www.pewtrusts.org/en/research-and-analysis/blogs/stateline/2017/04/18/to-keep-on-trucking-states-streamline-food-truck-licensing"
+      ],
+      [
+        "Texas Legislature: HB 2844 enrolled bill text",
+        "https://capitol.texas.gov/tlodocs/89R/billtext/html/HB02844S.htm"
+      ],
+      [
+        "KXXV: Texas to launch a statewide food truck permit on July 1",
+        "https://www.kxxv.com/news/texas-news/texas-to-launch-a-statewide-food-truck-permit-on-july-1"
+      ],
+      [
+        "Florida Statutes 509.102",
+        "https://florida.public.law/statutes/fla._stat._509.102"
+      ],
+      [
+        "7shifts: Food truck license requirements in Georgia",
+        "https://www.7shifts.com/blog/food-truck-license-georgia/"
+      ],
+      [
+        "Utah Policy: How Utah puts food trucks in idle",
+        "https://utahpolicy.com/politics/62753-how-utah-puts-food-trucks-in-idle"
+      ],
+      [
+        "App Store: PermitKeep",
+        "https://apps.apple.com/us/app/permitkeep/id6759765758"
+      ]
+    ]
+  },
+  {
+    "id": "ny-pesticide-annual-report",
+    "name": "PRL Ready",
+    "title": "New York pesticide annual reports for small lawn and pest control operators",
+    "category": "Home Services",
+    "model": "B2B",
+    "type": "Compliance software",
+    "summary": "A converter that turns a small New York lawn care or pest control company's job records into the electronic annual pesticide report that state law requires by February 1. The obligation is real and enforced: DEC has a standing $250 settlement for unfiled reports, consent orders list failure to file, and since 2024 reports must be electronic. But DEC supplies free spreadsheets and software, field service tools (Spraye, FieldWork and pest control suites) already log applications and export reports, and the market is one state.",
+    "buyer": "Owners of New York lawn care, tree care or pest control companies with roughly 1-10 certified applicators or technicians who keep application records on paper, in spreadsheets, or in general job software without a DEC export. The owner usually files and pays.",
+    "problem": "Under New York's Pesticide Reporting Law, every certified commercial applicator, technician and commercial permit holder must report the prior calendar year's applications to DEC by February 1, even if they made none, and since February 2024 reports must be electronic; DEC says printable templates are not acceptable and data must be typed into its spreadsheets or software for upload. Records must use the registered product name and EPA registration number, not the active ingredient. DEC has a standing reduced penalty of $250 by consent order for reporting violations, and consent orders list failure to file an annual report alongside other violations.",
+    "solution": "If pursued: import application records from paper-scan templates, spreadsheets or job software exports, match product names to EPA registration numbers using the state product database, flag missing fields, and output the DEC upload file plus a no-activity filing for technicians who made no applications. A January reminder and review service before the deadline.",
+    "revenue": "Hypothesis (unvalidated): $49-99 per company per filing season. Anchors: the $250 DEC settlement for an unfiled report caps the avoided-penalty value for most small firms; lawn care software Spraye was listed at $59.99-69.99 per month in third-party directories.",
+    "gap": "Alternatives: DEC's own free electronic spreadsheets and software (with a Cornell-run submission pipeline), field service software that already records applications and exports state reports (FieldWork documents a NYSDEC report export; Spraye advertises chemical tracking and regulatory reports; PestPac is described as publishing named state report formats), bookkeepers, and doing it by hand once a year. A narrow gap may exist for small firms on paper or general job software, but the free state tool undercuts it.",
+    "timing": "The 2024 move to mandatory electronic filing created a one-time switching moment that has passed. Enforcement continues (a June 2026 Westchester sweep reportedly issued 31 tickets), but no new filing requirement was found.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed pesticide licensing knowledge or access to New York applicators. The build is modest, but product-name matching and DEC format changes need care, and demand is concentrated in a few weeks each year.",
+    "risks": [
+      "Free state tool: DEC provides the spreadsheet and software for the report at no cost.",
+      "Incumbents: field service platforms that small operators already use log applications and export the report.",
+      "Low penalty: a $250 settlement limits what a small firm will pay to avoid missing the filing.",
+      "One state, once a year: a narrow, seasonal market with high churn risk.",
+      "Evidence quality: all page fetches failed and no first-hand operator complaints were found."
+    ],
+    "pilot": [
+      "Interview 8 owners of small New York lawn or pest control companies (find them through state and regional landscape and pest management associations). Ask how they filed last February, how long it took, what records they keep, and whether they have been cited. Stop if fewer than 3 of 8 spent 4 or more hours or found DEC's tool hard to use.",
+      "If interviews pass, prepare the February filing by hand for 5 companies at $75 each from their records. Success means all 5 filings are accepted and at least 3 say they would pay again next year. Stop if DEC's free spreadsheet handles their case in under an hour or fewer than 3 pay."
+    ],
+    "assumptions": [
+      "That many small New York applicators keep records outside software with a DEC export is assumed, not observed.",
+      "That the DEC tool is hard to use is untested; no complaints about it were found.",
+      "That the standing $250 settlement implies frequent non-filing is an inference; violation counts were not found.",
+      "The price range is a hypothesis with no buyer evidence."
+    ],
+    "level": "repeated-pain",
+    "verdict": "Pass",
+    "verdictRationale": "The obligation is concrete, annual and enforced: every certified commercial applicator must file electronically by February 1, DEC keeps a standard $250 settlement for reporting violations, and consent orders cite failure to file. But the state gives away the filing tool, the software small operators already use logs applications and exports reports, the penalty is small, and the market is a single state with one deadline a year. No operator was seen complaining or paying for help with this report. Confidence is limited because every page fetch failed. This would move to Watch if several small operators said the DEC tool is painful and that they pay someone to prepare the filing.",
+    "nextStep": "Shelve the idea. If revisiting, read the 2018 Comptroller audit for non-filing rates, try DEC's electronic spreadsheet to judge effort, and ask New York landscape association members how they filed last year.",
+    "status": "Annual electronic filing is required and enforced; free state tool and incumbent software cover it",
+    "sourceNote": "All page fetches failed in this run (WebFetch could not resolve hosts; the egress proxy returned 403 for direct requests), so every entry relies on search-result summaries and is unverified until re-fetched. Government pages and enforcement orders establish the obligation and penalties; vendor pages show incumbents. Searches for LawnSite or Reddit threads returned none, so there is no first-hand operator voice; the repeated-pain level rests on enforcement records showing failures to file across companies, not on complaints.",
+    "evidenceLog": [
+      {
+        "observedAt": "2026-11-09",
+        "observation": "DEC policy says every certified commercial applicator, commercial permit holder and importer, manufacturer or compounder must report regulated pesticide activities from January 1 through December 31, due by February 1 of the following year, and that certified applicators and technicians must file even if they made no applications.",
+        "label": "NYSDEC: Policy DSHM-PES-05-08 Compliance with the Pesticide Reporting Law",
+        "url": "https://dec.ny.gov/regulatory/regulations/policy-dshm-pes-05-08-compliance-with-the-pesticide-reporting-law",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "The obligation is annual, universal for certified commercial applicators, and includes no-activity filings.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Older policy text; form numbers may have changed."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "A DEC bulletin says a 2022 amendment requires all annual reports due February 1, 2024 and later to be in an electronic format developed or accepted by DEC, and announced videos on how to report electronically.",
+        "label": "NYSDEC bulletin: Changes in the Pesticide Reporting Law",
+        "url": "https://content.govdelivery.com/accounts/NYSDEC/bulletins/37c5791",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "Filers had to switch from paper to electronic formats.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Bulletin date not seen. Paper was accepted only for the February 2023 deadline per a separate DEC bulletin in the same results."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "DEC says printable templates are not to be submitted and are not an acceptable format for the annual report; the data must be typed into one of DEC's electronic spreadsheets or software to be uploaded.",
+        "label": "NYSDEC: Pesticide Reporting Law",
+        "url": "https://dec.ny.gov/environmental-protection/pesticides/pesticide-reporting-law",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "DEC supplies its own free electronic tools (counterevidence for a paid product).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Whether the tools are hard to use was not seen."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "A DEC page on pesticide reporting violations says a company can settle the violation for a reduced penalty of $250 by signing an Order on Consent, paying the penalty and mailing in its annual report.",
+        "label": "NYSDEC: Pesticide reporting violations settlement page",
+        "url": "https://www.dec.ny.gov/chemical/96893.html",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "DEC runs a standing settlement process for missed reports, suggesting non-filing recurs across many applicators.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. An inference from the existence of the process; the number of violations was not seen. The low penalty also limits willingness to pay."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "A DEC consent order against a lawn care company set a $4,000 payment due within 30 days plus an additional $2,000 framed as a punitive penalty; a separate DEC consent order in the same results listed failing to file a Pesticide Reporting Law annual report under ECL 33-1205(1) among its violations, alongside failing to keep copies of lawn contracts.",
+        "label": "NYSDEC consent order: Green Thumb Lawn Care",
+        "url": "https://extapps.dec.ny.gov/docs/legal_protection_pdf/greenthumbo.pdf",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "Reporting failures are cited in real enforcement against lawn care firms.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. The failure-to-file charge was seen in a summary of a different order whose company name was not confirmed; this order's violations were not fully seen. Undated."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "A 2010 post titled \"TruGreen agrees to $500,000 fine\" appeared in searches; search summaries of 2010 coverage said the New York fine covered misapplied pesticides, inaccurate records and uncertified workers, with DEC saying TruGreen's 2007 and 2008 annual reports contained numerous instances of inaccurate information.",
+        "label": "Peak Newsroom blog: TruGreen agrees to $500,000 fine",
+        "url": "https://peaknewsroom.blogspot.com/2010/03/trugreen-agrees-to-500000-fine.html",
+        "sourceType": "news",
+        "publishedAt": "2010-03",
+        "supports": "Annual report accuracy is an enforcement target even for the largest operator.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Old case involving a large company, not a small operator. A blog repost, not DEC's release; the details came from a summary of several 2010 items and may not all be from this post."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "A June 2026 headline reports 31 tickets issued in a DEC pesticide sweep in Westchester hitting Rye and Scarsdale landscapers.",
+        "label": "Talk of the Sound: 31 tickets issued in Westchester pesticide sweep",
+        "url": "https://talkofthesound.com/2026/06/23/31-tickets-issued-in-westchester-pesticide-sweep-dec-hits-rye-scarsdale-landscapers/",
+        "sourceType": "news",
+        "publishedAt": "2026-06-23",
+        "supports": "DEC enforcement against small landscapers is current.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Only the headline was seen; the violations may not involve annual reporting."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "A FieldWork help article describes exporting a final report for submission to the state and says the state will reject the form if it has errors or the data is not in CSV format.",
+        "label": "FieldWork help: Preparing for your NYSDEC report submission",
+        "url": "https://intercom.help/fieldwork/en/articles/1454205-preparing-for-your-nysdec-report-submission",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Field service software already offers a NYSDEC export (counterevidence), and the format is error-prone.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Vendor documentation; the CSV claim was not confirmed against DEC instructions."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "Spraye markets automated chemical tracking that keeps up with state requirements and offers regulatory reports; third-party directories listed it at $59.99-69.99 per month.",
+        "label": "Spraye: Automated chemical tracking",
+        "url": "https://spraye.io/features/chemical-tracking-compliance-reporting/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Lawn-specific software with compliance reporting is sold to the same buyer (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Vendor marketing; New York report support was not confirmed. A price is an offer, not proof of buyers."
+      },
+      {
+        "observedAt": "2026-11-09",
+        "observation": "A 2018 Comptroller audit of DEC's pesticide reporting database (2013-2015 data) found self-reported data reasonably accurate with some inaccuracies, and recommended a process to ensure all reports received are entered into DEC systems.",
+        "label": "NYS Comptroller: Oversight of the Pesticide Reporting Law",
+        "url": "https://osc.ny.gov/state-agencies/audits/2018/11/29/oversight-pesticide-reporting-law",
+        "sourceType": "government",
+        "publishedAt": "2018-11-29",
+        "supports": "Reported data quality is broadly acceptable, which weakens the case that filers struggle.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts and the egress proxy returned 403), so wording is unverified. Non-filing rates were not visible in the summary. Pre-dates electronic filing."
+      }
+    ],
+    "evidence": "Researched report",
+    "reviewedAt": "2026-11-09",
+    "sources": [
+      [
+        "NYSDEC: Policy DSHM-PES-05-08 Compliance with the Pesticide Reporting Law",
+        "https://dec.ny.gov/regulatory/regulations/policy-dshm-pes-05-08-compliance-with-the-pesticide-reporting-law"
+      ],
+      [
+        "NYSDEC bulletin: Changes in the Pesticide Reporting Law",
+        "https://content.govdelivery.com/accounts/NYSDEC/bulletins/37c5791"
+      ],
+      [
+        "NYSDEC: Pesticide Reporting Law",
+        "https://dec.ny.gov/environmental-protection/pesticides/pesticide-reporting-law"
+      ],
+      [
+        "NYSDEC: Pesticide reporting violations settlement page",
+        "https://www.dec.ny.gov/chemical/96893.html"
+      ],
+      [
+        "NYSDEC consent order: Green Thumb Lawn Care",
+        "https://extapps.dec.ny.gov/docs/legal_protection_pdf/greenthumbo.pdf"
+      ],
+      [
+        "Peak Newsroom blog: TruGreen agrees to $500,000 fine",
+        "https://peaknewsroom.blogspot.com/2010/03/trugreen-agrees-to-500000-fine.html"
+      ],
+      [
+        "Talk of the Sound: 31 tickets issued in Westchester pesticide sweep",
+        "https://talkofthesound.com/2026/06/23/31-tickets-issued-in-westchester-pesticide-sweep-dec-hits-rye-scarsdale-landscapers/"
+      ],
+      [
+        "FieldWork help: Preparing for your NYSDEC report submission",
+        "https://intercom.help/fieldwork/en/articles/1454205-preparing-for-your-nysdec-report-submission"
+      ],
+      [
+        "Spraye: Automated chemical tracking",
+        "https://spraye.io/features/chemical-tracking-compliance-reporting/"
+      ],
+      [
+        "NYS Comptroller: Oversight of the Pesticide Reporting Law",
+        "https://osc.ny.gov/state-agencies/audits/2018/11/29/oversight-pesticide-reporting-law"
+      ]
+    ]
   }
 ];
