@@ -4346,5 +4346,606 @@
         "https://osc.ny.gov/state-agencies/audits/2018/11/29/oversight-pesticide-reporting-law"
       ]
     ]
+  },
+  {
+    "id": "restaurant-tip-pool-calc",
+    "name": "PoolSplit",
+    "title": "Weekly tip pool calculations for small independent restaurants",
+    "category": "Food & Beverage",
+    "model": "B2B",
+    "type": "SaaS",
+    "summary": "A simple tool that turns POS tip and timeclock exports into a checked, documented tip pool split for small independent restaurants and cafes. The legal stakes are real: the Department of Labor keeps recovering back wages from restaurants whose pools included managers. But the market is crowded: Toast, SpotOn and other POS systems have tip modules, 7shifts, Kickfin, TipHaus, TipJar and Tiplo sell dedicated tools, and free spreadsheet templates are everywhere.",
+    "buyer": "Owners or general managers of single-location independent restaurants, cafes and bars with roughly 8-40 tipped and support staff who split tips by hours or role. The owner pays; the manager does the weekly math.",
+    "problem": "Managers must total cash and card tips per period, apply role percentages or hours, handle tip-outs on sales categories, and keep records. Errors and opaque math cause staff disputes, and an invalid pool, especially one that includes managers or supervisors, can cost the employer its tip credit and back wages. Paying users of POS tip modules still report numbers that do not match their sales.",
+    "solution": "If pursued: import POS tip and sales reports plus timeclock hours, apply a written pool policy, block ineligible roles, show each employee the math, and save a period record for audits. Export payout amounts to payroll.",
+    "revenue": "Hypothesis (unvalidated): $20-40 per location per month. Anchors seen in search results: Toast Tips Manager reportedly from $30 per month for five employees, TipJar $35 per month for 1-20 employees, 7shifts tip add-on listed at $49.99 per location per month plus $1 per payout (another source said $24.99), Tiplo from $99 per month. Etsy spreadsheet templates sell for roughly $4-24 once.",
+    "gap": "No clear gap found. POS vendors (Toast, SpotOn) bundle tip pooling; scheduling and payout tools (7shifts, Homebase, Kickfin, TipHaus, TipJar, Tiplo) automate it; 7shifts and RestaurantOwner.com give away spreadsheets. The remaining segment is owners who prefer a spreadsheet, and they have free and $4-24 templates.",
+    "timing": "DOL enforcement against illegal tip pools is steady through 2025-2026 (several back-wage recoveries reported), and a 2025 opinion letter restated that managers cannot keep tips. That raises the stakes, but the violations seen were about who was in the pool, a policy choice that calculation software does not fix.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed restaurant operations experience or access to owners. POS integrations (Toast, Square, Clover) would be required to compete and are gated by partner programs.",
+    "risks": [
+      "Crowded market: POS vendors bundle tip pooling and at least six dedicated tools compete.",
+      "Free substitutes: vendor-supplied Excel templates handle hours- and role-based splits.",
+      "Integration dependence: competing requires POS and payroll integrations controlled by others.",
+      "Wrong problem: enforcement cases stem from ineligible people in the pool, not arithmetic.",
+      "Evidence quality: all page fetches failed; no first-hand owner complaints about time spent were found."
+    ],
+    "pilot": [
+      "Interview 10 owners of independent restaurants that split tips without a dedicated tip tool. Ask how they ran last week's split, how long it took, and the last dispute. Stop if fewer than 4 spend over an hour a week or fewer than 3 have had a dispute in the past 3 months.",
+      "If interviews pass, run their splits by hand from POS exports for 4 weeks at $25 per month for 5 restaurants. Success means at least 3 continue paying after week 4. Stop if they say their POS module or a free template covers it."
+    ],
+    "assumptions": [
+      "That many small restaurants still split tips in spreadsheets is inferred from the volume of templates, not observed.",
+      "Time spent per week is unmeasured; the only figure seen (34 hours per month saved) is a 7shifts marketing claim.",
+      "Prices for competitors come from third-party listings and may be stale or conflicting.",
+      "The price range is a hypothesis with no buyer evidence."
+    ],
+    "level": "existing-spend",
+    "verdict": "Pass",
+    "verdictRationale": "The pain is real and sometimes costly: paying Toast users report tip-out math that does not match sales, DOL recovers back wages for illegal pools, and owners buy or download spreadsheet templates. But buyers already have many choices at $25-100 per month, POS vendors bundle the feature, and free templates cover the spreadsheet segment. A solo builder without POS partnerships would enter last with no visible gap. Confidence is limited because every page fetch failed and no owner interviews exist. This would change if a specific segment (for example, Square or Clover cafes) were shown to lack a tip-pool tool and owners described paying staff or bookkeepers to do the split.",
+    "nextStep": "Shelve the idea. If revisiting, check whether Square and Clover app marketplaces lack tip-pool apps and ask 5 cafe owners how they split tips last week.",
+    "status": "Real pain with existing paid and free tools; no underserved segment found",
+    "sourceNote": "All page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so every entry relies on search-result summaries and is unverified until re-fetched. The Toast community thread and G2 reviews are the only user voices; DOL cases come from news coverage; prices come from vendor and third-party pages. Searches for Reddit owner threads returned none.",
+    "evidenceLog": [
+      {
+        "observedAt": "2026-11-16",
+        "observation": "A Toast operator using Tips Manager with an order-interval policy reported the suggested tip-out was too low: draft beer net sales were $435 but only $289 was used in the calculation. Another operator with a 5% bartender tip-out on alcohol net sales reported summary sales that did not match contribution amounts.",
+        "label": "Toast Community: Tip pool calculations - net sales",
+        "url": "https://community.toasttab.com/t5/back-office-team/tip-pool-calculations-net-sales/td-p/15546",
+        "sourceType": "customer",
+        "publishedAt": null,
+        "supports": "Paying users of a POS tip module still struggle to reconcile tip-out math.",
+        "level": "existing-spend",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Post date not seen; no resolution seen. Toast documentation in the same results explains the order interval only counts orders with non-cash tips, so this may be a configuration issue rather than a product gap."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "G2 lists 7shifts at 4.5 of 5 from 125 reviews; listed complaint themes include inaccurate tracking and syncing issues, poor support and reporting. A reviewer cited add-on fees for payroll and tips and per-location pricing as drawbacks.",
+        "label": "G2: 7shifts reviews",
+        "url": "https://www.g2.com/products/7shifts/reviews",
+        "sourceType": "review",
+        "publishedAt": null,
+        "supports": "Restaurants pay for tip tooling and some complain about price and accuracy.",
+        "level": "existing-spend",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Aggregated review themes, not tip-specific counts; individual reviews were not read."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "DOL investigators found a coffee bar let its general manager participate in the employee tip pool while taking the tip credit, leading to $85,197 in back wages for 36 employees.",
+        "label": "Fox 7 Austin: Illegal tip pool at Buda coffee bar leads to $85K in back wages",
+        "url": "https://www.fox7austin.com/news/illegal-tip-pool-nates-coffee-cocktails-back-wages-recovered",
+        "sourceType": "news",
+        "publishedAt": "2026-04",
+        "supports": "Tip pool mistakes carry real cost for small operators.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Month inferred from search summary. The violation was pool eligibility, which arithmetic tools do not prevent."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Federal authorities recovered $230,353 in back wages for 274 workers after a Texas barbecue operator shared employees' tips with managers.",
+        "label": "CNY Central: Restaurant operator illegally gave over $200K in employee tips to managers",
+        "url": "https://cnycentral.com/news/nation-world/restaurant-operator-illegally-gave-over-200k-in-employee-tips-to-managers-officials-say-central-texas-blacks-barbecue-inc-kent-blacks-lockhart-barbecue-inc-new-braunfels-barbecue-llc-back-wages-food-service-industry",
+        "sourceType": "news",
+        "publishedAt": null,
+        "supports": "Enforcement on tip pools is ongoing.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Date not seen. A multi-location operator, not the small single-site target."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "A Denver Thai restaurant agreed to pay $61,568 in back wages for 11 workers plus a $990 civil penalty to settle a tip dispute.",
+        "label": "HR Morning: FLSA tip dispute in Denver",
+        "url": "https://www.hrmorning.com/news/flsa-tip-dispute-denver/",
+        "sourceType": "news",
+        "publishedAt": "2026-02",
+        "supports": "Small restaurants face five-figure liabilities over tips.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Month from search summary; the specific violation was not seen."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Etsy has many paid Excel and Google Sheets tip pool templates, several built around a pay-period summary of hours, tips and tip-outs, priced roughly $4-24.",
+        "label": "Etsy: Tip pool spreadsheet listings",
+        "url": "https://www.etsy.com/market/tip_pool_spreadsheet",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Some owners run tip pools in spreadsheets and spend small one-time amounts on templates.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Listings are offers, not proof of sales; price range from a search summary."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "7shifts offers a free Excel tip pooling calculator tracking employee names, roles, hours per shift, total tips and percent contribution; RestaurantOwner.com and Agendrix offer similar free templates.",
+        "label": "7shifts: Free tip pooling calculator template",
+        "url": "https://www.7shifts.com/resources/templates/tip-pooling-calculator/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Free substitutes cover the spreadsheet segment (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Lead-generation content from a competitor."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Homebase compares 7shifts, TipHaus, Kickfin and Toast Tips Manager, saying Toast Tips Manager starts at $30 per month for five employees in the US; Kickfin appears to be quote-based.",
+        "label": "Homebase: Restaurant tip pooling software comparison",
+        "url": "https://www.joinhomebase.com/blog/restaurant-tip-pooling-software",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Several paid tools compete for the same buyer (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Competitor-authored comparison; other sources describe Toast pricing as custom. Prices are offers."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Lists 7shifts tip management add-on at $49.99 per month per location plus $1 per payout transaction, and says Toast Tips Manager is an add-on to custom pricing.",
+        "label": "The Restaurant HQ: Best tipping software for restaurants",
+        "url": "https://www.therestauranthq.com/?p=3134477",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Price anchors for existing tools.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Third-party affiliate-style review; another source listed the 7shifts add-on at $24.99, so prices conflict."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Lists TipJar plans at $35 per month for 1-20 employees.",
+        "label": "Freedom251: TipJar listing",
+        "url": "https://freedom251.com/apps/tipjar/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Low-cost dedicated tools already serve small restaurants (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Third-party listing; current pricing not confirmed."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Capterra lists Tiplo tip software with a base plan starting at $99 per month.",
+        "label": "Capterra: Tiplo",
+        "url": "https://www.capterra.com/p/10040924/Tiplo/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Another paid incumbent.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Directory listing; price is an offer."
+      }
+    ],
+    "evidence": "Researched report",
+    "reviewedAt": "2026-11-16",
+    "sources": [
+      [
+        "Toast Community: Tip pool calculations - net sales",
+        "https://community.toasttab.com/t5/back-office-team/tip-pool-calculations-net-sales/td-p/15546"
+      ],
+      [
+        "G2: 7shifts reviews",
+        "https://www.g2.com/products/7shifts/reviews"
+      ],
+      [
+        "Fox 7 Austin: Illegal tip pool at Buda coffee bar leads to $85K in back wages",
+        "https://www.fox7austin.com/news/illegal-tip-pool-nates-coffee-cocktails-back-wages-recovered"
+      ],
+      [
+        "CNY Central: Restaurant operator illegally gave over $200K in employee tips to managers",
+        "https://cnycentral.com/news/nation-world/restaurant-operator-illegally-gave-over-200k-in-employee-tips-to-managers-officials-say-central-texas-blacks-barbecue-inc-kent-blacks-lockhart-barbecue-inc-new-braunfels-barbecue-llc-back-wages-food-service-industry"
+      ],
+      [
+        "HR Morning: FLSA tip dispute in Denver",
+        "https://www.hrmorning.com/news/flsa-tip-dispute-denver/"
+      ],
+      [
+        "Etsy: Tip pool spreadsheet listings",
+        "https://www.etsy.com/market/tip_pool_spreadsheet"
+      ],
+      [
+        "7shifts: Free tip pooling calculator template",
+        "https://www.7shifts.com/resources/templates/tip-pooling-calculator/"
+      ],
+      [
+        "Homebase: Restaurant tip pooling software comparison",
+        "https://www.joinhomebase.com/blog/restaurant-tip-pooling-software"
+      ],
+      [
+        "The Restaurant HQ: Best tipping software for restaurants",
+        "https://www.therestauranthq.com/?p=3134477"
+      ],
+      [
+        "Freedom251: TipJar listing",
+        "https://freedom251.com/apps/tipjar/"
+      ],
+      [
+        "Capterra: Tiplo",
+        "https://www.capterra.com/p/10040924/Tiplo/"
+      ]
+    ]
+  },
+  {
+    "id": "youth-coach-compliance",
+    "name": "ClearToCoach",
+    "title": "Coach certification and background check tracking for youth sports clubs",
+    "category": "Sports & Recreation",
+    "model": "B2B",
+    "type": "SaaS",
+    "summary": "A tracker that tells a youth sports club which coaches and volunteers have current background checks, SafeSport or abuse-awareness training and concussion courses, and chases the ones about to expire. The requirements are real and vary by sport and association. But the largest governing bodies already route compliance through their registration platforms (GotSport for soccer, JDP for Little League), and a venture-backed specialist, Ankored, raised $4 million and is integrating with club software.",
+    "buyer": "Volunteer registrars, safety officers or club administrators at youth sports clubs and leagues with roughly 30-300 coaches and volunteers, especially in sports or leagues without a governing-body compliance system. Boards approve spending; budgets come from player fees.",
+    "problem": "Each adult working with children needs several credentials on different cycles: SafeSport annually in many soccer associations, background checks every one or two years, concussion training annually or every two years, Little League abuse-awareness training resetting each October 1. One state soccer association set a single expiry date because monitoring staggered dates for every coach would be impossible for its leagues. Coaches with expired items are pulled from rosters.",
+    "solution": "If pursued: import the club roster, record each credential with its rule, read status from issuer systems where possible, send reminders before expiry, and give the safety officer a one-page cleared/not-cleared list for game day.",
+    "revenue": "Hypothesis (unvalidated): $100-400 per club per season. Ankored advertises tiered pricing with a nonprofit discount but figures were not seen.",
+    "gap": "Soccer clubs under US Youth Soccer state associations and US Club Soccer track requirements in GotSport; Little League requires JDP checks and its own training; Ankored sells cross-sport compliance and integrates with Sprocket, LeagueApps and Amilia. A gap may remain for small independent leagues in sports without a platform (ultimate, rec leagues), but those are the clubs least likely to pay.",
+    "timing": "Federal SafeSport rules and association policies keep expanding requirements, and capital is flowing into the space (Ankored seed round in September 2025; Otto Sport AI seed round in January 2026). That is a signal of attention, and of better-funded competition.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed ties to youth sports administrators. Handling background check data adds privacy and FCRA obligations if checks are ordered through the tool.",
+    "risks": [
+      "Governing bodies bundle it: GotSport and Little League already provide tracking for their members at no extra cost to clubs.",
+      "Funded competitor: Ankored raised $4 million and is integrating into club registration platforms.",
+      "Volunteer buyers: registrars change yearly and boards resist new fees.",
+      "Data sensitivity: background check results carry legal and privacy duties.",
+      "Evidence quality: all page fetches failed and no club administrator complaints were found directly."
+    ],
+    "pilot": [
+      "Interview 8 registrars or safety officers from leagues outside GotSport and Little League (ultimate, lacrosse, rec basketball). Ask how they checked coach clearance last season, how long it took, and whether anyone coached while expired. Stop if fewer than 3 use a spreadsheet they find painful.",
+      "If interviews pass, run tracking for 3 leagues for one season at $150 each. Success means all 3 pay and at least 2 renew. Stop if their association or registration software adds tracking first."
+    ],
+    "assumptions": [
+      "That many leagues outside soccer and Little League track credentials in spreadsheets is assumed, not observed.",
+      "The single-deadline rationale comes from one association page and may not generalize.",
+      "Ankored pricing and adoption were not seen.",
+      "The price range is a hypothesis with no buyer evidence."
+    ],
+    "level": "attention",
+    "verdict": "Pass",
+    "verdictRationale": "Requirements are real and messy, and one association said staggered expiries made monitoring impossible. But the largest segments get tracking from their governing body's platform, a venture-backed specialist is integrating with the club software everyone uses, and the leftover segment is small volunteer leagues with thin budgets. No administrator was seen complaining or paying for tracking. Confidence is limited because every page fetch failed. This would move to Interview if several non-soccer league administrators described costly manual tracking and said their registration software lacks it.",
+    "nextStep": "Shelve the idea. If revisiting, ask ultimate or lacrosse league administrators how they cleared coaches last season and check whether LeagueApps or SportsEngine already include credential tracking.",
+    "status": "Real requirements, but governing-body platforms and a funded specialist already track them",
+    "sourceNote": "All page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so every entry relies on search-result summaries and is unverified until re-fetched. Association and league pages establish requirements; vendor and news pages show incumbents and funding. No first-hand administrator complaints were found, so the report level is attention.",
+    "evidenceLog": [
+      {
+        "observedAt": "2026-11-16",
+        "observation": "The association told coaches who completed SafeSport before June to redo it for the fall season, explaining that it would be impossible for its leagues to monitor everyone's risk management eligibility if coaches' expiration dates fell at various times. It lists SafeSport yearly, concussion awareness every two years and background checks every two years, routed through GotSport.",
+        "label": "Eastern New York Youth Soccer: SafeSport and risk management page",
+        "url": "https://www.enysoccer.com/?p=1872",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Tracking staggered credential expiries is hard enough that an association changed its policy to avoid it.",
+        "level": "attention",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. The exact URL holding the quote is inferred from the top search result for the phrase. One organization; it solved the problem by policy, not software."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Little League says volunteers completing a background check must also complete Abuse Awareness Training annually; checks and training reset for local leagues each October 1, and the safety officer can also be the background check coordinator.",
+        "label": "Little League: Child Protection Program FAQs",
+        "url": "https://www.littleleague.org/help-center/child-protection-program-faqs/",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Requirements recur yearly and fall on volunteer officers.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Governing-body policy, not a complaint."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Little League says all background checks must be completed through JDP and will not be accepted from any other provider.",
+        "label": "Little League: Player Safety",
+        "url": "https://www.littleleague.org/player-safety/",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "The largest baseball program mandates its own screening channel (counterevidence for a third-party tool).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Whether JDP gives leagues a usable status dashboard was not seen."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "GotSport publishes admin help articles on tracking SafeSport and risk management requirements for coaches and managers; state association pages describe GotSport as the system where requirements are checked and approved.",
+        "label": "GotSport Support: Determine which players need to complete SafeSport",
+        "url": "https://support.gotsport.com/as-admin-determine-which-players-need-to-complete-safesport",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Soccer clubs already have built-in tracking (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Article contents were not seen, only titles and association descriptions."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "A club-facing guide says club admins can check the status of each requirement in GotSport, verify SafeSport with a check-records button, and track non-coach staff through the Users tab.",
+        "label": "Club admin guide to GotSport requirements (Google Doc)",
+        "url": "https://docs.google.com/document/d/1_De7snwyo9c32KMYmDXKkaTmk3-OBbBU/export?format=pdf",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Existing tooling covers the core workflow for soccer clubs (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Author and date unknown."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Ankored describes multiple pricing tiers for teams of all sizes, a nonprofit discount, and an integration that syncs a user's SafeSport status with their Ankored profile; background screening from Yardstik now runs inside Ankored.",
+        "label": "Ankored: Pricing",
+        "url": "https://ankored.com/pricing",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "A specialist already sells cross-sport compliance tracking (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. No price figures were visible. A price page is an offer, not proof of buyers."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Ankored closed a $4 million seed round led by Rally Ventures, with a SportsEngine co-founder joining its board, to fund product development and partnerships.",
+        "label": "VCA Online: Ankored secures seed funding",
+        "url": "https://www.vcaonline.com/news/2025092310/ankored-secures-seed-funding-to-simplify-safety-and-compliance-in-youth-sports/",
+        "sourceType": "news",
+        "publishedAt": "2025-09-23",
+        "supports": "Investors fund the category; competition is well capitalized.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Press release syndication. Investor money is not customer demand."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Ankored says background checks, abuse-prevention training and compliance tracking are now inside Sprocket Sports club registration.",
+        "label": "Ankored blog: Sports compliance now lives where clubs already work (Sprocket)",
+        "url": "https://www.ankored.com/blog/ankored-sprocket-sports-compliance-now-lives-where-clubs-already-work",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Compliance is being bundled into registration software clubs already use (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Vendor marketing."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "A youth ultimate league lists its own coach requirements, including concussion training once every two years, differing from soccer associations that require it annually.",
+        "label": "Cincinnati Ultimate: Youth coaching requirements",
+        "url": "https://cincyultimate.org/youth/coaching",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Rules vary across sports, which is where a cross-sport tracker could help.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. A requirements page, not evidence of tracking pain."
+      }
+    ],
+    "evidence": "Researched report",
+    "reviewedAt": "2026-11-16",
+    "sources": [
+      [
+        "Eastern New York Youth Soccer: SafeSport and risk management page",
+        "https://www.enysoccer.com/?p=1872"
+      ],
+      [
+        "Little League: Child Protection Program FAQs",
+        "https://www.littleleague.org/help-center/child-protection-program-faqs/"
+      ],
+      [
+        "Little League: Player Safety",
+        "https://www.littleleague.org/player-safety/"
+      ],
+      [
+        "GotSport Support: Determine which players need to complete SafeSport",
+        "https://support.gotsport.com/as-admin-determine-which-players-need-to-complete-safesport"
+      ],
+      [
+        "Club admin guide to GotSport requirements (Google Doc)",
+        "https://docs.google.com/document/d/1_De7snwyo9c32KMYmDXKkaTmk3-OBbBU/export?format=pdf"
+      ],
+      [
+        "Ankored: Pricing",
+        "https://ankored.com/pricing"
+      ],
+      [
+        "VCA Online: Ankored secures seed funding",
+        "https://www.vcaonline.com/news/2025092310/ankored-secures-seed-funding-to-simplify-safety-and-compliance-in-youth-sports/"
+      ],
+      [
+        "Ankored blog: Sports compliance now lives where clubs already work (Sprocket)",
+        "https://www.ankored.com/blog/ankored-sprocket-sports-compliance-now-lives-where-clubs-already-work"
+      ],
+      [
+        "Cincinnati Ultimate: Youth coaching requirements",
+        "https://cincyultimate.org/youth/coaching"
+      ]
+    ]
+  },
+  {
+    "id": "craft-fair-sales-tax",
+    "name": "BoothTax",
+    "title": "Sales tax permits and returns for touring craft fair and art show vendors",
+    "category": "Retail",
+    "model": "B2B",
+    "type": "SaaS",
+    "summary": "A calendar that tells a traveling craft or art fair vendor which sales tax permit each show needs, sets the right rate in their card reader, and reminds them when each state's return is due. Vendors do ask how to handle tax at out-of-town shows and complain that Square makes per-event rates clumsy. But most vendors sell near home under one permit, states publish free guidance, POS location settings cover the rate, and the buyers are low-revenue sole proprietors.",
+    "buyer": "Sole-proprietor artists and makers who sell at roughly 10-40 shows a year across several cities or states. The vendor is the payer.",
+    "problem": "Rules differ by state: some require registration even for one day (New York, Texas, Florida, Connecticut per a vendor guide), some issue temporary event permits, South Carolina adds a license after four shows a year, and California and New York require separate permits per location. Square cannot set tax from the booth's location, so vendors create a location per event or toggle taxes manually, and sellers reported its tax reports lumping city rates by state. A missed zero filing on a temporary permit can still count as a missed return.",
+    "solution": "If pursued: vendor enters the season's show list; the tool lists the permit each needs with links, the combined rate to set in the POS, and each resulting return deadline, then imports POS sales by event to prefill amounts.",
+    "revenue": "Hypothesis (unvalidated): $10-20 per month during show season or $79-99 per year. No price anchor seen for a dedicated product; BoothLedger advertises tax preparation support for event sellers.",
+    "gap": "Alternatives: home-state permit plus Square locations (enough for most vendors who stay local), free state special-event pages and vendor guides (Avalara, TaxJar, Stripe), event organizers who brief vendors, accountants, and general sales tax filing services for larger sellers. A narrow gap may exist for multi-state touring vendors, a small group.",
+    "timing": "No new trigger found. The 2021 Square sales tax Q&A thread is the most concentrated vendor feedback seen.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed craft-show access. Keeping 45 states' event rules current is ongoing research work; giving tax guidance carries liability.",
+    "risks": [
+      "Small paying segment: most vendors sell locally under one home-state permit.",
+      "Free substitutes: state guidance, vendor guides and organizers answer the permit question.",
+      "POS covers the rate: Square location and tax-toggle settings handle collection.",
+      "Low willingness to pay: hobby and part-time sellers with thin margins.",
+      "Rules upkeep and liability: state event rules change and wrong advice has consequences.",
+      "Evidence quality: all page fetches failed; forum evidence is old and sparse."
+    ],
+    "pilot": [
+      "Interview 8 vendors who sold at shows in 3 or more states last year (recruit at a regional art fair). Ask what permits they held, how they set rates, how many returns they filed and what it cost in time or accountant fees. Stop if fewer than 3 spent over 5 hours or paid someone.",
+      "If interviews pass, build next season's permit and filing calendar by hand for 5 vendors at $49 each. Success means 4 pay and use it for at least 3 shows. Stop if vendors say organizers or their accountant already do this."
+    ],
+    "assumptions": [
+      "That a meaningful number of vendors sell across states is assumed, not counted.",
+      "Square's limitations may have changed since the 2021 thread.",
+      "State rule summaries come from vendor guides, not each state's current rules.",
+      "The price range is a hypothesis with no buyer evidence."
+    ],
+    "level": "repeated-pain",
+    "verdict": "Pass",
+    "verdictRationale": "Several independent vendors asked how to set and report tax at different show locations, and state rules genuinely differ. But the evidence is thin and mostly old, the common case (local shows under a home permit) is already handled by POS settings and free guidance, and the segment with the real problem, multi-state touring vendors, is small and low-paying. No vendor was seen paying for help with event sales tax. Confidence is limited because every page fetch failed. This would move to Watch if touring vendors described paying accountants or missing returns after out-of-state shows.",
+    "nextStep": "Shelve the idea. If revisiting, survey vendors at a multi-state art fair circuit about permits and returns, and check whether art fair organizers already provide tax checklists.",
+    "status": "Vendors ask about per-show tax, but POS settings, home permits and free guides cover most cases",
+    "sourceNote": "All page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so every entry relies on search-result summaries and is unverified until re-fetched. Vendor voices come from the Square Seller Community, TurboTax Community, Etsy Community and an old stamping forum; state pages establish rules; vendor guides show free alternatives. No Reddit threads surfaced directly.",
+    "evidenceLog": [
+      {
+        "observedAt": "2026-11-16",
+        "observation": "In a Square-hosted Q&A, sellers described toggling the tax rate for the city or county they are selling in, a vendor found no tax applied at an event until changing item settings, and a seller said tax reports lump taxes by state rather than the city rate charged. Square suggested disabling a tax temporarily when opening a booth in a different tax location.",
+        "label": "Square Seller Community: Sales Tax Q&A - How can we improve sales tax settings?",
+        "url": "https://sellercommunity.com/t5/Event-Discussions/Sales-Tax-Q-amp-A-How-can-we-improve-sales-tax-settings/m-p/316676",
+        "sourceType": "community",
+        "publishedAt": "2021-11-10",
+        "supports": "Event sellers repeatedly work around POS tax settings when selling in other jurisdictions.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. From 2021; Square may have changed since. Several replies were summarized together."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "A seller asked whether Square calculates in-person sales tax automatically or must be changed manually each time; search summaries said vendors create one Square location per event with its own rate, and a moderator in an older thread said the app cannot detect location to set rates.",
+        "label": "Square Community: Does Square auto calculate sales tax for in-person, or do I have to change it manually each time?",
+        "url": "https://community.squareup.com/t5/Payments-Troubleshooting/Does-Square-auto-calculate-sales-tax-for-in-person-or-do-I-have/m-p/666396",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Manual per-event rate setup is a recurring question.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Only the title and summarized replies were seen; the moderator quote may come from an older archived thread."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "A separate thread titled \"How do I change sales tax for each location where I sell?\" appeared in results.",
+        "label": "Square Seller Community: How do I change sales tax for each location where I sell?",
+        "url": "https://sellercommunity.com/t5/General-Discussion/How-do-I-change-sales-tax-for-each-location-where-I-sell/m-p/351581",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Independent sellers ask the same question.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Only the title was seen; poster may not be an event vendor."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "A California resident who sold art at two-day craft fairs in Oregon and Pennsylvania asked whether they must file separate returns in those states, noting they had paid Pennsylvania sales tax.",
+        "label": "TurboTax Community: Out of state craft fair sales",
+        "url": "https://ttlc.intuit.com/community/state-taxes/discussion/out-of-state-craft-fair-sales/00/2648411",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Multi-state show vendors are unsure of their filing obligations.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Question only; no answer seen. Concerns income tax as much as sales tax."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "A Massachusetts seller replied that a home-business sales tax certificate covered craft fairs without a new certificate for each show.",
+        "label": "Etsy Community: Sales tax question (Made in Massachusetts)",
+        "url": "https://community.etsy.com/t5/Made-in-Massachusetts/Sales-tax-question/td-p/81700345",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "For in-state shows, one permit suffices (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Date not seen; one state."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "An old forum thread describes getting a tax ID the same day and says many promoters require vendors to collect tax and pay the state directly.",
+        "label": "Splitcoast Stampers forum: Craft shows/tax id #",
+        "url": "https://www.splitcoaststampers.com/forums/general-stamping-talk-17/craft-shows-tax-id-12446/",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Show promoters push vendors to register.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Roughly 2004-era per search summary; may be outdated."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "South Carolina requires craft sellers to charge 6% state sales tax plus local taxes and offers an Artist & Craftsman License for sellers exceeding four shows in a fiscal year.",
+        "label": "South Carolina DOR: Arts and crafts",
+        "url": "https://dor.sc.gov/tax-index/sales-and-use/arts-and-crafts",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "State-specific event rules exist.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Rule summary only."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Louisiana says anyone making retail sales there must collect and remit sales tax even if they sell only once a year, listing craft shows among special events.",
+        "label": "Louisiana Department of Revenue: Special events, craft shows and trade shows",
+        "url": "https://revenue.la.gov/businesses/sales-taxes/special-events-craft-shows-and-trade-shows/",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "Out-of-state vendors face registration duties for single shows.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. States publish this guidance free (also counterevidence)."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Avalara says most items sold at craft fairs are taxable in most sales tax states, some states offer temporary vendor registration, and California and New York require separate permits per location while Ohio lets one permit cover several.",
+        "label": "Avalara: If you're a craft fair vendor, you probably need to collect sales tax",
+        "url": "https://www.avalara.com/us/en/blog/if-youre-a-craft-fair-vendor-you-probably-need-to-collect-sales-tax.html",
+        "sourceType": "vendor",
+        "publishedAt": "2016-11",
+        "supports": "Rules vary; free vendor guides already explain them.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Vendor content, originally 2016; rules may have changed."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "Conventory recommends consolidating sales by state at filing time and warns that a missed zero filing still counts as missed in most states and temporary permits usually mean one filing due soon after the event.",
+        "label": "Conventory blog: Artist alley sales tax",
+        "url": "https://www.conventory.com/blog/artist-alley-sales-tax",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Someone already targets convention vendors with this content (possible competitor).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Search for a Conventory app found nothing; its product and pricing are unknown."
+      },
+      {
+        "observedAt": "2026-11-16",
+        "observation": "BoothLedger is listed as cloud bookkeeping for event sellers covering sales, expenses, booth fees, profit and loss, inventory and tax preparation support.",
+        "label": "GetApp: BoothLedger",
+        "url": "https://www.getapp.co.uk/software/2299695/boothledger",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Event-seller bookkeeping tools exist (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Pricing and sales tax depth not seen."
+      }
+    ],
+    "evidence": "Researched report",
+    "reviewedAt": "2026-11-16",
+    "sources": [
+      [
+        "Square Seller Community: Sales Tax Q&A - How can we improve sales tax settings?",
+        "https://sellercommunity.com/t5/Event-Discussions/Sales-Tax-Q-amp-A-How-can-we-improve-sales-tax-settings/m-p/316676"
+      ],
+      [
+        "Square Community: Does Square auto calculate sales tax for in-person, or do I have to change it manually each time?",
+        "https://community.squareup.com/t5/Payments-Troubleshooting/Does-Square-auto-calculate-sales-tax-for-in-person-or-do-I-have/m-p/666396"
+      ],
+      [
+        "Square Seller Community: How do I change sales tax for each location where I sell?",
+        "https://sellercommunity.com/t5/General-Discussion/How-do-I-change-sales-tax-for-each-location-where-I-sell/m-p/351581"
+      ],
+      [
+        "TurboTax Community: Out of state craft fair sales",
+        "https://ttlc.intuit.com/community/state-taxes/discussion/out-of-state-craft-fair-sales/00/2648411"
+      ],
+      [
+        "Etsy Community: Sales tax question (Made in Massachusetts)",
+        "https://community.etsy.com/t5/Made-in-Massachusetts/Sales-tax-question/td-p/81700345"
+      ],
+      [
+        "Splitcoast Stampers forum: Craft shows/tax id #",
+        "https://www.splitcoaststampers.com/forums/general-stamping-talk-17/craft-shows-tax-id-12446/"
+      ],
+      [
+        "South Carolina DOR: Arts and crafts",
+        "https://dor.sc.gov/tax-index/sales-and-use/arts-and-crafts"
+      ],
+      [
+        "Louisiana Department of Revenue: Special events, craft shows and trade shows",
+        "https://revenue.la.gov/businesses/sales-taxes/special-events-craft-shows-and-trade-shows/"
+      ],
+      [
+        "Avalara: If you're a craft fair vendor, you probably need to collect sales tax",
+        "https://www.avalara.com/us/en/blog/if-youre-a-craft-fair-vendor-you-probably-need-to-collect-sales-tax.html"
+      ],
+      [
+        "Conventory blog: Artist alley sales tax",
+        "https://www.conventory.com/blog/artist-alley-sales-tax"
+      ],
+      [
+        "GetApp: BoothLedger",
+        "https://www.getapp.co.uk/software/2299695/boothledger"
+      ]
+    ]
   }
 ]
