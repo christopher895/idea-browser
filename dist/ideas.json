@@ -4947,5 +4947,382 @@
         "https://www.getapp.co.uk/software/2299695/boothledger"
       ]
     ]
+  },
+  {
+    "id": "cemetery-plot-records",
+    "name": "PlotBook",
+    "title": "Plot, deed and burial records for small volunteer-run cemeteries",
+    "category": "Nonprofit",
+    "model": "B2B",
+    "type": "SaaS",
+    "summary": "A simple online plot map and ownership ledger for small cemetery associations and township cemeteries that still keep records in bound ledgers, index cards and spreadsheets. Regulators and local reporting show real harm from bad records, such as lots sold twice and burials in the wrong grave. But the category already has free and low-cost tools (Chronicle's free tier, Everspot's free plan, Ohio's state-supplied township module), the buyers are volunteer boards with little money, and the hard work is surveying and reconciling old paper, not software.",
+    "buyer": "Volunteer treasurers, secretaries or sextons of cemetery associations and township or town cemeteries with a few hundred to a few thousand burials. The board approves spending, often from small perpetual-care or plot-sale income.",
+    "problem": "Ownership and burial records are split across bound ledgers, card files and spreadsheets kept by volunteers who change over time. Private resales between families go unrecorded, so a plot offered for sale may already be occupied. New York's cemetery regulator lists lots sold twice and interment in the wrong grave among its most common complaints. Boards report records left incomplete by past officers, and consultants are described as unaffordable.",
+    "solution": "If pursued: a hosted plot map built from a scanned paper map, a ledger of lot owners and transfers, burial entries tied to each grave, and a public search page for families and genealogists, priced for boards with a few hundred burials.",
+    "revenue": "Hypothesis (unvalidated): $10-25 per month or a one-time setup fee. Anchors seen are offers, not proof of buyers: Chronicle's free Basic plan (up to 50 records) and Lite at $20 per month per Capterra, and Everspot's free plan.",
+    "gap": "Alternatives: Chronicle (free tier, then paid plans), Everspot (free plan with most features, founded 2023), Cemify, CemeteryPro, CIMS and PlotBox for larger cemeteries, Ohio's UAN Cemetery module for townships, genealogy volunteers (NYG&B, GenWeb, FamilySearch) who digitize indexes for free, and spreadsheets. No underserved segment was found; free tiers already target small cemeteries.",
+    "timing": "No new trigger found. New York runs an annual \"Caring for Your Cemetery Day\", and vendors already publish small-cemetery case studies, which points to an established rather than emerging need.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed access to cemetery boards. Onboarding means digitizing old maps and ledgers by hand, which is service work, and errors in ownership records carry legal and emotional weight.",
+    "risks": [
+      "Free competitors: Chronicle and Everspot offer free plans aimed at small cemeteries.",
+      "Very small budgets: volunteer boards describe consultants as prohibitively expensive.",
+      "Onboarding is manual: scanning, mapping and reconciling paper records dominates the work.",
+      "Slow, fragmented buyers: boards meet infrequently and turn over; there is no clear channel.",
+      "Liability: ownership disputes and wrong-grave burials make record errors costly.",
+      "Evidence quality: every page fetch failed; all entries rely on search summaries."
+    ],
+    "pilot": [
+      "Interview 8 cemetery association or township officers (recruit through a state cemetery association or county clerks). Ask how records are kept, the last ownership dispute or near-miss, and what they have spent on records. Stop if fewer than 3 had a recent records problem and a budget above $200 a year.",
+      "If interviews pass, digitize one section map and lot ledger by hand for 3 cemeteries at $150 each. Success means 2 pay and keep entries current for 3 months. Stop if boards choose Chronicle or Everspot free tiers instead."
+    ],
+    "assumptions": [
+      "That records problems are widespread outside New York and the cited cases is assumed, not counted.",
+      "Competitor plans and prices come from directory summaries and may be outdated.",
+      "The share of small cemeteries still on paper is unknown.",
+      "The price range is a hypothesis with no buyer evidence."
+    ],
+    "level": "repeated-pain",
+    "verdict": "Pass",
+    "verdictRationale": "Records problems are real and recurring: a state regulator names double-sold lots and wrong-grave burials among common complaints, and local reports describe spreadsheets and ledgers that drifted out of date. But free and cheap products already target exactly this segment, volunteer boards have very small budgets, and the costly part is hand-reconciling old paper, which is service work rather than scalable software. No board was seen paying for help that existing tools fail to provide. Confidence is limited because every page fetch failed. This would move to Watch if boards described trying free tools and abandoning them, or paying for record reconstruction.",
+    "nextStep": "Shelve the idea. If revisiting, ask a state cemetery association how many member cemeteries still keep paper-only records and what they use when they digitize.",
+    "evidence": "Researched report",
+    "status": "Records problems are documented, but free cemetery software already targets small boards",
+    "sourceNote": "All page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so every entry relies on search-result summaries and is unverified until re-fetched. Customer-side evidence comes from a state regulator's complaint summary, a local newspaper report, a letter to a local paper and a genealogy society profile; competitor details come from directory listings and vendor marketing. No forum threads from cemetery officers surfaced.",
+    "reviewedAt": "2026-11-23",
+    "evidenceLog": [
+      {
+        "observedAt": "2026-11-23",
+        "observation": "New York's guidance says small cemeteries are usually run by volunteers whose board is responsible for keeping records, and lists lots being sold twice and interment in the wrong grave among the most common complaints the state receives.",
+        "label": "New York Department of State: Everything you are dying to know about New York cemeteries",
+        "url": "https://dos.ny.gov/everything-you-are-dying-know-about-new-york-cemeteries",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "Bad records cause recurring, serious problems at small cemeteries.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Complaint frequency is described qualitatively; no counts seen. One state."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "At Friendship Cemetery in Columbus, ownership records are split between a spreadsheet and old bound ledgers; private family-to-family sales go unrecorded, so plots offered for sale may already contain a burial.",
+        "label": "Commercial Dispatch: Buying a grave site at Friendship: there are no guarantees",
+        "url": "https://cdispatch.com/news/buying-a-grave-site-at-friendship-there-are-no-guarantees/",
+        "sourceType": "news",
+        "publishedAt": null,
+        "supports": "Spreadsheet-plus-ledger records drift and cause double sales.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Publication date not seen. This cemetery is city-run, not volunteer-run."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "A letter about a Westerlo, New York town cemetery says the board found the treasurer had kept no accurate records of deposits or checks, and that a plot had been sold to another party, forcing a relocation.",
+        "label": "Altamont Enterprise: The town should help fund its cemeteries",
+        "url": "https://altamontenterprise.com/node/40105",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Volunteer turnover leaves records incomplete with costly consequences.",
+        "level": "repeated-pain",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Letter to the editor; date not seen; one cemetery."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "The profile of a small volunteer-run cemetery near Ithaca says cemeteries typically must work with consultants, often at a prohibitive cost the cemetery cannot afford; a genealogy society published its burial index for free.",
+        "label": "NYG&B: Preservation and Volunteer Insights with the Danby Rural Cemetery Board",
+        "url": "https://www.newyorkfamilyhistory.org/blog/preservation-and-volunteer-insights-danby-rural-cemetery-board",
+        "sourceType": "news",
+        "publishedAt": "2024",
+        "supports": "Buyers have very little budget, and volunteers digitize indexes free (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Year inferred from the summary saying the index was published in early 2024."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "Chronicle starts with a free Basic plan for small or community cemeteries (up to 50 records) covering records, plot management, interments and certificates; the summary listed Lite at $20 per month and Pro at $165 per month, and a reviewer said it has kept its low pricing.",
+        "label": "Capterra: Chronicle pricing",
+        "url": "https://www.capterra.com/p/187388/Chronicle/pricing/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "An established vendor already serves small cemeteries cheaply (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Prices are offers from a directory and conflicted with other listings (Software Advice says custom pricing); a $60 per month figure in the same summary was inconsistent."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "Everspot, founded in 2023, describes a free plan that includes most features and unlimited records across many modules, and directories describe it as a fit for independent cemeteries.",
+        "label": "Capterra: Everspot",
+        "url": "https://www.capterra.com/p/10028395/Everspot/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "A free product targets the same buyers (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Vendor marketing; free-plan limits not seen; few or no user ratings."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "Cemify is described as used by hundreds of small to mid-sized cemeteries, with burial records, plot management and maps; reviewers are mostly small businesses and religious institutions.",
+        "label": "Capterra: Cemify pricing",
+        "url": "https://www.capterra.com/p/175752/Cemify/pricing",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Small cemeteries already buy dedicated software (counterevidence; adjacent spend).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Customer count is a vendor claim. Search summaries gave one-time tiers ($500 under 500 burials) but attributed them inconsistently to Cemify or CemeteryPro, so prices are not relied on."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "Ohio's Uniform Accounting Network offers a cemetery module for township cemeteries that stores GPS coordinates to generate plot maps and exports to Excel; it requires Windows and SQL Server Express.",
+        "label": "Ohio Auditor of State: UAN Cemetery training",
+        "url": "https://OhioAuditor.gov/trainings/docs/2019/UAN_Cemetery.pdf",
+        "sourceType": "government",
+        "publishedAt": "2019",
+        "supports": "Ohio townships get a state-supplied records tool (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Details were summarized from several years of training documents (2019, 2024, 2025); the current version may differ."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "Helena Township runs a phased cemetery mapping and records project, says its online map is not the authoritative record, and asks residents with historical records, photographs or deeds to contact the clerk.",
+        "label": "Helena Township, Michigan: Cemetery",
+        "url": "https://helenatownshipmichigan.gov/?p=1442",
+        "sourceType": "government",
+        "publishedAt": null,
+        "supports": "Townships are reconstructing incomplete records.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. One township; vendor or method used not seen."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "A Chronicle case study describes a small volunteer-run cemetery with aging, inaccurate records and says reliance on volunteers creates its own record-keeping problems.",
+        "label": "PR Wire: Preserving Maple Hill Cemetery's heritage with simple cemetery software (Chronicle)",
+        "url": "https://prwire.com.au/pr/92648/preserving-maple-hill-cemetery-s-heritage-with-simple-cemetery-software",
+        "sourceType": "vendor",
+        "publishedAt": "2020-10-20",
+        "supports": "The pain is known and already marketed to by a vendor.",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Vendor press release."
+      }
+    ],
+    "sources": [
+      [
+        "New York Department of State: Everything you are dying to know about New York cemeteries",
+        "https://dos.ny.gov/everything-you-are-dying-know-about-new-york-cemeteries"
+      ],
+      [
+        "Commercial Dispatch: Buying a grave site at Friendship: there are no guarantees",
+        "https://cdispatch.com/news/buying-a-grave-site-at-friendship-there-are-no-guarantees/"
+      ],
+      [
+        "Altamont Enterprise: The town should help fund its cemeteries",
+        "https://altamontenterprise.com/node/40105"
+      ],
+      [
+        "NYG&B: Preservation and Volunteer Insights with the Danby Rural Cemetery Board",
+        "https://www.newyorkfamilyhistory.org/blog/preservation-and-volunteer-insights-danby-rural-cemetery-board"
+      ],
+      [
+        "Capterra: Chronicle pricing",
+        "https://www.capterra.com/p/187388/Chronicle/pricing/"
+      ],
+      [
+        "Capterra: Everspot",
+        "https://www.capterra.com/p/10028395/Everspot/"
+      ],
+      [
+        "Capterra: Cemify pricing",
+        "https://www.capterra.com/p/175752/Cemify/pricing"
+      ],
+      [
+        "Ohio Auditor of State: UAN Cemetery training",
+        "https://OhioAuditor.gov/trainings/docs/2019/UAN_Cemetery.pdf"
+      ],
+      [
+        "Helena Township, Michigan: Cemetery",
+        "https://helenatownshipmichigan.gov/?p=1442"
+      ],
+      [
+        "PR Wire: Preserving Maple Hill Cemetery's heritage with simple cemetery software (Chronicle)",
+        "https://prwire.com.au/pr/92648/preserving-maple-hill-cemetery-s-heritage-with-simple-cemetery-software"
+      ]
+    ]
+  },
+  {
+    "id": "boarding-barn-billing",
+    "name": "StallSlip",
+    "title": "Monthly board and add-on billing for small horse boarding barns",
+    "category": "Agriculture",
+    "model": "B2B",
+    "type": "SaaS",
+    "summary": "A billing log for small boarding barns that turns daily extras (blanketing, supplements, farrier holds, extra hay) into each boarder's monthly invoice so add-ons are not forgotten. Barn owners do debate all-inclusive versus a la carte board, and advice columns warn owners to bill extras properly. But no barn owner was seen describing lost revenue from missed charges, the forum thread on barn owners' biggest struggles names people, costs, help and burnout rather than billing, and at least six barn software products with billing already exist, some from $10 per month.",
+    "buyer": "Owners or managers of boarding barns with roughly 5-40 horses who invoice boarders monthly. The owner is the payer.",
+    "problem": "Board often covers a base set of services, with blanketing, supplement administration, extra turnout and holding for the farrier or vet charged separately. Tracking these by memory, whiteboard or spreadsheet risks unbilled work and disputes about what board includes. Advice pieces urge owners to define what board includes and pass on hay and bedding price changes.",
+    "solution": "If pursued: staff tap a horse and a service on a phone at the barn; the log rolls into monthly invoices with base board, add-ons and pass-through costs, sent by email with card payment.",
+    "revenue": "Hypothesis (unvalidated): $15-30 per month per barn. Anchors seen are offers, not proof of buyers: BarnManager Starter at $10 per month and Essentials at $40 per month per Capterra.",
+    "gap": "Alternatives: BarnManager (splits charges across horses and clients, ties feed changes to billing), BarnOps (boarding invoices and Stripe payments, unlimited horses), OnlineBarnManagement (boarder portal and PayPal, 5-100 horses), HayNet, Stable Secretary and EZHorse (named in search summaries), QuickBooks recurring invoices, spreadsheet templates sold on Etsy, and flat all-inclusive board that avoids itemizing. No uncovered segment was found.",
+    "timing": "No new trigger found. Feed and bedding price changes push some barns toward pass-through billing, but that is a long-standing debate.",
+    "fit": "Unconfirmed assumptions. The builder is a solo software developer with no confirmed access to barn owners. Barn owners are reachable through forums and tack shops but are a fragmented, low-margin, often hobby-adjacent market.",
+    "risks": [
+      "Crowded market: at least six barn software products already include billing.",
+      "Cheap incumbents: BarnManager lists a $10 per month starter tier.",
+      "Pain unconfirmed: no owner was seen describing lost revenue from forgotten charges.",
+      "Flat-rate board sidesteps the problem for many barns.",
+      "Low margins: owners describe covering costs as a main struggle, which limits software budgets.",
+      "Evidence quality: every page fetch failed; all entries rely on search summaries."
+    ],
+    "pilot": [
+      "Interview 8 boarding barn owners with 10 or more boarders (recruit through regional horse forums or feed stores). Ask how they bill extras, whether they found unbilled work in the last 3 months and what it was worth, and what software they tried. Stop if fewer than 3 can name a recent missed charge over $100.",
+      "If interviews pass, run billing for 3 barns for one month from a shared phone log at $25. Success means 2 pay and keep logging for a second month. Stop if owners prefer their existing software or flat board."
+    ],
+    "assumptions": [
+      "That forgotten add-on charges are common and material is assumed; it rests on vendor marketing and advice columns.",
+      "Competitor features and prices come from directory summaries and may be outdated.",
+      "The number of small barns using paper or spreadsheets is unknown.",
+      "The price range is a hypothesis with no buyer evidence."
+    ],
+    "level": "attention",
+    "verdict": "Pass",
+    "verdictRationale": "Billing extras is a recognized topic: forum threads debate a la carte board and advice columns warn owners to bill extra services and pass on price changes. But the evidence of pain is weak (no owner described lost revenue), the forum thread on barn owners' biggest struggles points to people, costs and labor instead, and many barn software products with billing already exist at low prices. A new entrant would compete on features in a crowded, low-margin niche. Confidence is limited because every page fetch failed. This would move to Watch if several owners described specific unbilled work or abandoning existing barn software over billing.",
+    "nextStep": "Shelve the idea. If revisiting, search horse forums for complaints from paying users of BarnManager, BarnOps or OnlineBarnManagement about billing.",
+    "evidence": "Researched report",
+    "status": "Billing extras is discussed, but missed-charge pain is unconfirmed and barn software is plentiful",
+    "sourceNote": "All page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so every entry relies on search-result summaries and is unverified until re-fetched. Owner voices come from Chronicle of the Horse forum threads seen only as titles and summarized replies; competitor details come from directory listings. Claims that vendors market against missed charges, and descriptions of HayNet and EZHorse, appeared in search summaries without a clear source page and are not logged as evidence.",
+    "reviewedAt": "2026-11-23",
+    "evidenceLog": [
+      {
+        "observedAt": "2026-11-23",
+        "observation": "In a thread asking about barn management struggles, a boarding-barn operator said the biggest struggle is people; another reply named covering costs, finding dependable help and avoiding burnout.",
+        "label": "Chronicle of the Horse forum: Barn management biggest struggles and challenges",
+        "url": "https://forum.chronofhorse.com/t/barn-management-biggest-struggles-and-challenges/365361",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Billing extras is not what owners name first (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Only summarized replies seen; date not seen; may be an old thread."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "A long thread (at least 13 pages) debates whether boarders would accept paying per service instead of flat board.",
+        "label": "Chronicle of the Horse forum: Thought experiment - boarders....would you pay by the service?",
+        "url": "https://forum.chronofhorse.com/t/thought-experiment-boarders-would-you-pay-by-the-service/799252?page=13",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Itemized board pricing attracts discussion among horse owners.",
+        "level": "attention",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Only the title and page number were seen; content and conclusions unknown."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "Barn owners who board were asked to share how their expenses break down.",
+        "label": "Chronicle of the Horse forum: Owners who offer boarding: what is your expense breakdown?",
+        "url": "https://forum.chronofhorse.com/t/owners-who-offer-boarding-what-is-your-expense-breakdown/771984",
+        "sourceType": "community",
+        "publishedAt": null,
+        "supports": "Owners compare costs and pricing with peers.",
+        "level": "attention",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Only the title was seen; replies unknown."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "The article asks whether owners charge all-inclusive or a la carte, and says a flat fee covering stall, feed, turnout and blanketing on a set schedule makes clear what owners get.",
+        "label": "Stable Management: All-inclusive or a la carte board?",
+        "url": "https://stablemanagement.com/?p=7710",
+        "sourceType": "news",
+        "publishedAt": null,
+        "supports": "Flat board is a common way to avoid itemizing (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Article title inferred from the search result heading; date not seen."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "The article advises barn owners to consider what board includes so they properly bill for extra services, and to account for price changes in hay, shavings and grain.",
+        "label": "The Horse: Accounting Software for Owners",
+        "url": "https://thehorse.com/15670/accounting-software-for-owners/",
+        "sourceType": "news",
+        "publishedAt": null,
+        "supports": "Billing extras correctly is a recognized concern.",
+        "level": "attention",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Advice column, not an owner report; may be old."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "BarnManager pricing was summarized as Starter $10 per month or $100 per year and Essentials $40 per month or $400 per year; other directories list Pro at $70. Marketing says users can view charges per horse or client and split items across clients, horses or invoices.",
+        "label": "Capterra: BarnManager",
+        "url": "https://www.capterra.co.uk/software/164823/barnmanager",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "A cheap incumbent already handles add-on billing (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Prices are offers and conflict across directories (per user versus per feature)."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "BarnOps includes boarding invoices, lesson billing and Stripe payments in its billing tier, with unlimited users and horses under one barn subscription.",
+        "label": "Capterra: BarnOps",
+        "url": "https://www.capterra.com/p/10045666/BarnOps/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Another competitor covers boarding invoices (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Vendor description; pricing not seen."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "OnlineBarnManagement targets barns with 5-100 horses, with farrier and vet scheduling, feeding and medication tracking, a boarder portal and PayPal payments on a subscription.",
+        "label": "Capterra: OnlineBarnManagement",
+        "url": "https://www.capterra.com/p/10048232/OnlineBarnManagement/",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "The target segment is already served (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Vendor description; pricing not seen."
+      },
+      {
+        "observedAt": "2026-11-23",
+        "observation": "An Excel and Google Sheets template tracks farrier and vet schedules, vaccines and per-horse monthly costs including an optional board fee, with sample data for a 7-horse barn.",
+        "label": "Etsy: horse barn tracker spreadsheet",
+        "url": "https://www.etsy.com/listing/4607357588",
+        "sourceType": "vendor",
+        "publishedAt": null,
+        "supports": "Spreadsheet templates are a cheap substitute (counterevidence).",
+        "level": "context",
+        "limitations": "Seen only in search-result summaries; page fetches failed in this run (WebFetch could not resolve hosts outside the session allowlist), so wording is unverified. Single seller listing; sales count and reviews not seen."
+      }
+    ],
+    "sources": [
+      [
+        "Chronicle of the Horse forum: Barn management biggest struggles and challenges",
+        "https://forum.chronofhorse.com/t/barn-management-biggest-struggles-and-challenges/365361"
+      ],
+      [
+        "Chronicle of the Horse forum: Thought experiment - boarders....would you pay by the service?",
+        "https://forum.chronofhorse.com/t/thought-experiment-boarders-would-you-pay-by-the-service/799252?page=13"
+      ],
+      [
+        "Chronicle of the Horse forum: Owners who offer boarding: what is your expense breakdown?",
+        "https://forum.chronofhorse.com/t/owners-who-offer-boarding-what-is-your-expense-breakdown/771984"
+      ],
+      [
+        "Stable Management: All-inclusive or a la carte board?",
+        "https://stablemanagement.com/?p=7710"
+      ],
+      [
+        "The Horse: Accounting Software for Owners",
+        "https://thehorse.com/15670/accounting-software-for-owners/"
+      ],
+      [
+        "Capterra: BarnManager",
+        "https://www.capterra.co.uk/software/164823/barnmanager"
+      ],
+      [
+        "Capterra: BarnOps",
+        "https://www.capterra.com/p/10045666/BarnOps/"
+      ],
+      [
+        "Capterra: OnlineBarnManagement",
+        "https://www.capterra.com/p/10048232/OnlineBarnManagement/"
+      ],
+      [
+        "Etsy: horse barn tracker spreadsheet",
+        "https://www.etsy.com/listing/4607357588"
+      ]
+    ]
   }
 ]
